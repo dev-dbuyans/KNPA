@@ -1,0 +1,61 @@
+name: Deploy Dev
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  host: "dev.dbuyans.com"
+  path: "/home/dbuyans/${{ github.event.repository.name }}"
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: development
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Zip artifact for deployment
+        run: |
+          zip -r HTML_release.zip . -x filelist.html
+
+      - name: Upload via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          username: ubuntu
+          key: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIEpAIBAAKCAQEAxehN8fv6ecI+Phhh4C6SJJeI3yzmfaG2z+9LnMJxczad7yWz
+            I4TrOspOa2AvqmFpNoirba/Hm6LB6G2WP+EVj8w0NFGd5BvIoR+/NSGbIiQeFKTj
+            qfCQuub6Pdq/Ps8MCOjArOX4JyBnsMJFqIbcaN81sxDGMyO4a2AZvUwPjeC+fy7W
+            MBmIBRZg1uAqbR0FOaIPWZ1tsz4lCvDFURN8yQgC1N8je71/N69UVk5Or1KbSsMK
+            pQJbOtZ6V8Gnfdx8oOUTpfS7AuT0medksIjOYty6CBDy9RNX8VpTYlhSM8G8aAku
+            gl4w4c1iW9k2uKFq3Lecm34FnQBjRyUHcgcTGQIDAQABAoIBACvqq/lJ0EBasVM4
+            N+f2jamfEtlrbk5sp1OnJ2FG6MQHV66s7/6uzUBDinlbY9hsO1vFojz559KKoHsC
+            bngIa694QhFmFyJ6Y+AVWmng5jsCRsaP/JFGd+dxwBAfzZaTfXkwpSj480NDdp8L
+            zUdjfd+rwI/W5hSNFayGK9AM49q4o3AHGsEvjOxoCzrGfwKq9LkyXgkmGB2bn7mb
+            Enzcx9GteJlfLvflXwQW8QwlNtC4cxLqAET4sYT4tEW8eoC9CaV3+IjAo/U6ZWhI
+            5BNW0bq1C5iB3IwATR6T+kmxLM9k87WbP6xVU2qihL0Vhuj7i05sVQQDpeUg+sWS
+            FaJkwx0CgYEA9HtJ2+Yllc9ft7Z3vi/uvfaZo4KShnP5HCcpq+w7LpCvQvbCXa+R
+            uQLm6ODwvGvBl8iE5FHM/DSrDBJdUSNaGHqG1A5TjULkFxIb0AzKCPDn/EY7hlgZ
+            3UxekYo0jo2rP9PSQNBkqSYuz+FqLvqMCJEktuRswbmLWrrnvOQUx7sCgYEAzztI
+            DRDueD1WD9xXkBxnljVfE5rWkKVRlGypeMSZsogHvFmMWhVktCwxgdANKWL3KthR
+            6iQWAvvruKdJVITew8umMRMhBD6ZA6WA+Q9+rXptUPYJOpaEVEWpYK6EpGS7cTcY
+            eG58Jg4Aobq7kWyJ4BYsOqSyI+zpg5U4LslC8TsCgYEA2KFSHda9oRRClU/KpKxm
+            WM7k7nyphxfGOUr+YseM3UL4+VYbfdYvQoeuwdVnmx3ESdE05/cPsr6cfbLcGyQ/
+            Fgej5szW/gmygDrciCp87xVACkrVPcJdELk15rJWxaYEgycXW7UMLNGXkz4Cz6PU
+            Z1bs+F5JfBMDxx5sbvSO8TcCgYA7p8McD822S2Hk+vcyAxtGwGJ4UFCIHy8W3RkE
+            LQRZwpMHg3fFzvbIbxhpWC0Rxu2EJfWew3iar06yP2X6sK04C/3xjqIoiKSfyhsQ
+            l4dOBTpG3izV8tJxOASEUnjYoi7bbpLayGNwyQMhi5HHUUl3eqqMzzCA6whl2qTr
+            wwBEVQKBgQDj1htZLsIpQCSTi25ujgSOL5kkLX7atcku20gPZJE0/UsvWXhSuJnJ
+            5B2LLYyrt01i6H0/+BKXUoOlz5gcTT9Eu2vKkauP6bFbPj3JBTG/y0heVMJ8fipR
+            cQxb79xu0RcNaj5gPVOpVm8c5M682InwIXgLYq329iMHu9jRo4ZgBA==
+            -----END RSA PRIVATE KEY-----
+          host: ${{ env.host }}
+          port: 22
+          source: "./*"
+          target: ${{ env.path }}

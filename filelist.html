@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>퍼블리싱 파일리스트</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/handsontable@14.0.0/dist/handsontable.full.min.css"
+    />
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        padding: 0px 40px 40px 40px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .download-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        text-decoration: none; /* 밑줄 제거 */
+      }
+
+      .download-btn:hover {
+        background-color: #45a049;
+      }
+
+      button.action-btn {
+        padding: 4px 10px;
+        font-size: 13px;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #hot {
+        margin-top: 20px;
+      }
+
+      .hot-container {
+        background: white;
+        overflow: hidden;
+      }
+
+      .htCore td {
+        padding: 8px 12px;
+        vertical-align: middle;
+      }
+
+      .htCore th {
+        padding: 10px 12px;
+        background-color: #f2f2f2;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .grid-btn {
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .grid-btn:hover {
+        background-color: #1976d2;
+      }
+
+      .grid-btn.save {
+        background-color: #4caf50;
+      }
+
+      .grid-btn.save:hover {
+        background-color: #388e3c;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      퍼블리싱 파일리스트
+      <a href="./HTML_release.zip" class="download-btn" download>📥 HTML_release.zip</a>
+    </h2>
+
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      "
+    >
+      <div>
+        <button class="grid-btn" onclick="addCol()">➕ 열 추가</button>
+      </div>
+      <div>
+        <button class="grid-btn save" onclick="saveData()">💾 저장</button>
+      </div>
+    </div>
+
+    <div id="hot" class="hot-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@14.0.0/dist/handsontable.full.min.js"></script>
+    <script>
+      function getProjectNameFromPath() {
+        const pathSegments = window.location.pathname.split('/').filter(Boolean)
+        return pathSegments[0] || 'default' // 예: 'my_project'
+      }
+
+      // 예: projectName은 고정 문자열이거나 동적으로 받아올 수 있음
+      const projectName = getProjectNameFromPath()
+      let data = null
+      // 페이지 로드 시 JSON 데이터 로딩
+      window.addEventListener('DOMContentLoaded', async () => {
+        const projectName = getProjectNameFromPath()
+        document.title = `${projectName} 퍼블리싱 파일리스트`
+        try {
+          const res = await fetch(
+            `/publishing_template_api/get?project=${encodeURIComponent(projectName)}`,
+          )
+          const json = await res.json()
+
+          if (!json.success) {
+            alert(json.message || '데이터를 불러오지 못했습니다.')
+            return
+          }
+
+          const { data, colHeaders, colWidths, mergeCells } = json.data || {}
+
+          hot.loadData(data || [])
+
+          const columns = Array.isArray(colWidths) ? colWidths.map((w) => ({ width: w })) : []
+
+          hot.updateSettings({
+            colHeaders: colHeaders || [],
+            mergeCells: mergeCells || [],
+            manualColumnResize: true,
+            colWidths: colWidths || [],
+          })
+
+          console.log('데이터:', data)
+          console.log('헤더:', colHeaders)
+          console.log('컬럼:', columns)
+          console.log('머지:', mergeCells)
+        } catch (err) {
+          console.error(err)
+          alert('서버와 통신 중 오류가 발생했습니다.')
+        }
+      })
+
+      const container = document.getElementById('hot')
+
+      const buttonRenderer = (instance, td, row, col, prop, value, cellProperties) => {
+        td.innerHTML = `<button class="action-btn" data-row="${row}">보기</button>`
+        td.classList.add('htCenter', 'htMiddle')
+        return td
+      }
+
+      const hot = new Handsontable(container, {
+        data: [],
+        colHeaders: ['No', '1Depth', '파일이름', '보기', '비고'],
+        width: '100%',
+        height: 'auto',
+        columnHeaders: true,
+        mergeCells: true,
+        contextMenu: true,
+        manualRowResize: true,
+        manualColumnResize: true,
+        stretchH: 'all',
+        licenseKey: 'non-commercial-and-evaluation',
+      })
+
+      hot.updateSettings({
+        cells: function (row, col) {
+          const cellProperties = {}
+          const totalCols = this.instance.countCols()
+
+          // 항상 마지막 열 바로 앞 컬럼이 '보기' 열이라고 가정
+          const viewButtonColIndex = totalCols - 2
+
+          if (col === viewButtonColIndex) {
+            cellProperties.renderer = buttonRenderer
+            cellProperties.readOnly = true
+          }
+
+          return cellProperties
+        },
+      })
+
+      container.addEventListener('click', (e) => {
+        if (e.target.classList.contains('action-btn')) {
+          const row = parseInt(e.target.dataset.row, 10)
+
+          // 동적으로 "파일이름" 열의 인덱스 찾기
+          const colHeaders = hot.getColHeader()
+          const fileNameColIndex = colHeaders.findIndex((header) => header === '파일이름')
+
+          if (fileNameColIndex === -1) {
+            alert('"파일이름" 열이 존재하지 않습니다.')
+            return
+          }
+
+          const fileName = hot.getDataAtCell(row, fileNameColIndex)
+          if (fileName) {
+            window.open(`./${fileName}`, '_blank')
+          } else {
+            alert('파일 이름이 비어 있습니다.')
+          }
+        }
+      })
+
+      function addCol() {
+        const newHeader = prompt('추가할 열의 이름을 입력하세요:')
+        if (!newHeader) return
+
+        const positionInput = prompt(`열을 추가할 위치 (0 ~ ${hot.countCols()})을 입력하세요:`)
+        const position = parseInt(positionInput, 10)
+
+        if (isNaN(position) || position < 0 || position > hot.countCols()) {
+          alert('유효한 숫자를 입력해주세요.')
+          return
+        }
+
+        const currentHeaders = [...hot.getColHeader()]
+        // 🔽 columns 제거 (Handsontable가 object 기반 데이터로 columns 설정시 insert_col_start 불가)
+        // const currentColumns = [...(hot.getSettings().columns || [])]
+
+        hot.alter('insert_col_start', position)
+
+        for (let r = 0; r < hot.countRows(); r++) {
+          hot.setDataAtCell(r, position, '')
+        }
+
+        currentHeaders.splice(position, 0, newHeader)
+
+        hot.updateSettings({
+          colHeaders: currentHeaders,
+        })
+
+        // 🔽 기본 폭도 직접 설정
+        hot.setColWidth(position, 100)
+      }
+
+      function saveData() {
+        const colWidths = []
+        for (let i = 0; i < hot.countCols(); i++) {
+          // 🔽 숫자만 저장
+          colWidths.push(hot.getColWidth(i))
+        }
+
+        const payload = {
+          filelist: {
+            data: hot.getData(),
+            colHeaders: hot.getColHeader(),
+            mergeCells: hot.getSettings().mergeCells || [],
+            colWidths, // ✅ 숫자 배열
+          },
+        }
+
+        fetch(`/publishing_template_api/save?project=${encodeURIComponent(projectName)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+          .then((res) => res.json())
+          .then((res) => alert(res.message || '저장 완료'))
+          .catch((err) => {
+            alert('저장 중 오류 발생')
+            console.error(err)
+          })
+      }
+    </script>
+  </body>
+</html>
