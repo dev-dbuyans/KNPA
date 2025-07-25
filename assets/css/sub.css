@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------- */
+/* 관서현황보고서(요약)
+/* ------------------------------------------------------------------------- *
+/* 관서현황 */
+.tbl2.w50{width: 50%; }
+.tbl2.w25{width: calc(25% - 8px);}
+
+.tbl2 table th {height: 3.9rem;}
+.tbl2 table td {height: 3.2rem; padding: 5px 4px;}
+.tbl2.h36 tr td {height: 3.6rem;}
+
+.tbl2 table td.h36 {height: 3.6rem; padding: 5px 4px;}
+.tbl2 table td.h36.tar {padding-right: 12px;}
+.tbl2 table td.bg{ background-color: var(--bg); color: var(--text1); font-weight: 600;}
+.tbl2 thead tr th.tbl_tit.h74:first-child{
+  height: 7.4rem;
+  border: 0; background-color: #ffffff; 
+} 
+.tbl2 thead tr.h36>td{height: 3.6rem; padding: 5px 4px;}
+.tbl2 table td.bdnone:first-child{ border: 0; }
+.tbl2 table td.blnone:first-child{ border-left: 0; }
+.tbl2 table th.blnone:first-child{ border-left: 0; }
+
+.tbl2 tr td.bold{ font-weight: 600; color: var(--text1); }
+.tbl2 table td.noHover:hover{background-color: #ffffff;}
+.tbl2.img table td div img{width: 100%; height: 100%; margin: auto;}
+.tbl2 tfoot tr td { background-color: var(--tfootbg); }
