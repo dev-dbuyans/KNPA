@@ -465,19 +465,19 @@
           </div>
           <div class="inner flexEnd">
             <button type="button" class="todo_Btn">
-              <p>국유재산</p>
+              <span>국유재산</span>
               <strong class="sB">124
                 <span class="mD">건</span>
               </strong>
             </button>
             <button type="button" class="todo_Btn">
-              <p>건축사업</p>
+              <span>건축사업</span>
               <strong class="sB">11,024
                 <span class="mD">건</span>
               </strong>
             </button>
             <button type="button" class="todo_Btn">
-              <p>시설사업</p>
+              <span>시설사업</span>
               <strong class="sB">45
                 <span class="mD">건</span>
               </strong>
@@ -496,33 +496,37 @@
       <nav id="navigation" class="tree_wrap">
         <ul class="depth1">
           <li class="d1_01 on">
-            <a href="#">관서현황보고서</a>
+            <a href="#"><span>관서현황보고서</span></a>
+            <div class="tree_box nav_box on">
+              <div class="scrollY">
+                <!-- 스크롤 테스트 -->
+                <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
           </li>
-          <div class="tree_box nav_box on">
-            <div class="scrollY">
-              <!-- 스크롤 테스트 -->
-              <ul id="tree" class="ztree" style="height: 3000px;"></ul>
-            </div>
-          </div>
 
-          <li class="d1_02"><a href="#">기금사업</a></li>
-          <div class="tree_box nav_box">
-            <div class="scrollY">
-              <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+          <li class="d1_02">
+            <a href="#"><span>기금사업</span></a>
+            <div class="tree_box nav_box">
+              <div class="scrollY">
+                <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
+              </div>
             </div>
-          </div>
+          </li>
 
-          <li class="d1_03"><a href="#">시설사업</a></li>
-          <div class="tree_box nav_box">
-            <div class="scrollY">
-              <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+          <li class="d1_03">
+            <a href="#"><span>시설사업</span></a>
+            <div class="tree_box nav_box">
+              <div class="scrollY">
+                <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
+              </div>
             </div>
-          </div>
+          </li>
+        </ul>
 
           <div class="btnbox">
             <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
           </div>
-        </ul>
       </nav>
       <!-- //navigation -->
 
@@ -827,7 +831,7 @@
             <div class="tabCont_todo0 on">
               <div class="con">
                 <header class="con_head flexEnd">
-                  <h3>국유재산(토지/건물)현황</h3>
+                  <h3>국유재산(토지/건물) 현황</h3>
                   <p>00건</p>
                 </header>
 
@@ -1053,7 +1057,7 @@
             <div class="tabCont_todo3">
               <div class="con">
                 <header class="con_head">
-                  <h3>시스템 권한 관리</h3>
+                  <h3>시스템 권한관리</h3>
                 </header>
                 <div class="list_area type2">
                   <ul>

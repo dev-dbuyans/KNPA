@@ -18,7 +18,7 @@
 
 <body>
 
-  <!-- 메인화면 > 통합검색  :  사이드 메뉴 + 콘텐츠 영역  -->
+  <!-- 메인화면 > 통합검색 -->
 
   <!-- wrap -->
   <div id="wrap">
@@ -458,32 +458,32 @@
             </div>
           </div>
 
-          <!-- 나의 할일 -->
-          <div id="todolist" class="relative">
-            <div class="todo_tit">
-              <span>나의 할일</span>
-            </div>
-            <div class="inner flexEnd">
-              <button type="button" class="todo_Btn">
-                <p>국유재산</p>
-                <strong class="sB">124
-                  <span class="mD">건</span>
-                </strong>
-              </button>
-              <button type="button" class="todo_Btn">
-                <p>건축사업</p>
-                <strong class="sB">11,024
-                  <span class="mD">건</span>
-                </strong>
-              </button>
-              <button type="button" class="todo_Btn">
-                <p>시설사업</p>
-                <strong class="sB">45
-                  <span class="mD">건</span>
-                </strong>
-              </button>
-            </div>
+        <!-- 나의 할일 -->
+        <div id="todolist" class="relative">
+          <div class="todo_tit">
+            <span>나의 할일</span>
           </div>
+          <div class="inner flexEnd">
+            <button type="button" class="todo_Btn">
+              <span>국유재산</span>
+              <strong class="sB">124
+                <span class="mD">건</span>
+              </strong>
+            </button>
+            <button type="button" class="todo_Btn">
+              <span>건축사업</span>
+              <strong class="sB">11,024
+                <span class="mD">건</span>
+              </strong>
+            </button>
+            <button type="button" class="todo_Btn">
+              <span>시설사업</span>
+              <strong class="sB">45
+                <span class="mD">건</span>
+              </strong>
+            </button>
+          </div>
+        </div>
 
         </div>
       </div>
@@ -492,39 +492,43 @@
       <!-- main -->
       <main class="searchType">
 
-        <!-- navigation : -->
-        <nav id="navigation" class="tree_wrap">
-          <ul class="depth1">
-            <li class="d1_01 on">
-              <a href="#">관서현황보고서</a>
-            </li>
+      <!-- navigation : -->
+      <nav id="navigation" class="tree_wrap">
+        <ul class="depth1">
+          <li class="d1_01 on">
+            <a href="#"><span>관서현황보고서</span></a>
             <div class="tree_box nav_box on">
               <div class="scrollY">
                 <!-- 스크롤 테스트 -->
-                <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+                <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
               </div>
             </div>
+          </li>
 
-            <li class="d1_02"><a href="#">기금사업</a></li>
+          <li class="d1_02">
+            <a href="#"><span>기금사업</span></a>
             <div class="tree_box nav_box">
               <div class="scrollY">
-                <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+                <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
               </div>
             </div>
+          </li>
 
-            <li class="d1_03"><a href="#">시설사업</a></li>
+          <li class="d1_03">
+            <a href="#"><span>시설사업</span></a>
             <div class="tree_box nav_box">
               <div class="scrollY">
-                <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+                <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
               </div>
             </div>
+          </li>
+        </ul>
 
-            <div class="btnbox">
-              <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
-            </div>
-          </ul>
-        </nav>
-        <!-- //navigation -->
+          <div class="btnbox">
+            <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
+          </div>
+      </nav>
+      <!-- //navigation -->
 
         <div class="sec_wrap2">
           <header class="sec_head type2">
@@ -594,7 +598,7 @@
                 </table>
               </div>
 
-              <div class="flexi">
+              <div class="alend">
                 <!-- pagination -->
                 <div class="pagination">
                   <button class="first" aria-label="처음 리스트"></button>
@@ -613,6 +617,7 @@
                 <form class="st_fm">
                   <label for="list1" class="soundOnly">5건</label>
                   <select id="list1" name="numlist" class="st type2">
+                    <option value="">5</option>
                     <option value="">10</option>
                     <option value="">50</option>
                     <option value="">100</option>
@@ -705,7 +710,7 @@
               <div class="tabCont_public1">관리 탭 영역</div>
               <div class="tabCont_public2">비관리 탭 영역</div>
 
-              <div class="flexi">
+              <div class="alend">
                 <!-- pagination -->
                 <div class="pagination">
                   <button class="first on" aria-label="처음 리스트"></button>
@@ -722,8 +727,9 @@
                 </div>
 
                 <form class="st_fm">
-                  <label for="list1" class="soundOnly">5건</label>
-                  <select id="list1" name="numlist" class="st type2">
+                  <label for="list2" class="soundOnly">5건</label>
+                  <select id="list2" name="numlist" class="st type2">
+                    <option value="">5</option>
                     <option value="">10</option>
                     <option value="">50</option>
                     <option value="">100</option>
@@ -742,11 +748,11 @@
               </header>
               <div class="tabMenu_FP">
                 <button class=" on" onclick="tabMenu('FP',0)">전체</button>
-                <button class="" onclick="tabMenu('FP',1)">리모델링</button>
-                <button class="" onclick="tabMenu('FP',2)">석면제거</button>
-                <button class="" onclick="tabMenu('FP',3)">내진보장</button>
-                <button class="" onclick="tabMenu('FP',4)">기타시설</button>
-                <button class="" onclick="tabMenu('FP',5)">법정시설</button>
+                <button onclick="tabMenu('FP',1)">리모델링</button>
+                <button onclick="tabMenu('FP',2)">석면제거</button>
+                <button onclick="tabMenu('FP',3)">내진보장</button>
+                <button onclick="tabMenu('FP',4)">기타시설</button>
+                <button onclick="tabMenu('FP',5)">법정시설</button>
               </div>
 
               <div class="tabCont_FP0 on">
@@ -828,7 +834,7 @@
               <div class="tabCont_FP4">탭영역4</div>
               <div class="tabCont_FP5">탭영역5</div>
 
-              <div class="flexi">
+              <div class="alend">
                 <!-- pagination -->
                 <div class="pagination">
                   <button class="first on" aria-label="처음 리스트"></button>
@@ -845,8 +851,9 @@
                 </div>
 
                 <form class="st_fm">
-                  <label for="list1" class="soundOnly">5건</label>
-                  <select id="list1" name="numlist" class="st type2">
+                  <label for="list3" class="soundOnly">5건</label>
+                  <select id="list3" name="numlist" class="st type2">
+                    <option value="">5</option>
                     <option value="">10</option>
                     <option value="">50</option>
                     <option value="">100</option>

@@ -19,7 +19,7 @@
 
 <body>
 
-  <!-- 서브 / 상세 화면 :  사이드 메뉴 + 콘텐츠 영역  -->
+   <!-- 메인화면 > 통합검색 > 보고서(요약)-->
 
   <!-- wrap -->
   <div id="wrap">
@@ -321,211 +321,47 @@
       </div>
       <!--// 전체메뉴 -->
 
-      <!-- 통합검색 -->
-      <div id="searchAll">
-        <div class="s_wrap">
-          <div class="group">
-            <form role="search" aria-label="통합 검색" class="srchField">
-              <label for="site-search" class="soundOnly">검색어 입력</label>
-              <input type="search" id="site-search" name="q" class="it" placeholder="자산명, 관서명, 주소 등 검색">
-              <button type="submit" class="srchBtn"><span class="soundOnly">검색</span></button>
-            </form>
-
-            <div class="st_wrap">
-              <div class="st_title">
-                <p>관서검색</p>
-              </div>
-
-              <div class="st_group">
-                <div class="st_box">
-                  <button class="label st on">구분</button>
-                  <ul class="sts on">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st1" checked>
-                        <span>선택1</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st1">
-                        <span>선택2</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st1">
-                        <span>선택2</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">시도청</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st2" checked>
-                        <span>서울특별시</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st2">
-                        <span>하남시</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">경찰서</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st3" checked>
-                        <span>OO경찰서</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st3">
-                        <span>OO경찰서</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">지/파출소</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st4" checked>
-                        <span>**파출소</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st4">
-                        <span>**파출소</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">지안센터</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st5" checked>
-                        <span>OO센터</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st5">
-                        <span>OO센터</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">세부관서</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st6" checked>
-                        <span>세부관서</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st6">
-                        <span>세부관서</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="stBtn_wrap">
-                <button type="button" class="st Btn"><span class="soundOnly">검색</span></button>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- 나의 할일 -->
-          <div id="todolist" class="relative">
-            <div class="todo_tit">
-              <span>나의 할일</span>
-            </div>
-            <div class="inner flexEnd">
-              <button type="button" class="todo_Btn">
-                <p>국유재산</p>
-                <strong class="sB">124
-                  <span class="mD">건</span>
-                </strong>
-              </button>
-              <button type="button" class="todo_Btn">
-                <p>건축사업</p>
-                <strong class="sB">11,024
-                  <span class="mD">건</span>
-                </strong>
-              </button>
-              <button type="button" class="todo_Btn">
-                <p>시설사업</p>
-                <strong class="sB">45
-                  <span class="mD">건</span>
-                </strong>
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!-- //통합검색 -->
 
       <!-- main -->
       <main class="searchType">
 
-        <!-- navigation : -->
-        <nav id="navigation" class="tree_wrap">
-          <ul class="depth1">
-            <li class="d1_01 on">
-              <a href="#">관서현황보고서</a>
-            </li>
+      <!-- navigation : -->
+      <nav id="navigation" class="tree_wrap">
+        <ul class="depth1">
+          <li class="d1_01 on">
+            <a href="#"><span>관서현황보고서</span></a>
             <div class="tree_box nav_box on">
               <div class="scrollY">
                 <!-- 스크롤 테스트 -->
-                <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+                <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
               </div>
             </div>
+          </li>
 
-            <li class="d1_02"><a href="#">기금사업</a></li>
+          <li class="d1_02">
+            <a href="#"><span>기금사업</span></a>
             <div class="tree_box nav_box">
               <div class="scrollY">
-                <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+                <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
               </div>
             </div>
+          </li>
 
-            <li class="d1_03"><a href="#">시설사업</a></li>
+          <li class="d1_03">
+            <a href="#"><span>시설사업</span></a>
             <div class="tree_box nav_box">
               <div class="scrollY">
-                <ul id="tree" class="ztree" style="height: 3000px;"></ul>
+                <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
               </div>
             </div>
+          </li>
+        </ul>
 
-            <div class="btnbox">
-              <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
-            </div>
-          </ul>
-        </nav>
-        <!-- //navigation -->
+          <div class="btnbox">
+            <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
+          </div>
+      </nav>
+      <!-- //navigation -->
 
         <!-- section -->
         <section class="sec_wrap2">
@@ -586,10 +422,10 @@
                         </thead>
                         <tbody>
                           <tr class="tit_bg">
-                            <td class="bg h39">소속</td>
-                            <td class="bg h39">관서명</td>
-                            <td class="bg h39">관서단위</td>
-                            <td class="bg h39">관서급지</td>
+                            <td>소속</td>
+                            <td>관서명</td>
+                            <td>관서단위</td>
+                            <td>관서급지</td>
                           </tr>
                           <tr>
                             <td>부산금정서</td>
@@ -614,10 +450,10 @@
                         </thead>
                         <tbody>
                           <tr class="tit_bg">
-                            <td class="bg h39">총원</td>
-                            <td class="bg h39">경찰관</td>
-                            <td class="bg h39">일반직</td>
-                            <td class="bg h39">무기계약</td>
+                            <td>총원</td>
+                            <td>경찰관</td>
+                            <td>일반직</td>
+                            <td>무기계약</td>
                           </tr>
                           <tr>
                             <td>/</td>
@@ -664,15 +500,15 @@
                       </thead>
                       <tbody>
                         <tr class="tit_bg">
-                          <td colspan="3" class="bg h39">주차면수</td>
-                          <td colspan="2" class="bg h39">사격장</td>
+                          <td colspan="3">주차면수</td>
+                          <td colspan="2">사격장</td>
                         </tr>
                         <tr class="tit_bg">
-                          <td class="bg h39">총계</td>
-                          <td class="bg h39">관용</td>
-                          <td class="bg h39">민원</td>
-                          <td class="bg h39">건</td>
-                          <td class="bg h39">0</td>
+                          <td>총계</td>
+                          <td>관용</td>
+                          <td>민원</td>
+                          <td>건</td>
+                          <td>0</td>
                         </tr>
                         <tr>
                           <td>100</td>
@@ -700,16 +536,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="bg h39">준공년도</td>
-                      <td class="bg h39">노후도</td>
-                      <td class="bg h39">협소도</td>
-                      <td class="bg h39">안정도</td>
-                      <td class="bg h39">토지(필지)</td>
-                      <td class="bg h39">토지 소유자</td>
-                      <td class="bg h39">건물</td>
-                      <td class="bg h39">건물 소유자</td>
-                      <td class="bg h39">기타</td>
+                    <tr class="tit_bg">
+                      <td>준공년도</td>
+                      <td>노후도</td>
+                      <td>협소도</td>
+                      <td>안정도</td>
+                      <td>토지(필지)</td>
+                      <td>토지 소유자</td>
+                      <td>건물</td>
+                      <td>건물 소유자</td>
+                      <td>기타</td>
                     </tr>
                     <tr>
                       <td>2023년</td>
@@ -731,13 +567,13 @@
             </div> -->
             </div>
           </section>
-          <!-- //1. 관서현황 -->
+          <!-- // 관서현황 -->
 
           <!-- 국유재산(사용재산 현황) -->
           <section class="sec">
             <div class="sec_con">
               <header class="s_tit ">
-                <h4>관서현황</h4>
+                <h4>국유재산(사용재산 현황)</h4>
               </header>
 
               <div class="col">
@@ -763,9 +599,9 @@
                         <col style="width: auto;">
                       </colgroup>
                       <thead>
-                        <tr>
-                          <th scope="col" class="h36">경비번호</th>
-                          <th scope="col" class="nobg h36">-</th>
+                        <tr class="h36">
+                          <th scope="col">경비번호</th>
+                          <th scope="col" class="nobg">-</th>
                         </tr>
                       </thead>
                     </table>
@@ -801,7 +637,7 @@
                     </table>
                   </div>
 
-                  <div class="tbl2 w25 h36">
+                  <div class="tbl2 w25">
                     <table>
                       <colgroup>
                         <col style="width: 31%;">
@@ -813,15 +649,15 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="h36">
                           <td class="bg">필지수</td>
                           <td class="tar">-건</td>
                         </tr>
-                        <tr>
+                        <tr class="h36">
                           <td class="bg">면적(㎡)</td>
                           <td class="tar">-㎡</td>
                         </tr>
-                        <tr>
+                        <tr class="h36">
                           <td class="bg">가액(원)</td>
                           <td class="tar">-원</td>
                         </tr>
@@ -829,7 +665,7 @@
                     </table>
                   </div>
 
-                  <div class="tbl2 w50 h36">
+                  <div class="tbl2 w50">
                     <table>
                       <colgroup>
                         <col style="width: 15%;">
@@ -843,19 +679,19 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="h36">
                           <td class="bg">선박</td>
                           <td class="tar">-개</td>
                           <td class="bg">입죽목</td>
                           <td class="tar">-개</td>
                         </tr>
-                        <tr>
+                        <tr class="h36">
                           <td class="bg">항공기</td>
                           <td class="tar">-개</td>
                           <td class="bg">기계기구</td>
                           <td class="tar">-개</td>
                         </tr>
-                        <tr>
+                        <tr class="h36">
                           <td class="bg">무체재산</td>
                           <td class="tar">-개</td>
                           <td class="bg">공작물</td>
@@ -953,7 +789,6 @@
                     </tr>
                   </tbody>
                   <tfoot>
-
                     <tr class="hlight">
                       <td rowspan="2">합계</td>
                       <td>토지</td>
@@ -1014,7 +849,7 @@
                   </table>
                 </div>
 
-                <div class="tbl2 w50 h36">
+                <div class="tbl2 w50">
                   <table>
                     <colgroup>
                       <col style="width: 15%;">
@@ -1026,15 +861,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr class="h36">
                         <td class="bg">필지수</td>
                         <td class="tar">- 건</td>
                       </tr>
-                      <tr>
+                      <tr class="h36">
                         <td class="bg">면적(㎡)</td>
                         <td class="tar">- ㎡</td>
                       </tr>
-                      <tr>
+                      <tr class="h36">
                         <td class="bg">가액(원)</td>
                         <td class="tar">- 원</td>
                       </tr>
@@ -1091,7 +926,7 @@
                     </tr>
                     <tr>
                       <!-- <td></td> -->
-                      <td class="blnone" class="bold">사업비</td>
+                      <td class="blnone bold">사업비</td>
                       <td class="tar">123,345 원</td>
                       <td class="tar">- 원</td>
                       <td class="tar">- 원</td>
@@ -1157,7 +992,7 @@
                       <td class="bg" rowspan="3">기타시설</td>
                       <td class="bg">사격장</td>
                       <td colspan="2" class="tal">전체 : (&ensp; 0 &ensp;)개</td>
-                      <td class="bg" rowspan="3">성능평가 : (&ensp; 1 &ensp;)동</td>
+                      <td class="bg" rowspan="3">법정시설</td>
                       <td class="bg">장애인 편의시설</td>
                       <td>충족 : (&ensp; 1 &ensp;)건</td>
                       <td>미충족 : (&ensp; 0 &ensp;)건</td>
@@ -1186,7 +1021,7 @@
                 
               </div>
 
-              <div class="rowbox end mt40">
+              <div class="rowbox end">
                 <button type="button" class="btn back">
                   <span>이전으로</span>
                 </button>
