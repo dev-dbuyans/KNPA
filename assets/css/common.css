@@ -228,6 +228,8 @@ header#header:hover {border-color: #ffffff;}
   background: url(../img/ico_menu.svg) no-repeat center / contain;
   padding: 2.3rem 0;
 }
+#gnb ul.depth1>li>.menuBtn:hover{ background: url(../img/ico_menuOn.svg) no-repeat center / contain;}
+
 
 /* 드롭메뉴 */
 #gnb .dropMenu{
