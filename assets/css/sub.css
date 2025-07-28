@@ -9,12 +9,12 @@
 .tbl2.w25{width: calc(25% - 8px);}
 
 .tbl2 table th {height: 3.9rem;}
-.tbl2 table td {height: 3.2rem; padding: 5px 4px;}
+/* .tbl2 table td {height: 3.2rem; padding: 5px 4px;} */
 
 .tbl2.h36 table tr td, 
-.tbl2 table tr.h36 td {height: 3.6rem; padding: 5px 4px;}
+.tbl2 table tr.h36 td {height: 3.6rem;}
 
-.tbl2 table tr.h36 td.tar {padding-right: 12px;}
+/* .tbl2 table tr.h36 td.tar {padding-right: 12px;} */
 .tbl2 table tr.tit_bg td{
   height: 3.9rem;
   background-color: var(--bg); color: var(--text1); font-weight: 600;
