@@ -1,21 +1,27 @@
 $(function () {
-  // gnb호버 /
-  $("#gnb ul.depth1>li").hover(
-    function () {
-      if (!$(this).hasClass("noHover")) {
-        $("body").addClass("no-scroll");
-        $("#gnb>.dimmed").addClass("on");
-        $(this).addClass("on");
-      }
-    },
-    function () {
-      if (!$(this).hasClass("noHover")) {
-        $("body").removeClass("no-scroll");
-        $("#gnb > .dimmed").removeClass("on");
-        $(this).removeClass("on");
-      }
-    }
-  );
+  $("#gnb ul.depth1 > li").hover(
+    
+  function () {
+    if ($(this).hasClass("noHover")) return;
+    $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
+
+    $(this).addClass("on");
+    $(this).find(".dropMenu").addClass("on");
+    $("#gnb .dimmed").addClass("on");
+  },
+  // function () {
+  // }
+);
+
+// 마우스가 전체 GNB를 벗어나면 드롭메뉴 닫기
+$("#gnb").on("mouseleave", function () {
+  $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
+  $("#gnb .dimmed").removeClass("on");
+  $("body").removeClass("no-scroll")
+});
+
+
+
 
   //전체메뉴
   $(".menuBtn").click(function (e) {
@@ -102,7 +108,7 @@ function tabMenu(tabName, num) {
 
 // ul>li -> select
 document.addEventListener("DOMContentLoaded", () => {
-  const labels = document.querySelectorAll(".label");
+  const labels = document.querySelectorAll(".st_wrap .st_group .st_box .label");
 
   labels.forEach((lb) => {
     lb.addEventListener("click", (e) => {

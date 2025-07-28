@@ -44,7 +44,12 @@
   background-color: var(--bg);
   
 }
-.sec .piechart p.total{  font-weight: 500; color: var(--text5); line-height: 2.55rem; }
+.sec .piechart p.total{  
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  font-weight: 500; color: var(--text5); line-height: 2.55rem; 
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .sec .piechart p.total > span{ font-size: 18px; font-weight: 500; color: var(--text1); margin-left: 8px;}
 
 .sec .piechart .underline {
@@ -53,14 +58,17 @@
   margin: 12px 0;
 }
 .sec .piechart .budgets{ display: flex; flex-direction: column; gap: 8px; }
-.sec .piechart .budgets p{ font-size: 14px; font-weight: 500; color: var(--text5); }
+.sec .piechart .budgets p{ 
+  display: flex; align-items: center;
+  font-size: 14px; font-weight: 500; color: var(--text5); 
+}
 .sec .piechart .budgets p::before{
   display: inline-block; content: '';
   width: 8px; height: 8px; 
   background-color: var(--l_blueBuget); border-radius: 50%; margin-right: 8px;
 }
 .sec .piechart .budgets p.used::before{background-color: var(--l_Blueborder);}
-.sec .piechart .budgets p>span{ color: var(--text1); padding-left: 8px;}
+.sec .piechart .budgets p>span{ color: var(--text1); padding-left: 8px; margin-left: auto;}
 
 
 .sec .barchart{
