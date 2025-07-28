@@ -40,6 +40,7 @@
 /********** 현황보고서 (상세) **********/
 .sub_info{ margin-bottom: 8px; }
 .sub_info .sub_tit{
+  display: flex; align-items: center;
   font-size: 16px; font-weight: 600; line-height: 2.4rem;
   color: var(--primary);
 }
@@ -51,16 +52,19 @@
 }
 .sub_info ul.info { 
   display: flex; align-items: center; flex-wrap: wrap; 
-  padding: 0 12px;
+  padding: 0 12px; margin-right: 2rem;
   border-radius: 6px; 
   background-color: var(--tabDisable);
   /* gap: 6px; */
 }
 .sub_info ul.info li{
-  align-content: center;
+  display: flex; align-content: center;
   background-color: var(--tabDisable); color: var(--text1);
   height: 3.2rem; 
   border-radius: 6px;
+  /* white-space: nowrap; */
+  overflow: hidden; text-overflow: ellipsis;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
   /* padding: 0 12px; */
 }
 /* .sub_info ul.info li:first-child{ padding-left: 12px; }
@@ -93,3 +97,20 @@
   background: url(../img/ico_tbl_up.svg) no-repeat center / contain;
 }
 .updown button.downbtn{background: url(../img/ico_tbl_down.svg) no-repeat center / contain;}
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* MediaQuery
+/* ------------------------------------------------------------------------- */
+@media screen and (max-width : 1280px){
+  .sub_info ul.info li.benone::before {display: none;}
+}
+
+
+
+@media screen and (max-width : 960px){
+  /* .sub_info ul.info li.benone2{ padding: 0 10px; } */
+  .sub_info ul.info li.benone2::before {display: none;}
+}

@@ -5,12 +5,14 @@ $(function () {
       if (!$(this).hasClass("noHover")) {
         $("body").addClass("no-scroll");
         $("#gnb>.dimmed").addClass("on");
+        $(this).addClass("on");
       }
     },
     function () {
       if (!$(this).hasClass("noHover")) {
         $("body").removeClass("no-scroll");
         $("#gnb > .dimmed").removeClass("on");
+        $(this).removeClass("on");
       }
     }
   );
@@ -98,6 +100,7 @@ function tabMenu(tabName, num) {
   });
 }
 
+// ul>li -> select
 document.addEventListener("DOMContentLoaded", () => {
   const labels = document.querySelectorAll(".label");
 

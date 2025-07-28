@@ -5,7 +5,7 @@
 /* ------------------------------------------------------------------------- */
 .sec_wrap {
   flex: 1 1 clamp(45.1rem, 62%, 68.49%);
-  width: 100%; min-width: 45.1rem; max-width: 144rem;
+  width: 100%; min-width: calc(100% - 55.4rem); max-width: 144rem;
   height: 100%;
   padding: 2.4rem 4rem;
   box-shadow: var(--boxshadow);
@@ -88,7 +88,8 @@
 .btn.tab02.on{ font-weight: 600; background-color: var(--menuHover); color: var(--secondary); border: none; }
 
 .tabMenu_commu{
-  height: 3.2rem; margin-left: 2rem;
+  height: 3.2rem; 
+  margin-left: 2rem; margin-bottom: 0; 
   display: flex; align-items: center; gap: 8px;
 }
 .btn.viewAll{ display: flex; align-items: center; padding: 3px 12px 3px 8px;}
@@ -161,7 +162,7 @@ header.todo_head{
   padding:11px 16px;
   background-color: var(--secondary); color: #ffffff;
 }
-header.todo_head h3 { font: var(--fontBold); display: flex; }
+header.todo_head h3 { font: var(--fontBold); display: flex; align-items: center; }
 header.todo_head h3::before { 
   display: inline-block; content: '';
   width: 24px; height: 24px;

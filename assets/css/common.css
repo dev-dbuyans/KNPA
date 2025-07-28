@@ -872,11 +872,6 @@ input, select, textarea, button {
 
 
 
-
-
-
-
-
 /* ------------------------------------------------------------------------- */
 /* TABLE
 /* ------------------------------------------------------------------------- */
@@ -894,7 +889,7 @@ input, select, textarea, button {
 }
 
 /* 테이블 스크롤 가능 */
-.tbl2 .scroll_wrap{ width: 100%; overflow-x: auto; }
+.tbl2 .scroll_wrap{ width: 100%; overflow-x: auto; padding-bottom: 3px; }
 .tbl2 .scroll_wrap table { min-width: 158rem; }
 
 
@@ -952,7 +947,9 @@ input, select, textarea, button {
     display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
 }
 
-
+.tbl2 .scroll_wrap::-webkit-scrollbar{ height:4px ;}
+.tbl2 .scroll_wrap::-webkit-scrollbar-track{ background-color: #F9F9F9; }
+.tbl2 .scroll_wrap::-webkit-scrollbar-thumb{ background-color: var(--gray300); border-radius: 10rem;}
 
 /* ------------------------------------------------------------------------- */
 /* Pagination
