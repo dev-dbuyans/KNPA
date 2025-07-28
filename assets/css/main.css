@@ -5,7 +5,7 @@
 /* ------------------------------------------------------------------------- */
 .sec_wrap {
   flex: 1 1 clamp(45.1rem, 62%, 68.49%);
-  width: 100%; min-width: calc(100% - 55.4rem); max-width: 144rem;
+  width: 100%; min-width: 45.1rem; max-width: 144rem;
   height: 100%;
   padding: 2.4rem 4rem;
   box-shadow: var(--boxshadow);
@@ -336,6 +336,10 @@ header.todo_head h3::before {
 
 /********** 960px **********/
 @media screen and (max-width : 960px){
+
+  .sec_wrap {
+    min-width: calc(100% - 55.4rem); 
+  }
 
   .sec .piechart .chart_st{ width: calc(55% - 2rem);}
   .sec .piechart figure { width: 45%; }
