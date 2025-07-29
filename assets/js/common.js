@@ -1,26 +1,23 @@
 $(function () {
   $("#gnb ul.depth1 > li").hover(
-    
-  function () {
-    if ($(this).hasClass("noHover")) return;
+
+    function () {
+      if ($(this).hasClass("noHover")) return;
+      $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
+
+      $(this).addClass("on");
+      $(this).find(".dropMenu").addClass("on");
+      $("#gnb .dimmed").addClass("on");
+    },
+
+  );
+
+  // 마우스가 전체 GNB를 벗어나면 드롭메뉴 닫기
+  $("#gnb").on("mouseleave", function () {
     $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
-
-    $(this).addClass("on");
-    $(this).find(".dropMenu").addClass("on");
-    $("#gnb .dimmed").addClass("on");
-  },
-  // function () {
-  // }
-);
-
-// 마우스가 전체 GNB를 벗어나면 드롭메뉴 닫기
-$("#gnb").on("mouseleave", function () {
-  $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
-  $("#gnb .dimmed").removeClass("on");
-  $("body").removeClass("no-scroll")
-});
-
-
+    $("#gnb .dimmed").removeClass("on");
+    $("body").removeClass("no-scroll")
+  });
 
 
   //전체메뉴
@@ -110,8 +107,27 @@ function tabMenu(tabName, num) {
   });
 }
 
-// ul>li -> select
 document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header"); 
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      header.classList.add("hide");
+    } else {
+      header.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+  });
+
+
+
+
+
+  // ul>li -> select
   const labels = document.querySelectorAll(".st_box .label.st");
   const resetBtn = document.querySelector(".resetSelectBtn");
 
@@ -134,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-  
+
   resetBtn?.addEventListener("click", () => {
     labels.forEach((label) => {
       const defaultText = label.dataset.default;
@@ -142,50 +158,15 @@ document.addEventListener("DOMContentLoaded", () => {
       label.closest(".st_box").classList.remove("on");
     });
   });
+
+
+
+
+
+
+
+
+
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const labels = document.querySelectorAll(".st_wrap .st_group .st_box .label");
 
-//   labels.forEach((lb) => {
-//     lb.addEventListener("click", (e) => {
-//       const stBox = lb.parentNode;
-//       const optionList = lb.nextElementSibling;
-//       const optionItems = optionList.querySelectorAll(".opts");
-
-//       const isOpen = stBox.classList.contains("on");
-
-//       if (isOpen) {
-//         stBox.classList.remove("on");
-//         optionList.classList.remove("on");
-//         lb.classList.remove("on");
-
-//         optionItems.forEach((opt) => {
-//           opt.removeEventListener("click", () => {
-//             handleSelect(lb, opt);
-//           });
-//         });
-//       } else {
-//         stBox.classList.add("on");
-//         optionList.classList.add("on");
-//         lb.classList.add("on");
-
-//         optionItems.forEach((opt) => {
-//           opt.addEventListener("click", () => {
-//             handleSelect(lb, opt);
-//           });
-//         });
-//       }
-//     });
-//   });
-
-//   const handleSelect = (label, item) => {
-//     label.innerHTML = item.textContent;
-//     const stBox = label.parentNode;
-//     const optionList = label.nextElementSibling;
-
-//     stBox.classList.remove("on");
-//     optionList.classList.remove("on");
-//     label.classList.remove("on");
-//   };
-// });
