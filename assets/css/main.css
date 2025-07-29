@@ -113,7 +113,7 @@
 [class*="tabCont_commu"].on {display: block;}
 
 /* 스와이퍼 슬라이드 */
-[class*=tabCont_commu].swiper{width: 100%; height: 100%;  position: relative;}
+[class*=tabCont_commu].swiper{width: 100%; height: 100%;  position: relative; overflow: visible;}
 [class*=tabCont_commu] .swiper-wrapper{width: 100%; height: 100%; display: flex; }
 [class*=tabCont_commu] .con.swiper-slide{
   /* width: calc((100% - 6rem) / 4); */
@@ -145,6 +145,11 @@
 }
 [class*=tabCont_commu] .con.swiper-slide .date{ font-size: 12px; line-height: 1.5rem; color: var(--text8); }
 
+.swiper_con{
+  width: 100%; height: 100%;
+  overflow: visible;
+  position: absolute; top: 5%;
+}
 /* 스와이퍼 버튼 */
 .swiper-button-next, .swiper-button-prev { 
   width: 36px; height: 36px; 
@@ -152,12 +157,14 @@
   border: 1px solid var(--gray200); border-radius: 100%;
   box-shadow: var(--boxshodow);
   text-indent: -9999px;
-  /* position: absolute;   */
-  /* right: -16px; bottom: 30px; */
-  /* z-index: 150 !important; overflow: visible; */
+  position: absolute;  
+  right: -16px; bottom: 30px;
+  z-index: 150 !important; overflow: visible;
 }
-.swiper-button-prev {transform: rotate(180deg);}
-
+.swiper-button-prev {transform: rotate(180deg); position: absolute; top: 50%; left: -16px;}
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: var(--swiper-scrollbar-bottom,0px);
+}
 
 
 /* ------------------------------------------------------------------------- */
