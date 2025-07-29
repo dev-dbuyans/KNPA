@@ -320,143 +320,172 @@
       </div>
       <!--// 전체메뉴 -->
 
-      <!-- 통합검색 -->
-      <div id="searchAll">
-        <div class="s_wrap">
-          <div class="group">
-            <form role="search" aria-label="통합 검색" class="srchField">
-              <label for="site-search" class="soundOnly">검색어 입력</label>
-              <input type="search" id="site-search" name="q" class="it" placeholder="자산명, 관서명, 주소 등 검색">
-              <button type="submit" class="srchBtn"><span class="soundOnly">검색</span></button>
-            </form>
+          <!-- 통합검색 -->
+    <div id="searchAll">
+      <div class="s_wrap">
+        <div class="group">
+          <form role="search" aria-label="통합 검색" class="srchField">
+            <label for="site-search" class="soundOnly">검색어 입력</label>
+            <input type="search" id="site-search" name="q" class="it" placeholder="자산명, 관서명, 주소 등 검색">
+            <button type="submit" class="srchBtn"><span class="soundOnly">검색</span></button>
+          </form>
 
-            <div class="st_wrap">
-              <div class="st_title">
-                <p>관서검색</p>
+          <div class="st_wrap">
+            <div class="st_title">
+              <p>관서검색</p>
+            </div>
+
+            <div class="st_group">
+              <div class="st_box on">
+                <button class="label st" data-defalt="구분">구분</button>
+                <ul class="sts on">
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>선택1</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>선택2</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>선택3</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
 
-              <div class="st_group">
-                <div class="st_box">
-                  <button class="label st">구분</button>
-                  <ul class="sts on">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st1" checked>
-                        <span>선택1</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st1">
-                        <span>선택2</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st1">
-                        <span>선택2</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">시도청</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st2" checked>
-                        <span>서울특별시</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st2">
-                        <span>하남시</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">경찰서</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st3" checked>
-                        <span>OO경찰서</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st3">
-                        <span>OO경찰서</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">지/파출소</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st4" checked>
-                        <span>**파출소</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st4">
-                        <span>**파출소</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">지안센터</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st5" checked>
-                        <span>OO센터</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st5">
-                        <span>OO센터</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="st_box">
-                  <button class="label st">세부관서</button>
-                  <ul class="sts">
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st6" checked>
-                        <span>세부관서</span>
-                      </label>
-                    </li>
-                    <li class="opts">
-                      <label class="check_btn">
-                        <input type="radio" name="st6">
-                        <span>세부관서</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
+              <div class="st_box">
+                <button class="label st" data-defalt="시도청">시도청</button>
+                <ul class="sts">
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>서울특별시</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>하남시</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>부산광역시</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
 
-              <div class="stBtn_wrap">
-                <button type="button" class="st Btn"><span class="soundOnly">검색</span></button>
+              <div class="st_box">
+                <button class="label st" data-defalt="경찰서">경찰서</button>
+                <ul class="sts">
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>OO경찰서</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>OOOO경찰서</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>OOOOOO경찰서</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
 
+              <div class="st_box">
+                <button class="label st" data-defalt="지/파출소">지/파출소</button>
+                <ul class="sts">
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>**파출소</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>****파출소</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>******파출소</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="st_box">
+                <button class="label st" data-defalt="지안센터">지안센터</button>
+                <ul class="sts">
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>OO센터</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>OOOO센터</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>OOOOOO센터</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="st_box">
+                <button class="label st" data-defalt="세부관서">세부관서</button>
+                <ul class="sts">
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>세부관서 세부 관서 세 부 관 서</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>세부관서 세부 관서 세 부 관 서</span>
+                    </label>
+                  </li>
+                  <li class="opts">
+                    <label class="radio_btn">
+                      <input type="radio" name="tempName2" class="none">
+                      <span>세부관서 세부 관서 세 부 관 서</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="stBtn_wrap">
+              <button type="button" class="st Btn"><span class="soundOnly">검색</span></button>
             </div>
           </div>
+        </div>
 
         <!-- 나의 할일 -->
         <div id="todolist" class="relative">
@@ -464,71 +493,71 @@
             <span>나의 할일</span>
           </div>
           <div class="inner flexEnd">
-            <button type="button" class="todo_Btn">
+            <div class="todos">
               <span>국유재산</span>
               <strong class="sB">124
                 <span class="mD">건</span>
               </strong>
-            </button>
-            <button type="button" class="todo_Btn">
+            </div>
+            <div class="todos">
               <span>건축사업</span>
               <strong class="sB">11,024
                 <span class="mD">건</span>
               </strong>
-            </button>
-            <button type="button" class="todo_Btn">
+            </div>
+            <div class="todos">
               <span>시설사업</span>
               <strong class="sB">45
                 <span class="mD">건</span>
               </strong>
-            </button>
+            </div>
           </div>
         </div>
 
-        </div>
       </div>
-      <!-- //통합검색 -->
+    </div>
+    <!-- //통합검색 -->
 
       <!-- main -->
       <main class="searchType">
 
-      <!-- navigation : -->
-      <nav id="navigation" class="tree_wrap">
-        <ul class="depth1">
-          <li class="d1_01 on">
-            <a href="#"><span>관서현황보고서</span></a>
-            <div class="tree_box nav_box on">
-              <div class="scrollY">
-                <!-- 스크롤 테스트 -->
-                <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
+        <!-- navigation : -->
+        <nav id="navigation" class="tree_wrap">
+          <ul class="depth1">
+            <li class="d1_01 on">
+              <a href="#"><span>관서현황보고서</span></a>
+              <div class="tree_box nav_box on">
+                <div class="scrollY">
+                  <!-- 스크롤 테스트 -->
+                  <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="d1_02">
-            <a href="#"><span>기금사업</span></a>
-            <div class="tree_box nav_box">
-              <div class="scrollY">
-                <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
+            <li class="d1_02">
+              <a href="#"><span>기금사업</span></a>
+              <div class="tree_box nav_box">
+                <div class="scrollY">
+                  <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="d1_03">
-            <a href="#"><span>시설사업</span></a>
-            <div class="tree_box nav_box">
-              <div class="scrollY">
-                <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
+            <li class="d1_03">
+              <a href="#"><span>시설사업</span></a>
+              <div class="tree_box nav_box">
+                <div class="scrollY">
+                  <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
 
           <div class="btnbox">
             <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
           </div>
-      </nav>
-      <!-- //navigation -->
+        </nav>
+        <!-- //navigation -->
 
         <div class="sec_wrap2">
           <header class="sec_head type2">
@@ -641,7 +670,7 @@
               </div>
 
               <div class="tabCont_public0 on">
-                <div class="tbl2">
+                <div class="tbl2 noHover">
                   <div class="scroll_wrap">
                     <table>
                       <colgroup>
@@ -756,7 +785,7 @@
               </div>
 
               <div class="tabCont_FP0 on">
-                <div class="tbl2">
+                <div class="tbl2 noHover">
                   <div class="scroll_wrap">
                     <table>
                       <colgroup>

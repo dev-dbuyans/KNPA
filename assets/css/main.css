@@ -5,13 +5,13 @@
 /* ------------------------------------------------------------------------- */
 .sec_wrap {
   flex: 1 1 clamp(45.1rem, 62%, 68.49%);
-  width: 100%; min-width: 45.1rem; max-width: 144rem;
+  overflow: hidden;
+  width: 100%; min-width: 45.1rem;
   height: 100%;
   padding: 2.4rem 4rem;
   box-shadow: var(--boxshadow);
   background-color: #ffffff;
 }
-
 .sec + .sec {margin-top: 4rem;}
 .sec .sec_head { height: 3.2rem; margin-bottom: 12px; }
 .sec .sec_head h3{ 
@@ -33,6 +33,7 @@
   width: 100%; overflow: hidden;
   display: flex; align-items: center; gap: 2.4rem;
 }
+
 /******** 차트 ********/
 .sec .piechart{
   width: 27%; 
@@ -89,6 +90,7 @@
 /******** 공지사항 ********/
 .btn.tab02{
   padding: 8px 14.5px; 
+  display: flex; align-items: center;
   font-size: 14px; font-weight: 500; 
   color: var(--disableText); background-color: var(--disablebg);
   border-radius: 50rem; border: none; 
@@ -105,16 +107,16 @@
   display: inline-block; content: '';
   width: 24px; height: 24px;
   margin-right: 2px;
-  background: url(../img/ico_plus.svg) no-repeat  center / contain;
+  background: url(/assets/img/ico_plus.svg) no-repeat  center / contain;
 }
 [class*="tabCont_commu"] {display: none;}
 [class*="tabCont_commu"].on {display: block;}
 
 /* 스와이퍼 슬라이드 */
-[class*=tabCont_commu].swiper{width: 100%; height: 100%; overflow: hidden;}
+[class*=tabCont_commu].swiper{width: 100%; height: 100%;  position: relative;}
 [class*=tabCont_commu] .swiper-wrapper{width: 100%; height: 100%; display: flex; }
 [class*=tabCont_commu] .con.swiper-slide{
-  width: calc((100% - 6rem) / 4);
+  /* width: calc((100% - 6rem) / 4); */
   min-height: 16.6rem;
   padding: 2rem 2.4rem;
   display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
@@ -146,10 +148,13 @@
 /* 스와이퍼 버튼 */
 .swiper-button-next, .swiper-button-prev { 
   width: 36px; height: 36px; 
-  background: #fff url(../img/ico_slideArrow.svg) no-repeat  center / 24px 24px;
+  background: #fff url(/assets/img/ico_slideArrow.svg) no-repeat  center / 24px 24px;
   border: 1px solid var(--gray200); border-radius: 100%;
   box-shadow: var(--boxshodow);
   text-indent: -9999px;
+  /* position: absolute;   */
+  /* right: -16px; bottom: 30px; */
+  /* z-index: 150 !important; overflow: visible; */
 }
 .swiper-button-prev {transform: rotate(180deg);}
 
@@ -174,7 +179,7 @@ header.todo_head h3 { font: var(--fontBold); display: flex; align-items: center;
 header.todo_head h3::before { 
   display: inline-block; content: '';
   width: 24px; height: 24px;
-  background: url(../img/ico_toDo.svg) no-repeat center / contain;
+  background: url(/assets/img/ico_toDo.svg) no-repeat center / contain;
   margin-right: 8px;
 }
 #aside .tab_container{
@@ -190,7 +195,7 @@ header.todo_head h3::before {
   width: calc(100% / 4); height: 100%;
   font-size: 14px; font-weight: 500; 
   color: var(--disableText); background-color: var(--tabDisable);
-   border-bottom: 1px solid var(--gray200);
+  border-bottom: 1px solid var(--gray200);
 }
 .tabMenu_todo > button.on{ 
   font-weight: 600; 
@@ -207,8 +212,9 @@ header.todo_head h3::before {
 [class*=tabCont_todo] .con + .con{ margin-top: 2.4rem; } 
 
 [class*=tabCont_todo] .con_head { margin-bottom: 8px; }
-[class*=tabCont_todo] .con_head h3 , p{
-  font-weight: 600; line-height: 2.4rem;
+[class*=tabCont_todo] .con_head h3 ,
+[class*=tabCont_todo] .con_head p{
+  font-size: 16px; font-weight: 600; line-height: 2.4rem;
   color: var(--secondary);
 }
 
@@ -288,7 +294,6 @@ header.todo_head h3::before {
   border-bottom: 1px solid var(--gray100);
 }
 .list_area.type2 ul li:last-child { border-bottom: 0; }
-
 
 
 

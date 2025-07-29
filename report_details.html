@@ -397,7 +397,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="bdnone noHover">
+                          <td class="bdnone">
                             <div class="flexible">
                               <img src="./assets/img/report_sampleImg.png" alt="관서 대표 이미지">
                             </div>
@@ -411,7 +411,7 @@
                 <div class="w75 col g8">
                   <div class="flexi g8">
                     <!-- 소속기관 -->
-                    <div class="tbl2 w50">
+                    <div class="tbl2 noHover w50">
                       <table>
                         <colgroup>
                           <col span="4" style="width: 25%;">
@@ -420,14 +420,14 @@
                           <tr>
                             <th colspan="4" scope="col">소속기관</th>
                           </tr>
+                          <tr>
+                            <th>소속</th>
+                            <th>관서명</th>
+                            <th>관서단위</th>
+                            <th>관서급지</th>
+                          </tr>
                         </thead>
                         <tbody>
-                          <tr class="tit_bg">
-                            <td>소속</td>
-                            <td>관서명</td>
-                            <td>관서단위</td>
-                            <td>관서급지</td>
-                          </tr>
                           <tr>
                             <td>부산금정서</td>
                             <td>부산청</td>
@@ -439,7 +439,7 @@
                     </div>
 
                     <!-- 정/현원 -->
-                    <div class="tbl2">
+                    <div class="tbl2 noHover">
                       <table>
                         <colgroup>
                           <col span="4" style="width: 25%;">
@@ -448,14 +448,14 @@
                           <tr>
                             <th colspan="4" scope="col">정/현원</th>
                           </tr>
+                          <tr>
+                            <th>총원</th>
+                            <th>경찰관</th>
+                            <th>일반직</th>
+                            <th>무기계약</th>
+                          </tr>
                         </thead>
                         <tbody>
-                          <tr class="tit_bg">
-                            <td>총원</td>
-                            <td>경찰관</td>
-                            <td>일반직</td>
-                            <td>무기계약</td>
-                          </tr>
                           <tr>
                             <td>/</td>
                             <td>/</td>
@@ -468,7 +468,7 @@
                   </div>
 
                   <!-- 지번주소 / 도로명주소 -->
-                  <div class="tbl2">
+                  <div class="tbl2 noHover">
                     <table>
                       <colgroup>
                         <col span="2" style="width: 50%;">
@@ -489,7 +489,7 @@
                   </div>
 
                   <!-- 시설현황 -->
-                  <div class="tbl2">
+                  <div class="tbl2 noHover">
                     <table>
                       <colgroup>
                         <col span="5" style="width: 20%;">
@@ -498,19 +498,19 @@
                         <tr>
                           <th colspan="5" scope="col">시설현황</th>
                         </tr>
+                        <tr>
+                          <th colspan="3">주차면수</th>
+                          <th colspan="2">사격장</th>
+                        </tr>
+                        <tr>
+                          <th>총계</th>
+                          <th>관용</th>
+                          <th>민원</th>
+                          <th>건</th>
+                          <th>0</th>
+                        </tr>
                       </thead>
                       <tbody>
-                        <tr class="tit_bg">
-                          <td colspan="3">주차면수</td>
-                          <td colspan="2">사격장</td>
-                        </tr>
-                        <tr class="tit_bg">
-                          <td>총계</td>
-                          <td>관용</td>
-                          <td>민원</td>
-                          <td>건</td>
-                          <td>0</td>
-                        </tr>
                         <tr>
                           <td>100</td>
                           <td>50</td>
@@ -525,7 +525,7 @@
               </div>
 
               <!-- 재산현황 -->
-              <div class="tbl2 mt8">
+              <div class="tbl2 mt8 noHover">
                 <table>
                   <colgroup>
                     <col span="9" style="width: auto;">
@@ -535,19 +535,19 @@
                       <th colspan="4">재산현황</th>
                       <th colspan="5">관리재산</th>
                     </tr>
+                    <tr>
+                      <th>준공년도</th>
+                      <th>노후도</th>
+                      <th>협소도</th>
+                      <th>안정도</th>
+                      <th>토지(필지)</th>
+                      <th>토지 소유자</th>
+                      <th>건물</th>
+                      <th>건물 소유자</th>
+                      <th>기타</th>
+                    </tr>
                   </thead>
                   <tbody>
-                    <tr class="tit_bg">
-                      <td>준공년도</td>
-                      <td>노후도</td>
-                      <td>협소도</td>
-                      <td>안정도</td>
-                      <td>토지(필지)</td>
-                      <td>토지 소유자</td>
-                      <td>건물</td>
-                      <td>건물 소유자</td>
-                      <td>기타</td>
-                    </tr>
                     <tr>
                       <td>2023년</td>
                       <td>-</td>
@@ -598,11 +598,21 @@
                     </select>
                   </form>
 
+                  <form class="st_fm">
+                    <label for="list2" class="soundOnly">건수</label>
+                    <select id="list2" name="numlist" class="st type2">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+                  </form>
+
                   <a href="#" download class="btn blueBtn">다운로드</a>
                 </div>
               </div>
 
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -711,31 +721,19 @@
                 </div>
               </div>
 
-              <div class="alend">
-                <!-- pagination -->
-                <div class="pagination">
-                  <button class="first" aria-label="처음 리스트"></button>
-                  <button class="prev" aria-label="이전 리스트"></button>
-                  <div class="g4">
-                    <button class="on" aria-label="1 페이지">1</button>
-                    <button aria-label="2 페이지">2</button>
-                    <button aria-label="3 페이지">3</button>
-                    <button aria-label="4 페이지">4</button>
-                    <button aria-label="5 페이지">5</button>
-                  </div>
-                  <button class="next on" aria-label="다음 리스트"></button>
-                  <button class="last on" aria-label="마지막 리스트"></button>
+              <!-- pagination -->
+              <div class="pagination">
+                <button class="first" aria-label="처음 리스트"></button>
+                <button class="prev" aria-label="이전 리스트"></button>
+                <div class="g4">
+                  <button class="on" aria-label="1 페이지">1</button>
+                  <button aria-label="2 페이지">2</button>
+                  <button aria-label="3 페이지">3</button>
+                  <button aria-label="4 페이지">4</button>
+                  <button aria-label="5 페이지">5</button>
                 </div>
-
-                <form class="st_fm">
-                  <label for="list2" class="soundOnly">건수</label>
-                  <select id="list2" name="numlist" class="st type2">
-                    <option value="">5</option>
-                    <option value="">10</option>
-                    <option value="">30</option>
-                    <option value="">50</option>
-                  </select>
-                </form>
+                <button class="next on" aria-label="다음 리스트"></button>
+                <button class="last on" aria-label="마지막 리스트"></button>
               </div>
 
             </div>
@@ -766,11 +764,21 @@
                     </select>
                   </form>
 
+                  <form class="st_fm">
+                    <label for="list4" class="soundOnly">건수</label>
+                    <select id="list4" name="numlist" class="st type2">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+                  </form>
+
                   <a href="#" download class="btn blueBtn">다운로드</a>
                 </div>
               </div>
 
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -889,31 +897,20 @@
                 </div>
               </div>
 
-              <div class="alend">
-                <!-- pagination -->
-                <div class="pagination">
-                  <button class="first" aria-label="처음 리스트"></button>
-                  <button class="prev" aria-label="이전 리스트"></button>
-                  <div class="g4">
-                    <button class="on" aria-label="1 페이지">1</button>
-                    <button aria-label="2 페이지">2</button>
-                    <button aria-label="3 페이지">3</button>
-                    <button aria-label="4 페이지">4</button>
-                    <button aria-label="5 페이지">5</button>
-                  </div>
-                  <button class="next on" aria-label="다음 리스트"></button>
-                  <button class="last on" aria-label="마지막 리스트"></button>
-                </div>
 
-                <form class="st_fm">
-                  <label for="list4" class="soundOnly">건수</label>
-                  <select id="list4" name="numlist" class="st type2">
-                    <option value="">5</option>
-                    <option value="">10</option>
-                    <option value="">30</option>
-                    <option value="">50</option>
-                  </select>
-                </form>
+              <!-- pagination -->
+              <div class="pagination">
+                <button class="first" aria-label="처음 리스트"></button>
+                <button class="prev" aria-label="이전 리스트"></button>
+                <div class="g4">
+                  <button class="on" aria-label="1 페이지">1</button>
+                  <button aria-label="2 페이지">2</button>
+                  <button aria-label="3 페이지">3</button>
+                  <button aria-label="4 페이지">4</button>
+                  <button aria-label="5 페이지">5</button>
+                </div>
+                <button class="next on" aria-label="다음 리스트"></button>
+                <button class="last on" aria-label="마지막 리스트"></button>
               </div>
 
             </div>
@@ -945,6 +942,16 @@
                   </select>
                 </form>
 
+                <form class="st_fm">
+                  <label for="list6" class="soundOnly">건수</label>
+                  <select id="list6" name="numlist" class="st type2">
+                    <option value="">5</option>
+                    <option value="">10</option>
+                    <option value="">30</option>
+                    <option value="">50</option>
+                  </select>
+                </form>
+
                 <a href="#" download class="btn blueBtn">다운로드</a>
               </div>
             </div>
@@ -958,7 +965,7 @@
             </div>
 
             <div class="tabCont_etc0 on">
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -1083,32 +1090,21 @@
             <div class="tabCont_etc4">입축몰 표</div>
 
 
-            <div class="alend">
-              <!-- pagination -->
-              <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
-                <div class="g4">
-                  <button class="on" aria-label="1 페이지">1</button>
-                  <button aria-label="2 페이지">2</button>
-                  <button aria-label="3 페이지">3</button>
-                  <button aria-label="4 페이지">4</button>
-                  <button aria-label="5 페이지">5</button>
-                </div>
-                <button class="next on" aria-label="다음 리스트"></button>
-                <button class="last on" aria-label="마지막 리스트"></button>
+            <!-- pagination -->
+            <div class="pagination">
+              <button class="first" aria-label="처음 리스트"></button>
+              <button class="prev" aria-label="이전 리스트"></button>
+              <div class="g4">
+                <button class="on" aria-label="1 페이지">1</button>
+                <button aria-label="2 페이지">2</button>
+                <button aria-label="3 페이지">3</button>
+                <button aria-label="4 페이지">4</button>
+                <button aria-label="5 페이지">5</button>
               </div>
-
-              <form class="st_fm">
-                <label for="list6" class="soundOnly">건수</label>
-                <select id="list6" name="numlist" class="st type2">
-                  <option value="">5</option>
-                  <option value="">10</option>
-                  <option value="">30</option>
-                  <option value="">50</option>
-                </select>
-              </form>
+              <button class="next on" aria-label="다음 리스트"></button>
+              <button class="last on" aria-label="마지막 리스트"></button>
             </div>
+
           </section>
           <!-- // 사용 재산 현황 > 기타 -->
 
@@ -1134,6 +1130,16 @@
                   </select>
                 </form>
 
+                <form class="st_fm">
+                  <label for="list8" class="soundOnly">건수</label>
+                  <select id="list8" name="numlist" class="st type2">
+                    <option value="">5</option>
+                    <option value="">10</option>
+                    <option value="">30</option>
+                    <option value="">50</option>
+                  </select>
+                </form>
+
                 <a href="#" download class="btn blueBtn">다운로드</a>
               </div>
             </div>
@@ -1146,7 +1152,7 @@
             </div>
 
             <div class="tabCont_sample0 on">
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -1269,32 +1275,22 @@
             <div class="tabCont_sample2">지자체 표</div>
             <div class="tabCont_sample3">기타 표</div>
 
-            <div class="alend">
-              <!-- pagination -->
-              <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
-                <div class="g4">
-                  <button class="on" aria-label="1 페이지">1</button>
-                  <button aria-label="2 페이지">2</button>
-                  <button aria-label="3 페이지">3</button>
-                  <button aria-label="4 페이지">4</button>
-                  <button aria-label="5 페이지">5</button>
-                </div>
-                <button class="next on" aria-label="다음 리스트"></button>
-                <button class="last on" aria-label="마지막 리스트"></button>
+            <!-- pagination -->
+            <div class="pagination">
+              <button class="first" aria-label="처음 리스트"></button>
+              <button class="prev" aria-label="이전 리스트"></button>
+              <div class="g4">
+                <button class="on" aria-label="1 페이지">1</button>
+                <button aria-label="2 페이지">2</button>
+                <button aria-label="3 페이지">3</button>
+                <button aria-label="4 페이지">4</button>
+                <button aria-label="5 페이지">5</button>
               </div>
-
-              <form class="st_fm">
-                <label for="list8" class="soundOnly">건수</label>
-                <select id="list8" name="numlist" class="st type2">
-                  <option value="">5</option>
-                  <option value="">10</option>
-                  <option value="">30</option>
-                  <option value="">50</option>
-                </select>
-              </form>
+              <button class="next on" aria-label="다음 리스트"></button>
+              <button class="last on" aria-label="마지막 리스트"></button>
             </div>
+
+
           </section>
           <!-- // 사용 재산 현황 > 상호점유 -->
 
@@ -1326,6 +1322,16 @@
                   </select>
                 </form>
 
+                <form class="st_fm">
+                  <label for="list10" class="soundOnly">건수</label>
+                  <select id="list10" name="numlist" class="st type2">
+                    <option value="">5</option>
+                    <option value="">10</option>
+                    <option value="">30</option>
+                    <option value="">50</option>
+                  </select>
+                </form>
+
                 <a href="#" download class="btn blueBtn">다운로드</a>
               </div>
             </div>
@@ -1336,7 +1342,7 @@
             </div>
 
             <div class="tabCont_CB0 on">
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -1457,32 +1463,21 @@
             </div>
             <div class="tabCont_CB1">완료 표</div>
 
-            <div class="alend">
-              <!-- pagination -->
-              <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
-                <div class="g4">
-                  <button class="on" aria-label="1 페이지">1</button>
-                  <button aria-label="2 페이지">2</button>
-                  <button aria-label="3 페이지">3</button>
-                  <button aria-label="4 페이지">4</button>
-                  <button aria-label="5 페이지">5</button>
-                </div>
-                <button class="next on" aria-label="다음 리스트"></button>
-                <button class="last on" aria-label="마지막 리스트"></button>
+            <!-- pagination -->
+            <div class="pagination">
+              <button class="first" aria-label="처음 리스트"></button>
+              <button class="prev" aria-label="이전 리스트"></button>
+              <div class="g4">
+                <button class="on" aria-label="1 페이지">1</button>
+                <button aria-label="2 페이지">2</button>
+                <button aria-label="3 페이지">3</button>
+                <button aria-label="4 페이지">4</button>
+                <button aria-label="5 페이지">5</button>
               </div>
-
-              <form class="st_fm">
-                <label for="list10" class="soundOnly">건수</label>
-                <select id="list10" name="numlist" class="st type2">
-                  <option value="">5</option>
-                  <option value="">10</option>
-                  <option value="">30</option>
-                  <option value="">50</option>
-                </select>
-              </form>
+              <button class="next on" aria-label="다음 리스트"></button>
+              <button class="last on" aria-label="마지막 리스트"></button>
             </div>
+
           </section>
           <!-- // 건축사업 현황 -->
 
@@ -1512,6 +1507,16 @@
                   </select>
                 </form>
 
+                <form class="st_fm">
+                  <label for="list12" class="soundOnly">건수</label>
+                  <select id="list12" name="numlist" class="st type2">
+                    <option value="">5</option>
+                    <option value="">10</option>
+                    <option value="">30</option>
+                    <option value="">50</option>
+                  </select>
+                </form>
+
                 <a href="#" download class="btn blueBtn">다운로드</a>
               </div>
             </div>
@@ -1522,7 +1527,7 @@
             </div>
 
             <div class="tabCont_FPS0 on">
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -1643,32 +1648,22 @@
             </div>
             <div class="tabCont_FPS1">완료 표</div>
 
-            <div class="alend">
-              <!-- pagination -->
-              <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
-                <div class="g4">
-                  <button class="on" aria-label="1 페이지">1</button>
-                  <button aria-label="2 페이지">2</button>
-                  <button aria-label="3 페이지">3</button>
-                  <button aria-label="4 페이지">4</button>
-                  <button aria-label="5 페이지">5</button>
-                </div>
-                <button class="next on" aria-label="다음 리스트"></button>
-                <button class="last on" aria-label="마지막 리스트"></button>
+            <!-- pagination -->
+            <div class="pagination">
+              <button class="first" aria-label="처음 리스트"></button>
+              <button class="prev" aria-label="이전 리스트"></button>
+              <div class="g4">
+                <button class="on" aria-label="1 페이지">1</button>
+                <button aria-label="2 페이지">2</button>
+                <button aria-label="3 페이지">3</button>
+                <button aria-label="4 페이지">4</button>
+                <button aria-label="5 페이지">5</button>
               </div>
-
-              <form class="st_fm">
-                <label for="list12" class="soundOnly">건수</label>
-                <select id="list12" name="numlist" class="st type2">
-                  <option value="">5</option>
-                  <option value="">10</option>
-                  <option value="">30</option>
-                  <option value="">50</option>
-                </select>
-              </form>
+              <button class="next on" aria-label="다음 리스트"></button>
+              <button class="last on" aria-label="마지막 리스트"></button>
             </div>
+
+
           </section>
           <!-- // 시설사업 현황 -->
 
@@ -1692,6 +1687,16 @@
                   </select>
                 </form>
 
+                <form class="st_fm">
+                  <label for="list14" class="soundOnly">건수</label>
+                  <select id="list14" name="numlist" class="st type2">
+                    <option value="">5</option>
+                    <option value="">10</option>
+                    <option value="">30</option>
+                    <option value="">50</option>
+                  </select>
+                </form>
+
                 <a href="#" download class="btn blueBtn">다운로드</a>
               </div>
             </div>
@@ -1706,7 +1711,7 @@
             </div>
 
             <div class="tabCont_FS0 on">
-              <div class="tbl2">
+              <div class="tbl2 noHover">
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
@@ -1831,32 +1836,21 @@
             <div class="tabCont_FS4">기타시설 표</div>
             <div class="tabCont_FS5">법적시설 표</div>
 
-            <div class="alend">
-              <!-- pagination -->
-              <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
-                <div class="g4">
-                  <button class="on" aria-label="1 페이지">1</button>
-                  <button aria-label="2 페이지">2</button>
-                  <button aria-label="3 페이지">3</button>
-                  <button aria-label="4 페이지">4</button>
-                  <button aria-label="5 페이지">5</button>
-                </div>
-                <button class="next on" aria-label="다음 리스트"></button>
-                <button class="last on" aria-label="마지막 리스트"></button>
+            <!-- pagination -->
+            <div class="pagination">
+              <button class="first" aria-label="처음 리스트"></button>
+              <button class="prev" aria-label="이전 리스트"></button>
+              <div class="g4">
+                <button class="on" aria-label="1 페이지">1</button>
+                <button aria-label="2 페이지">2</button>
+                <button aria-label="3 페이지">3</button>
+                <button aria-label="4 페이지">4</button>
+                <button aria-label="5 페이지">5</button>
               </div>
-
-              <form class="st_fm">
-                <label for="list14" class="soundOnly">건수</label>
-                <select id="list14" name="numlist" class="st type2">
-                  <option value="">5</option>
-                  <option value="">10</option>
-                  <option value="">30</option>
-                  <option value="">50</option>
-                </select>
-              </form>
+              <button class="next on" aria-label="다음 리스트"></button>
+              <button class="last on" aria-label="마지막 리스트"></button>
             </div>
+
 
             <div class="rowbox end">
               <button type="button" class="btn back">

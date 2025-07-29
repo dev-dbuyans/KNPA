@@ -374,6 +374,7 @@
             </div>
           </header>
 
+
           <!-- 관서 현황 -->
           <section class="sec">
             <div class="sec_con">
@@ -384,7 +385,7 @@
               <div class="row g8">
                 <!-- 대표이미지 -->
                 <div class="w25">
-                  <div class="tbl2 img nohover">
+                  <div class="tbl2 img noHover">
                     <table>
                       <colgroup>
                         <col style="width: 25%;">
@@ -396,7 +397,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="bdnone noHover">
+                          <td class="bdnone">
                             <div class="flexible">
                               <img src="./assets/img/report_sampleImg.png" alt="관서 대표 이미지">
                             </div>
@@ -410,7 +411,7 @@
                 <div class="w75 col g8">
                   <div class="flexi g8">
                     <!-- 소속기관 -->
-                    <div class="tbl2 w50 nohover">
+                    <div class="tbl2 noHover w50">
                       <table>
                         <colgroup>
                           <col span="4" style="width: 25%;">
@@ -419,14 +420,14 @@
                           <tr>
                             <th colspan="4" scope="col">소속기관</th>
                           </tr>
+                          <tr>
+                            <th>소속</th>
+                            <th>관서명</th>
+                            <th>관서단위</th>
+                            <th>관서급지</th>
+                          </tr>
                         </thead>
                         <tbody>
-                          <tr class="tit_bg">
-                            <td>소속</td>
-                            <td>관서명</td>
-                            <td>관서단위</td>
-                            <td>관서급지</td>
-                          </tr>
                           <tr>
                             <td>부산금정서</td>
                             <td>부산청</td>
@@ -438,7 +439,7 @@
                     </div>
 
                     <!-- 정/현원 -->
-                    <div class="tbl2 nohover">
+                    <div class="tbl2 noHover">
                       <table>
                         <colgroup>
                           <col span="4" style="width: 25%;">
@@ -447,14 +448,14 @@
                           <tr>
                             <th colspan="4" scope="col">정/현원</th>
                           </tr>
+                          <tr>
+                            <th>총원</th>
+                            <th>경찰관</th>
+                            <th>일반직</th>
+                            <th>무기계약</th>
+                          </tr>
                         </thead>
                         <tbody>
-                          <tr class="tit_bg">
-                            <td>총원</td>
-                            <td>경찰관</td>
-                            <td>일반직</td>
-                            <td>무기계약</td>
-                          </tr>
                           <tr>
                             <td>/</td>
                             <td>/</td>
@@ -467,7 +468,7 @@
                   </div>
 
                   <!-- 지번주소 / 도로명주소 -->
-                  <div class="tbl2 nohover">
+                  <div class="tbl2 noHover">
                     <table>
                       <colgroup>
                         <col span="2" style="width: 50%;">
@@ -488,7 +489,7 @@
                   </div>
 
                   <!-- 시설현황 -->
-                  <div class="tbl2 nohover">
+                  <div class="tbl2 noHover">
                     <table>
                       <colgroup>
                         <col span="5" style="width: 20%;">
@@ -497,19 +498,19 @@
                         <tr>
                           <th colspan="5" scope="col">시설현황</th>
                         </tr>
+                        <tr>
+                          <th colspan="3">주차면수</th>
+                          <th colspan="2">사격장</th>
+                        </tr>
+                        <tr>
+                          <th>총계</th>
+                          <th>관용</th>
+                          <th>민원</th>
+                          <th>건</th>
+                          <th>0</th>
+                        </tr>
                       </thead>
                       <tbody>
-                        <tr class="tit_bg">
-                          <td colspan="3">주차면수</td>
-                          <td colspan="2">사격장</td>
-                        </tr>
-                        <tr class="tit_bg">
-                          <td>총계</td>
-                          <td>관용</td>
-                          <td>민원</td>
-                          <td>건</td>
-                          <td>0</td>
-                        </tr>
                         <tr>
                           <td>100</td>
                           <td>50</td>
@@ -524,7 +525,7 @@
               </div>
 
               <!-- 재산현황 -->
-              <div class="tbl2 mt8 nohover">
+              <div class="tbl2 mt8 noHover">
                 <table>
                   <colgroup>
                     <col span="9" style="width: auto;">
@@ -534,19 +535,19 @@
                       <th colspan="4">재산현황</th>
                       <th colspan="5">관리재산</th>
                     </tr>
+                    <tr>
+                      <th>준공년도</th>
+                      <th>노후도</th>
+                      <th>협소도</th>
+                      <th>안정도</th>
+                      <th>토지(필지)</th>
+                      <th>토지 소유자</th>
+                      <th>건물</th>
+                      <th>건물 소유자</th>
+                      <th>기타</th>
+                    </tr>
                   </thead>
                   <tbody>
-                    <tr class="tit_bg">
-                      <td>준공년도</td>
-                      <td>노후도</td>
-                      <td>협소도</td>
-                      <td>안정도</td>
-                      <td>토지(필지)</td>
-                      <td>토지 소유자</td>
-                      <td>건물</td>
-                      <td>건물 소유자</td>
-                      <td>기타</td>
-                    </tr>
                     <tr>
                       <td>2023년</td>
                       <td>-</td>
@@ -561,10 +562,11 @@
                   </tbody>
                 </table>
               </div>
-              <!-- <div class="rowbox end mt8">
-              <button type="button" class="btn Dgray">관서등록</button>
-              <button type="button" class="btn Dgray">수정</button>
-            </div> -->
+
+              <div class="rowbox end mt8">
+                <button type="button" class="btn Dgray">관서등록</button>
+                <button type="button" class="btn Dgray">수정</button>
+              </div>
             </div>
           </section>
           <!-- // 관서현황 -->
@@ -578,7 +580,7 @@
 
               <div class="col">
                 <div class="row w50 g8">
-                  <div class="tbl2 w25 nohover">
+                  <div class="tbl2 w25 noHover">
                     <table>
                       <colgroup>
                         <col style="width: 31%;">
@@ -586,8 +588,8 @@
                       </colgroup>
                       <thead>
                         <tr>
-                          <th>담당자</th>
-                          <th class="nobg">부산중부서 경장 홍길동</th>
+                          <th scope="row">담당자</th>
+                          <td>부산중부서 경장 홍길동</td>
                         </tr>
                       </thead>
                     </table>
@@ -600,8 +602,8 @@
                       </colgroup>
                       <thead>
                         <tr class="h36">
-                          <th scope="col">경비번호</th>
-                          <th scope="col" class="nobg">-</th>
+                          <th scope="row">경비번호</th>
+                          <td class="nobg">-</td>
                         </tr>
                       </thead>
                     </table>
@@ -609,7 +611,7 @@
                 </div>
 
                 <div class="row g8 mt8">
-                  <div class="tbl2 w25 h36 nohover">
+                  <div class="tbl2 w25 h36 noHover">
                     <table>
                       <colgroup>
                         <col style="width: 31%;">
@@ -622,22 +624,22 @@
                       </thead>
                       <tbody>
                         <tr class="h36">
-                          <td class="bg">필지수</td>
+                          <th scope="row">필지수</th>
                           <td class="tar">-건</td>
                         </tr>
                         <tr class="h36">
-                          <td class="bg">면적(㎡)</td>
+                          <th>면적(㎡)</th>
                           <td class="tar">-㎡</td>
                         </tr>
                         <tr class="h36">
-                          <td class="bg">가액(원)</td>
+                          <th>가액(원)</th>
                           <td class="tar">-원</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
 
-                  <div class="tbl2 w25 nohover">
+                  <div class="tbl2 w25 noHover">
                     <table>
                       <colgroup>
                         <col style="width: 31%;">
@@ -650,22 +652,22 @@
                       </thead>
                       <tbody>
                         <tr class="h36">
-                          <td class="bg">필지수</td>
+                          <th>필지수</th>
                           <td class="tar">-건</td>
                         </tr>
                         <tr class="h36">
-                          <td class="bg">면적(㎡)</td>
+                          <th>면적(㎡)</th>
                           <td class="tar">-㎡</td>
                         </tr>
                         <tr class="h36">
-                          <td class="bg">가액(원)</td>
+                          <th>가액(원)</th>
                           <td class="tar">-원</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
 
-                  <div class="tbl2 w50 nohover">
+                  <div class="tbl2 w50 noHover">
                     <table>
                       <colgroup>
                         <col style="width: 15%;">
@@ -680,21 +682,21 @@
                       </thead>
                       <tbody>
                         <tr class="h36">
-                          <td class="bg">선박</td>
+                          <th scope="row">선박</th>
                           <td class="tar">-개</td>
-                          <td class="bg">입죽목</td>
-                          <td class="tar">-개</td>
-                        </tr>
-                        <tr class="h36">
-                          <td class="bg">항공기</td>
-                          <td class="tar">-개</td>
-                          <td class="bg">기계기구</td>
+                          <th scope="row">입죽목</th>
                           <td class="tar">-개</td>
                         </tr>
                         <tr class="h36">
-                          <td class="bg">무체재산</td>
+                          <th scope="row">항공기</th>
                           <td class="tar">-개</td>
-                          <td class="bg">공작물</td>
+                          <th scope="row">기계기구</th>
+                          <td class="tar">-개</td>
+                        </tr>
+                        <tr class="h36">
+                          <th scope="row">무체재산</th>
+                          <td class="tar">-개</td>
+                          <th scope="row">공작물</th>
                           <td class="tar">-개</td>
                         </tr>
                       </tbody>
@@ -737,8 +739,8 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td rowspan="2">경찰청</td>
-                      <td>토지</td>
+                      <th class="nobg" rowspan="2" scope="row">경찰청</th>
+                      <th class="nobg" scope="row">토지</th>
                       <td>-</td>
                       <td class="tar">23.54</td>
                       <td class="tar">123,345</td>
@@ -746,7 +748,7 @@
                       <td class="tar">-</td>
                     </tr>
                     <tr>
-                      <td class="blnone">건물</td>
+                      <th class="nobg blnone" scope="row">건물</th>
                       <td>-</td>
                       <td class="tar">23.54</td>
                       <td class="tar">123,345</td>
@@ -754,8 +756,8 @@
                       <td class="tar">-</td>
                     </tr>
                     <tr>
-                      <td rowspan="2">지자체</td>
-                      <td>토지</td>
+                      <th class="nobg" rowspan="2" scope="row">지자체</th>
+                      <th class="nobg" scope="row">토지</th>
                       <td>-</td>
                       <td class="tar">23.54</td>
                       <td class="tar">123,345</td>
@@ -763,7 +765,7 @@
                       <td class="tar">-</td>
                     </tr>
                     <tr>
-                      <td class="blnone">건물</td>
+                      <th class="blnone nobg" scope="row">건물</th>
                       <td>-</td>
                       <td class="tar">23.54</td>
                       <td class="tar">123,345</td>
@@ -771,8 +773,8 @@
                       <td class="tar">-</td>
                     </tr>
                     <tr>
-                      <td rowspan="2">기타 <br>(시민 등)</td>
-                      <td>토지</td>
+                      <th class="nobg" rowspan="2">기타 <br>(시민 등)</th>
+                      <th class="nobg" scope="row">토지</th>
                       <td>-</td>
                       <td class="tar">23.54</td>
                       <td class="tar">123,345</td>
@@ -780,7 +782,7 @@
                       <td class="tar">-</td>
                     </tr>
                     <tr>
-                      <td class="blnone">건물</td>
+                      <th class="blnone nobg">건물</th>
                       <td>-</td>
                       <td class="tar">23.54</td>
                       <td class="tar">123,345</td>
@@ -834,15 +836,15 @@
                     </thead>
                     <tbody>
                       <tr class="h36">
-                        <td class="bg">필지수</td>
+                        <th>필지수</th>
                         <td class="tar">- 건</td>
                       </tr>
                       <tr class="h36">
-                        <td class="bg">면적(㎡)</td>
+                        <th>면적(㎡)</th>
                         <td class="tar">- ㎡</td>
                       </tr>
                       <tr class="h36">
-                        <td class="bg">가액(원)</td>
+                        <th>가액(원)</th>
                         <td class="tar">- 원</td>
                       </tr>
                     </tbody>
@@ -862,15 +864,15 @@
                     </thead>
                     <tbody>
                       <tr class="h36">
-                        <td class="bg">필지수</td>
+                        <th>필지수</th>
                         <td class="tar">- 건</td>
                       </tr>
                       <tr class="h36">
-                        <td class="bg">면적(㎡)</td>
+                        <th>면적(㎡)</th>
                         <td class="tar">- ㎡</td>
                       </tr>
                       <tr class="h36">
-                        <td class="bg">가액(원)</td>
+                        <th>가액(원)</th>
                         <td class="tar">- 원</td>
                       </tr>
                     </tbody>
@@ -904,29 +906,27 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td rowspan="2" class="bold">관리</td>
-                      <td class="bold">건수</td>
+                      <th scope="row" rowspan="2" class="bold nobg">관리</th>
+                      <th scope="row" class="bold nobg">건수</th>
                       <td class="tar">- 건</td>
                       <td class="tar">- 건</td>
                       <td class="tar">- 건</td>
                     </tr>
                     <tr>
-                      <!-- <td></td> -->
-                      <td class="blnone bold">사업비</td>
+                      <th scope="row" class="blnone bold nobg">사업비</th>
                       <td class="tar">123,345 원</td>
                       <td class="tar">- 원</td>
                       <td class="tar">- 원</td>
                     </tr>
                     <tr>
-                      <td rowspan="2" class="bold">비관리</td>
-                      <td class="bold">건수</td>
+                      <th scope="row" rowspan="2" class="bold nobg">비관리</th>
+                      <th scope="row" class="bold nobg">건수</th>
                       <td class="tar">123,345 건</td>
                       <td class="tar">- 건</td>
                       <td class="tar">- 건</td>
                     </tr>
                     <tr>
-                      <!-- <td></td> -->
-                      <td class="blnone bold">사업비</td>
+                      <th class="blnone bold">사업비</th>
                       <td class="tar">123,345 원</td>
                       <td class="tar">- 원</td>
                       <td class="tar">- 원</td>
@@ -934,15 +934,14 @@
                   </tbody>
                   <tfoot>
                     <tr class="hlight">
-                      <td rowspan="2" class="bold">합계</td>
+                      <th scope="row" rowspan="2" class="bold">합계</th>
                       <td class="bold">건수</td>
                       <td class="tar">123,345 건</td>
                       <td class="tar">- 건</td>
                       <td class="tar">- 건</td>
                     </tr>
                     <tr class="hlight">
-                      <!-- <td></td> -->
-                      <td class="blnone bold">사업비</td>
+                      <th scope="row" class="blnone bold">사업비</th>
                       <td class="tar">123,345 원</td>
                       <td class="tar">- 원</td>
                       <td class="tar">- 원</td>
@@ -963,7 +962,6 @@
 
               <div class="tbl2 h36 noHover">
                 <div class="scroll_wrap">
-
                 <table>
                   <colgroup>
                     <col span="2" style="width: 8%;">
@@ -974,45 +972,45 @@
 
                   <tbody>
                     <tr>
-                      <td class="bg">리모델링</td>
-                      <td colspan="2">전체 : (&ensp; 1 &ensp;)동</td>
+                      <th scope="row">리모델링</th>
+                      <td colspan="2" class="tal">전체 : (&ensp; 1 &ensp;)동</td>
                       <td>투입 : (&ensp; 0 &ensp;)동</td>
-                      <td class="bg">석면제거</td>
-                      <td>전체 : (&ensp; 1 &ensp;)동</td>
-                      <td>완료 : (&ensp; 0 &ensp;)동</td>
-                      <td>대상 : (&ensp; 0 &ensp;)동 (잔여 0  ㎡)</td>
+                      <th scope="row">석면제거</th>
+                      <td class="tal">전체 : (&ensp; 1 &ensp;)동</td>
+                      <td class="tal">완료 : (&ensp; 0 &ensp;)동</td>
+                      <td class="tal">대상 : (&ensp; 0 &ensp;)동 (잔여 0  ㎡)</td>
                     </tr>
                     <tr>
-                      <td class="bg">내진보강</td>
-                      <td colspan="2">전체 : (&ensp; 1 &ensp;)동</td>
-                      <td>완료 : (&ensp; 0 &ensp;)동</td>
-                      <td colspan="2">성능평가 : (&ensp; 1 &ensp;)동</td>
-                      <td>보강설계 : (&ensp; 0 &ensp;)동</td>
-                      <td>보강공사 : (&ensp; 0 &ensp;)동 (잔여 &ensp;0&ensp;  ㎡)</td>
+                      <th scope="row">내진보강</th>
+                      <td class="tal" colspan="2">전체 : (&ensp; 1 &ensp;)동</td>
+                      <td class="tal">완료 : (&ensp; 0 &ensp;)동</td>
+                      <td class="tal" colspan="2">성능평가 : (&ensp; 1 &ensp;)동</td>
+                      <td class="tal">보강설계 : (&ensp; 0 &ensp;)동</td>
+                      <td class="tal">보강공사 : (&ensp; 0 &ensp;)동 (잔여 &ensp;0&ensp;  ㎡)</td>
                     </tr>
                     <tr>
-                      <td class="bg" rowspan="3">기타시설</td>
-                      <td class="bg">사격장</td>
+                      <th scope="row" rowspan="3">기타시설</th>
+                      <th scope="row">사격장</th>
                       <td colspan="2" class="tal">전체 : (&ensp; 0 &ensp;)개</td>
-                      <td class="bg" rowspan="3">법정시설</td>
-                      <td class="bg">장애인 편의시설</td>
-                      <td>충족 : (&ensp; 1 &ensp;)건</td>
-                      <td>미충족 : (&ensp; 0 &ensp;)건</td>
+                      <th scope="row" rowspan="3">법정시설</th>
+                      <th scope="row">장애인 편의시설</th>
+                      <td class="tal">충족 : (&ensp; 1 &ensp;)건</td>
+                      <td class="tal">미충족 : (&ensp; 0 &ensp;)건</td>
                     </tr>
                     <tr>
-                      <td class="bg blnone">승강기</td>
+                      <th scope="row" class="blnone">승강기</th>
                       <td class="tal">본관 : (&ensp; 0 &ensp;)대</td>
                       <td class="tal">별관 : (&ensp; 0 &ensp;)대</td>
-                      <td class="bg">양성평등 시설</td>
-                      <td>충족 : (&ensp; 1 &ensp;)건</td>
-                      <td>미충족 : (&ensp; 0 &ensp;)건</td>
+                      <th scope="row">양성평등 시설</th>
+                      <td class="tal">충족 : (&ensp; 1 &ensp;)건</td>
+                      <td class="tal">미충족 : (&ensp; 0 &ensp;)건</td>
                     </tr>
                     <tr>
-                      <td class="bg blnone">비상발전기</td>
+                      <th scope="row" class="blnone">비상발전기</th>
                       <td colspan="2" class="tal">전체 : (&ensp; 0 &ensp;)개</td>
-                      <td class="bg">소방설비</td>
-                      <td>충족 : (&ensp; 1 &ensp;)건</td>
-                      <td>미충족 : (&ensp; 0 &ensp;)건</td>
+                      <th scope="row">소방설비</th>
+                      <td class="tal">충족 : (&ensp; 1 &ensp;)건</td>
+                      <td class="tal">미충족 : (&ensp; 0 &ensp;)건</td>
                     </tr>
                   </tbody>
                 </table>

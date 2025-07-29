@@ -25,9 +25,12 @@ $("#gnb").on("mouseleave", function () {
 
   //전체메뉴
   $(".menuBtn").click(function (e) {
+    console.log('전체메뉴')
     e.stopPropagation();
     $("#allMenu").toggleClass("on");
     $("#allMenu .dimmed").toggleClass("on");
+    $(this).toggleClass("on")
+
 
     // gnb호버 제한
     if ($("#allMenu").hasClass("on")) {
@@ -53,6 +56,7 @@ $("#gnb").on("mouseleave", function () {
   function closeAllMenu() {
     $("#allMenu").removeClass("on");
     $("#allMenu .dimmed").removeClass("on");
+    $(".menuBtn").removeClass("on");
     $(document).off(".closeMenu");
   }
 
@@ -108,47 +112,80 @@ function tabMenu(tabName, num) {
 
 // ul>li -> select
 document.addEventListener("DOMContentLoaded", () => {
-  const labels = document.querySelectorAll(".st_wrap .st_group .st_box .label");
+  const labels = document.querySelectorAll(".st_box .label.st");
+  const resetBtn = document.querySelector(".resetSelectBtn");
 
-  labels.forEach((lb) => {
-    lb.addEventListener("click", (e) => {
-      const stBox = lb.parentNode;
-      const optionList = lb.nextElementSibling;
-      const optionItems = optionList.querySelectorAll(".opts");
+  labels.forEach((label) => {
+    const box = label.closest(".st_box");
+    const options = box.querySelectorAll(".opts");
 
-      const isOpen = stBox.classList.contains("on");
+    label.addEventListener("click", () => {
+      document.querySelectorAll(".st_box.on").forEach((openBox) => {
+        if (openBox !== box) openBox.classList.remove("on");
+      });
 
-      if (isOpen) {
-        stBox.classList.remove("on");
-        optionList.classList.remove("on");
-        lb.classList.remove("on");
+      box.classList.toggle("on");
+    });
 
-        optionItems.forEach((opt) => {
-          opt.removeEventListener("click", () => {
-            handleSelect(lb, opt);
-          });
-        });
-      } else {
-        stBox.classList.add("on");
-        optionList.classList.add("on");
-        lb.classList.add("on");
-
-        optionItems.forEach((opt) => {
-          opt.addEventListener("click", () => {
-            handleSelect(lb, opt);
-          });
-        });
-      }
+    options.forEach((opt) => {
+      opt.addEventListener("click", () => {
+        label.textContent = opt.textContent;
+        box.classList.remove("on");
+      });
     });
   });
-
-  const handleSelect = (label, item) => {
-    label.innerHTML = item.textContent;
-    const stBox = label.parentNode;
-    const optionList = label.nextElementSibling;
-
-    stBox.classList.remove("on");
-    optionList.classList.remove("on");
-    label.classList.remove("on");
-  };
+  
+  resetBtn?.addEventListener("click", () => {
+    labels.forEach((label) => {
+      const defaultText = label.dataset.default;
+      if (defaultText) label.textContent = defaultText;
+      label.closest(".st_box").classList.remove("on");
+    });
+  });
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const labels = document.querySelectorAll(".st_wrap .st_group .st_box .label");
+
+//   labels.forEach((lb) => {
+//     lb.addEventListener("click", (e) => {
+//       const stBox = lb.parentNode;
+//       const optionList = lb.nextElementSibling;
+//       const optionItems = optionList.querySelectorAll(".opts");
+
+//       const isOpen = stBox.classList.contains("on");
+
+//       if (isOpen) {
+//         stBox.classList.remove("on");
+//         optionList.classList.remove("on");
+//         lb.classList.remove("on");
+
+//         optionItems.forEach((opt) => {
+//           opt.removeEventListener("click", () => {
+//             handleSelect(lb, opt);
+//           });
+//         });
+//       } else {
+//         stBox.classList.add("on");
+//         optionList.classList.add("on");
+//         lb.classList.add("on");
+
+//         optionItems.forEach((opt) => {
+//           opt.addEventListener("click", () => {
+//             handleSelect(lb, opt);
+//           });
+//         });
+//       }
+//     });
+//   });
+
+//   const handleSelect = (label, item) => {
+//     label.innerHTML = item.textContent;
+//     const stBox = label.parentNode;
+//     const optionList = label.nextElementSibling;
+
+//     stBox.classList.remove("on");
+//     optionList.classList.remove("on");
+//     label.classList.remove("on");
+//   };
+// });

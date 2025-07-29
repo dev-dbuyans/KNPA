@@ -8,31 +8,23 @@
 .tbl2.w50{width: 50%; }
 .tbl2.w25{width: calc(25% - 8px);}
 
-.tbl2 table th {height: 3.9rem;}
-/* .tbl2 table td {height: 3.2rem; padding: 5px 4px;} */
+.tbl2 table th {height: 3.9rem; background-color: var(--bg);}
+.tbl2 table th.nobg{background-color: #ffffff;}
 
-.tbl2.h36 table tr td, 
+.tbl2.h36 table tr td,
+.tbl2 table tr.h36 th,
 .tbl2 table tr.h36 td {height: 3.6rem;}
 
-/* .tbl2 table tr.h36 td.tar {padding-right: 12px;} */
-.tbl2 table tr.tit_bg td{
-  height: 3.9rem;
-  background-color: var(--bg); color: var(--text1); font-weight: 600;
-}
-.tbl2 table td.bg{ background-color: var(--bg); color: var(--text1); font-weight: 600;}
-.tbl2 table th.nobg{ background-color: #ffffff;}
-
-.tbl2 thead tr th.tbl_tit.h74:first-child{
-  height: 7.4rem;
-  border: 0; background-color: #ffffff; 
-} 
 .tbl2 table td.bdnone:first-child{ border: 0; }
 .tbl2 table td.blnone:first-child{ border-left: 0; }
 .tbl2 table th.blnone:first-child{ border-left: 0; }
 
-.tbl2.noHover tr:hover td.bg {background-color: var(--bg);}
+
+.tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
+.tbl2.noHover tr:hover td.bg {background-color: #ffffff;}
 .tbl2 tr td.bold{ font-weight: 600; color: var(--text1); }
 .tbl2.img table td div img{width: 100%; height: 100%; margin: auto;}
+.tbl2 tfoot tr.hlight th,
 .tbl2 tfoot tr.hlight td { background-color: var(--tfootbg); }
 .tbl2 thead tr.btntbl{position: relative;}
 
@@ -47,7 +39,7 @@
 .sub_info .sub_tit::before{
   display: inline-block; content: '';
   width: 12px; height: 12px;
-  background: url(../img/ico_disc.svg) no-repeat center / contain;
+  background: url(/assets/img/ico_disc.svg) no-repeat center / contain;
   margin-right: 8px;
 }
 .sub_info ul.info { 
@@ -55,17 +47,14 @@
   padding: 0 12px; margin-right: 2rem;
   border-radius: 6px; 
   background-color: var(--tabDisable);
-  /* gap: 6px; */
 }
 .sub_info ul.info li{
   display: flex; align-content: center;
   background-color: var(--tabDisable); color: var(--text1);
   height: 3.2rem; 
   border-radius: 6px;
-  /* white-space: nowrap; */
   overflow: hidden; text-overflow: ellipsis;
   display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
-  /* padding: 0 12px; */
 }
 /* .sub_info ul.info li:first-child{ padding-left: 12px; }
 .sub_info ul.info li:last-child{ padding-right: 12px; } */
@@ -77,7 +66,6 @@
   width: 1px; height: 14px;
   background-color: var(--gray200); 
   margin: 0 10px;
-  /* margin-right: 12px; */
 }
 
 /* btn */
@@ -86,6 +74,8 @@
   font-size: 16px; align-content: center;
   background-color: var(--primary2); color: #ffffff; border-color: var(--primary2);
 }
+.btn.blueBtn:hover{background-color: var(--secondary);}
+
 .updown { 
   width: 20px; height: 20px; 
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
@@ -94,9 +84,9 @@
 }
 .updown button{
   width: 20px; height: 5px;
-  background: url(../img/ico_tbl_up.svg) no-repeat center / contain;
+  background: url(/assets/img/ico_tbl_up.svg) no-repeat center / contain;
 }
-.updown button.downbtn{background: url(../img/ico_tbl_down.svg) no-repeat center / contain;}
+.updown button.downbtn{background: url(/assets/img/ico_tbl_down.svg) no-repeat center / contain;}
 
 
 
