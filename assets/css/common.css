@@ -145,6 +145,7 @@ html {font-size: 62.5%;}
 .col{ display: flex; flex-direction: column;}
 .end{ display: flex; align-items: center; justify-content: flex-end;}
 .alend {display: flex; align-items: flex-end;}
+.fstart{display: flex; align-items: flex-start;}
 .relative {position: relative;}
 .scrollY {overflow-x: hidden; overflow-y: auto;}
 body.no-scroll { overflow: hidden; }
@@ -155,10 +156,12 @@ body.no-scroll { overflow: hidden; }
 .mt8 { margin-top: 8px;}
 .mt40 { margin-top: 4rem;}
 .g8 { gap: 8px;}
+.g16{ gap: 16px; }
 .g20 {gap: 2rem;}
 .w25 { width: 25%;}
-/* .w25 .tbl2 { width: 100%;} */
+.w50 { width: 50%;}
 .w75 { width: 75%;}
+.w33 { width: 33%;}
 
 
 
@@ -180,11 +183,12 @@ header#header {
   display: flex; align-items: center;
   position: sticky; top: 0; left: 0;
   z-index: 1000;
-  background-color: #ffff;
+  background-color: #ffff; 
+  border-bottom: 1px solid var(--gray200);
   transition: transform 0.2s ease;
 }
 header.hide{transform: translateY(-100%);}
-header#header:hover {border-color: #ffffff;}
+/* header#header:hover {border-color: #ffffff;} */
 header#header h1 a img{flex-shrink: 0;}
 
 .h_inner{
@@ -224,6 +228,7 @@ header#header h1 a img{flex-shrink: 0;}
   color: var(--text1);
   position: relative;
 }
+#gnb ul.depth1>li:hover header{border-color: #ffffff;}
 #gnb ul.depth1>li:hover>a{ color: var(--primary); font-weight: 700;}
 #gnb ul.depth1 ul li{ color: var(--text3);}
 #gnb ul.depth1>li>a{ padding: 2.3rem 2rem; }
@@ -498,7 +503,7 @@ header#header h1 a img{flex-shrink: 0;}
   position: relative; z-index: 1;
   box-sizing: border-box;
 }
-#searchAll .st_wrap .st_group .st_box .label.st{
+#searchAll .st_wrap .st_group .st_box .st.label{
   width: 100%;
   display: flex; align-items: center;
   background-color: var(--secondary); color: #ffffff;
@@ -620,7 +625,7 @@ header#header h1 a img{flex-shrink: 0;}
 /* /******** main ********/
 /* ------------------------------------------------------------------------- */
 main{
-  width: 100%; 
+  width: 100%; min-height: calc(100vh - 7rem);
   display: flex;
   position: relative; top: 0; left: 0;
 }
@@ -761,6 +766,10 @@ main.type2 {
 .sec_wrap2 .sec_head .rowbox .btn.blue.print::before{ background: url(/assets/img/ico_print.svg) no-repeat center / contain;}
 .rowbox{gap: 8px;}
 
+.sec_wrap2.bgtype{
+  padding: 0;
+}
+
 
 
 /******** footer ********/
@@ -802,7 +811,14 @@ footer .f_inner{
   background-color: var(--menuTitle); color: #ffffff;
   border-color: var(--menuTitle);
 }
+.btn.blue.sm{
+  height: 2.6rem;
+  margin-right: 7.5px;
+  font-size: 14px; line-height: 2.1rem;
+  padding: 2.5px 8px; 
+}
 .btn.blue:hover{background-color: #1E69C4;}
+
 
 .btn.Dgray{
   width: 8rem; 
@@ -811,6 +827,7 @@ footer .f_inner{
   background-color: #2B2B2B; color: #ffffff;
 }
 .btn.Dgray:hover{background-color: var(--text1);}
+
 
 .btn.back {
   width: 11rem; height: 3.6rem;
@@ -823,6 +840,32 @@ footer .f_inner{
   display: flex; align-items: center;
 }
 .btn.back span{line-height: 2.4rem;}
+
+.btn.blueBtn{
+  height: 3.2rem; padding: 0 12px;
+  font-size: 16px; align-content: center;
+  background-color: var(--primary2); color: #ffffff; border-color: var(--primary2);
+}
+
+/*** 250730 :  검색 버튼 추가 ***/
+.btn.blueBtn.srch {
+  height: 4rem; 
+  padding: 0 4.6rem; margin: 4rem;
+  font-weight: 600;
+}
+.btn.blueBtn:hover{background-color: var(--secondary);}
+
+.updown { 
+  width: 20px; height: 20px; 
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  position: absolute;
+  right: 12px; top: 50%; transform: translateY(-50%);
+}
+.updown button{
+  width: 20px; height: 5px;
+  background: url(/assets/img/ico_tbl_up.svg) no-repeat center / contain;
+}
+.updown button.downbtn{background: url(/assets/img/ico_tbl_down.svg) no-repeat center / contain;}
 
 
 /* ------------------------------------------------------------------------- */
@@ -845,6 +888,7 @@ input, select, textarea, button {
   color: var(--gray400);
 }
 
+
 /* select */
 .st.type2 {
   width: 100%; height: 3.6rem; 
@@ -854,12 +898,64 @@ input, select, textarea, button {
   border: 1px solid var(--gray100); border-radius: 4px;
   background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ;
 }
+
+
+/*** 250730 : table > select 추가 ***/
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="month"]::-webkit-calendar-picker-indicator,
+input[type="week"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+  opacity: 0; cursor: pointer;
+  position: absolute; right: 5px;
+}
+
+.it.date, .it.edit{
+  min-width: 85px; width: 100%;
+  height: 2.6rem; border-radius: 4px; border: 1px solid var(--gray200);
+  padding-right: 32px; padding: 0 28px 0 5px;
+  position: relative;
+  background: #fff url(../img/ico_canlendar.svg) no-repeat right 5px top 4px;
+  cursor: pointer;
+}
+.it.edit { background: #fff url(../img/ico_edit.svg) no-repeat right 5px top 4px; }
+
+
+/*** 250731 : datepicker 추가 ***/ 
+/* datepicker */
+.ui-datepicker {display: none; padding: 18px 20px; border: 1px solid var(--secondary); border-radius: 12px; background-color: #ffffff; z-index: 1200 !important; cursor: pointer;}
+.ui-datepicker .ui-datepicker-header {margin-bottom: 12px; position: relative;}
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next {width: 17px; height: 17px; text-indent: -9999px; background: url(../img/ico_selectArrow.svg) no-repeat center / contain; position: absolute; top: 1px; cursor: pointer; transform: rotate(90deg);}
+.ui-datepicker .ui-datepicker-prev {left: 5px;}
+.ui-datepicker .ui-datepicker-next {background-image: url(../img/ico_selectArrow.svg); right: 5px; transform: rotate(-90deg);}
+.ui-datepicker .ui-datepicker-next .ui-icon{display: none;}
+.ui-datepicker .ui-datepicker-title {font-weight: 600; font-size: 16px; line-height: 20px; text-align: center; color: var(--text1);}
+.ui-datepicker .ui-datepicker-month::after {content: "월";} 
+.ui-datepicker table {width: 100%; font-size: 14px; line-height: 16px; text-align: center; color: var(--text1);}
+.ui-datepicker th, .ui-datepicker td {width: 32px; height: 32px; padding: 0; border: 0;}
+.ui-datepicker th {padding: 6px; font-weight: 500; text-align: center; color: var(--text9);}
+.ui-datepicker td span,.ui-datepicker td a {display: block; height: 32px; padding: 6px; line-height: 20px; text-align: center; text-decoration: none}
+.ui-datepicker td.ui-datepicker-today a {font-weight: 700; color: var(--primary);}
+.ui-datepicker td.ui-datepicker-current-day a {border: 1px solid #E3EDFF; border-radius: 50%; font-weight: 600; line-height: 18px; color: var(--secondary); background-color: #E3EDFF;}
+
+select.st{
+  border: 0; border-radius: 0;
+  width: 100%; height: 3.6rem; 
+  padding-left: 12px;
+  line-height: 2.1rem; font-size: 14px; font-weight: 500; 
+  color: var(--text1); background-color: #ffffff;
+  background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ;
+}
 .st_fm .st.type2{
   min-width: 7rem; height: 2.8rem;
   line-height: 1.7rem; 
   background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ;
 }
-/* .st_fm .st.type2.h28{ height: 2.8rem; } */
+
+
+
 
 
 
@@ -870,10 +966,15 @@ input, select, textarea, button {
 }
 .check_btn input {
   appearance: none; -webkit-appearance: none;
-  width: 16px; height: 17px;
+  width: 20px; height: 20px;
   background-repeat: no-repeat; background-position: center top; background-size: contain;
   cursor: pointer;
 }
+
+/*** 250730 : input > check 추가 ***/
+.check_btn input[type="checkbox"] {background-image: url(../img/ico_check.svg);}
+.check_btn input[type="checkbox"]:checked {background-image: url(../img/ico_checked.svg);}
+.check_btn input[type="checkbox"]:checked:disabled {background-image: url(../img/ico_checked_dis.svg);}
 .check_btn input[type="radio"] {background-image: url(/assets/img/ico_radio.svg);}
 .check_btn input[type="radio"]:checked {background-image: url(/assets/img/ico_radio_checked.svg);}
 .check_btn > span {
@@ -923,37 +1024,26 @@ input, select, textarea, button {
   width: 100%; 
   overflow: visible; border-collapse: separate; 
   table-layout: fixed;
-  /* min-width: 158rem; */
 }
 
-/* 테이블 스크롤 가능 */
+/*** 250730 : 테이블 스크롤 부분 추가 수정 ***/
+.scroll_wrap,
 .tbl2 .scroll_wrap{ width: 100%; overflow-x: auto; padding-bottom: 3px; }
+.scroll_wrap > *,
 .tbl2 .scroll_wrap table { min-width: 158rem; }
 
-
-.tbl2 thead tr th { height: 4rem; background-color: var(--bg); border-left: 0;}
-.tbl2 thead tr th:first-child { border-left: 1px solid var(--gray200);}
-
-.tbl2 tbody tr:hover td {background-color: var(--tablebg);}
-.tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
 .tbl2 table th,
 .tbl2 table td {
   min-width: 45px; 
   height: 3.2rem;
-  /* padding: 8px 4px; */
   border: 1px solid var(--border);
   font-weight: 500; font-size: 14px; text-align: center; color: var(--text4);
-  background-color: transparent;
+  background-color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border-left: none;
 }
-.tbl2 table th + th,
-.tbl2 table th + td,
-.tbl2 table td + td,
-.tbl2 table td + th {border-left: 1px solid var(--border);}
-
 .tbl2 table th {
   font-weight: 600;  color: var(--text1);
   background-color: #ffffff;
@@ -961,17 +1051,34 @@ input, select, textarea, button {
   border-top: 0; 
   position: relative;
 }
+.tbl2 table th + th,
+.tbl2 table th + td,
+.tbl2 table td + td,
+.tbl2 table td + th {border-left: 1px solid var(--border);}
+.tbl2 thead tr th { height: 4rem; background-color: var(--bg); border-left: 0;}
+.tbl2 thead tr th:first-child { border-left: 1px solid var(--gray200);}
+
+.tbl2 tbody tr:hover td {background-color: var(--tablebg);}
+.tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
 
 .tbl2 table td { border-right: 1px solid var(--gray200); }
 .tbl2 table td:first-child { border-left: 1px solid var(--gray200);}
 .tbl2 table td { border-bottom: 1px solid var(--gray200);}
 
 .tbl2 table td {transition: background-color 0.2s ease;}
-.tbl2 table td.tal {padding-left: 12px; text-align: left;}
+.tbl2 table td.tal,
+.tbl2 table tr.tal td {padding-left: 12px; text-align: left;}
 .tbl2 table td.tar {
   padding-right: 12px;
   text-align: right;
 }
+
+/*** 250730 : table >  td(checkbox) 추가 ***/
+.tbl2 table tr.h41 td {height: 4.1rem;}
+.tbl2 table tr.bdnone td{border-left: 0; border-right: 0; border-bottom: 0;}
+.tbl2 table tr.bdnone:last-child td{border-bottom: 1px solid var(--gray200);}
+.tbl2 table tr.bdnone td:last-child{border-right: 1px solid var(--gray200);}
+
 .tbl2 table td a {
     max-height: 40px;
     text-decoration: underline; text-underline-offset: 2px;
@@ -1057,7 +1164,7 @@ input, select, textarea, button {
 @media screen and (max-width : 1400px){
   #gnb ul.depth1>li:nth-child(4) { display: none; }
 
-    /* 통합검색 */
+  /* 통합검색 */
   #searchAll { height: 20rem;}
   #searchAll .s_wrap{justify-content: flex-start;}
   #searchAll .s_wrap .group { width: 65%; }
@@ -1086,9 +1193,7 @@ input, select, textarea, button {
 
   /* 통합검색 */
   #searchAll .s_wrap .group {width: 60%;}
-    #todolist{width: 33%;}
-  /* #searchAll .s_wrap .group { width: 53%;} */
-  /* .st_wrap .st_group .st_box {width: 31.5%;} */
-  /* .stBtn_wrap {width: 7.8rem;} */
+  #todolist{width: 33%;}
+
 
 }
