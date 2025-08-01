@@ -34,7 +34,7 @@
           <div id="logo" class="flexi">
             <h1>
               <a href="/main.html">
-                <img src="./assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
+                <img src="/assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
               </a>
             </h1>
             <span class="bold">국유재산 정보시스템</span>
@@ -367,19 +367,19 @@
         </nav>
         <!-- //navigation -->
 
-        <!-- section : 국유재산 건물 검색 -->
+        <!-- section : 미등재 재산 검색 -->
         <section class="sec_wrap2 pd0">
           <div class="inner">
             <header class="sec_head type2 flexible">
-              <h3>국유재산(건물) 검색</h3>
+              <h3>상호점유 관리 검색</h3>
             </header>
 
             <div class="sec">
               <div class="sec_con">
                 <div class="scroll_wrap">
-                  <div class="flexEnd g16">
-                    <div class="col w75 g8">
-                      <div class="tbl2 noHover w33">
+                  <div class="alend g16">
+                    <div class="col g8">
+                      <div class="tbl2 noHover w25">
                         <table>
                           <colgroup>
                             <col style="width: 120px;">
@@ -387,11 +387,11 @@
                           </colgroup>
                           <tbody>
                             <tr class="h36">
-                              <th scope="row">처분 구분</th>
+                              <th scope="row">완료 구분</th>
                               <td>
                                 <select class="st">
-                                  <option value="">미처분</option>
-                                  <option value="">처분</option>
+                                  <option value="">전체</option>
+                                  <option value="">전체</option>
                                 </select>
                               </td>
                             </tr>
@@ -400,30 +400,42 @@
                       </div>
 
                       <div class="row g8">
-                        <div class="tbl2 w33 noHover">
+                        <div class="tbl2 noHover">
                           <table>
                             <colgroup>
+                              <col style="width: 120px;">
+                              <col style="width: auto;">
                               <col style="width: 120px;">
                               <col style="width: auto;">
                             </colgroup>
                             <tbody>
                               <tr class="h36">
-                                <th scope="row">자산명</th>
-                                <td>
+                                <th scope="row">자산/사업명</th>
+                                <td colspan="3">
                                   <input type="text" aria-label="자산명" class="it">
                                 </td>
                               </tr>
                               <tr class="h36">
-                                <th scope="row">대장 번호</th>
+                                <th scope="row">재산 종류</th>
                                 <td>
-                                  <input type="search" aria-label="자산명" class="it">
+                                  <select class="st">
+                                    <option value="">전체</option>
+                                    <option value="">전체</option>
+                                  </select>
+                                </td>
+                                <th scope="row">관서 단위</th>
+                                <td>
+                                  <select class="st">
+                                    <option value="">전체</option>
+                                    <option value="">전체</option>
+                                  </select>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
 
-                        <div class="tbl2 W65 noHover">
+                        <div class="tbl2 noHover">
                           <table>
                             <colgroup>
                               <col span="2" style="width: 120px;">
@@ -431,7 +443,7 @@
                             </colgroup>
                             <tbody>
                               <tr class="h36">
-                                <th scope="row" rowspan="2">소재지</th>
+                                <th rowspan="2" scope="row">소재지</th>
                                 <th scope="row">지번</th>
                                 <td>
                                   <div class="flexEnd g8">
@@ -440,7 +452,7 @@
                                   </div>
                                 </td>
                               </tr>
-                              <tr class="h36">
+                              <tr>
                                 <th scope="row" class="blnone">도로명</th>
                                 <td>
                                   <div class="flexEnd g8">
@@ -452,50 +464,6 @@
                             </tbody>
                           </table>
                         </div>
-                      </div>
-
-                      <div class="tbl2 noHover">
-                        <table>
-                          <colgroup>
-                            <col span="4" style="width: auto;">
-                          </colgroup>
-                          <thead>
-                            <tr>
-                              <th scope="col">외형구분</th>
-                              <th scope="col">관서 단위</th>
-                              <th scope="col">관서 급지</th>
-                              <th scope="col">관서 집계</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="h36">
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
 
                       <div class="tbl2 noHover">
@@ -550,7 +518,37 @@
                       </div>
 
                       <div class="row g8">
-                        <div class="tbl2 w50 noHover">
+                        <div class="tbl2 noHover" style="width: 60%;">
+                          <table>
+                            <colgroup>
+                              <col span="2" style="width: auto;">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">진행단계</th>
+                                <th scope="col">교환희망</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="h36">
+                                <td>
+                                  <select class="st">
+                                    <option value="">전체</option>
+                                    <option value="">전체</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <select class="st">
+                                    <option value="">전체</option>
+                                    <option value="">전체</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="tbl2 noHover"  style="width: 40%;">
                           <table>
                             <colgroup>
                               <col span="2" style="width: 120px;">
@@ -558,8 +556,8 @@
                             </colgroup>
                             <tbody>
                               <tr class="h36">
-                                <th rowspan="2" scope="row">재산 관리관</th>
-                                <th scope="row">시도청</th>
+                                <th rowspan="2" scope="row">소유 관계</th>
+                                <th scope="row">구분</th>
                                 <td>
                                   <select class="st">
                                     <option value="">전체</option>
@@ -567,485 +565,24 @@
                                   </select>
                                 </td>
                               </tr>
-                              <tr class="h36">
-                                <th scope="row" class="blnone">경찰서</th>
+                              <tr>
+                                <th scope="row" class="blnone">세부</th>
                                 <td>
-                                  <select class="st">
-                                    <option value="">전체</option>
-                                    <option value="">전체</option>
-                                  </select>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-
-                        <div class="tbl2 w50 noHover">
-                          <table>
-                            <colgroup>
-                              <col style="width: 120px;">
-                              <col style="width: auto;">
-                            </colgroup>
-                            <tbody>
-                              <tr class="h36">
-                                <th scope="row">노후도</th>
-                                <td>
-                                  <div class="flexi">
-                                    <input type="text" name="statate" aria-label="시작일" class="it edit">
-                                    ~
-                                    <input type="text" name="statate" aria-label="종료일" class="it edit">
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr class="h36">
-                                <th scope="row">관공일자</th>
-                                <td>
-                                  <div class="flexi">
-                                    <input type="text" name="statate" aria-label="시작일" class="it date"
-                                      value="2025.07.25">
-                                    ~
-                                    <input type="text" name="statate" aria-label="종료일" class="it date"
-                                      value="2025.07.25">
+                                  <div class="flexEnd g8">
+                                    <input type="text" aria-label="세부내용" class="it">
                                   </div>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
+
                       </div>
 
-                      <div class="row g8">
-                        <div class="tbl2 noHover">
-                          <table>
-                            <colgroup>
-                              <col style="width: 120px;">
-                              <col style="width: auto;">
-                            </colgroup>
-                            <tbody>
-                              <tr class="h36">
-                                <th scope="row">무단점유</th>
-                                <td>
-                                  <select class="st">
-                                    <option value="">전체</option>
-                                    <option value="">전체</option>
-                                  </select>
-                                </td>
-                              </tr>
-                              <tr class="h36">
-                                <th scope="row">용도폐지</th>
-                                <td>
-                                  <select class="st">
-                                    <option value="">해당없음</option>
-                                    <option value="">해당없음</option>
-                                  </select>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="tbl2 noHover">
-                          <table>
-                            <colgroup>
-                              <col style="width: 120px;">
-                              <col style="width: auto;">
-                            </colgroup>
-                            <tbody>
-                              <tr class="h36">
-                                <th scope="row">상호점유</th>
-                                <td>
-                                  <select class="st">
-                                    <option value="">전체</option>
-                                    <option value="">전체</option>
-                                  </select>
-                                </td>
-                              </tr>
-                              <tr class="h36">
-                                <th scope="row">사용허가</th>
-                                <td>
-                                  <select class="st">
-                                    <option value="">전체</option>
-                                    <option value="">전체</option>
-                                  </select>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="tbl2 noHover">
-                          <table>
-                            <colgroup>
-                              <col style="width: 120px;">
-                              <col style="width: auto;">
-                            </colgroup>
-                            <tbody>
-                              <tr class="h36">
-                                <th scope="row">철거</th>
-                                <td>
-                                  <select class="st">
-                                    <option value="">전체</option>
-                                    <option value="">전체</option>
-                                  </select>
-                                </td>
-                              </tr>
-                              <tr class="h36">
-                                <th scope="row">미등제</th>
-                                <td>
-                                  <select class="st">
-                                    <option value="">전체</option>
-                                    <option value="">전체</option>
-                                  </select>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-
-                      <div class="tbl2 w33 noHover">
-                        <table>
-                          <colgroup>
-                            <col style="width: 120px;">
-                            <col style="width: auto;">
-                          </colgroup>
-                          <tbody>
-                            <tr class="h36">
-                              <th scope="row">사용현황(용도)</th>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="tbl2 noHover">
-                        <table>
-                          <colgroup>
-                            <col style="width: 120px;">
-                            <col span="6" style="width: auto;">
-                          </colgroup>
-                          <tbody>
-                            <tr class="h41 tal bdnone">
-                              <th scope="row" rowspan="3">세부용도</th>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox" checked>
-                                    <span>본관</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox" checked>
-                                    <span>별관</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>관사</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>무기고</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>탄약고</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>사격장</span>
-                                  </label>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h41 tal bdnone">
-                              <td class="blnone">
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>주차동(주차장x)</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>어린이집</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>청소년경찰학교</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>교통정보센터</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>초소</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>파견소</span>
-                                  </label>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h41 tal bdnone">
-                              <td class="blnone">
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>현충시설</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>수련원</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>면허시험장</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <label class="check_btn">
-                                    <input type="checkbox">
-                                    <span>기타</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-
-                    <!-- 대장정보 조회 -->
-                    <div class="col w25">
-                      <header class="s_tit ">
-                        <h4>대장정보 조회</h4>
-                      </header>
-                      <div class="tbl2 noHover">
-                        <table>
-                          <colgroup>
-                            <col span="2" style="width: 60px;">
-                            <col style="width: 20%;">
-                            <col style="width: auto;">
-                          </colgroup>
-                          <tbody>
-                            <tr class="h36">
-                              <th colspan="2" scope="row">준공일자</th>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <input type="text" name="start-date" aria-label="시작일" class="it date">
-                                  ~
-                                  <input type="text" name="start-date" aria-label="종료일" class="it date">
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th colspan="2" scope="row">등기일자</th>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <input type="text" name="start-date" aria-label="시작일" class="it date">
-                                  ~
-                                  <input type="text" name="start-date" aria-label="종료일" class="it date">
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th colspan="2" scope="row">취득일자</th>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <input type="text" name="start-date" aria-label="시작일" class="it date">
-                                  ~
-                                  <input type="text" name="start-date" aria-label="종료일" class="it date">
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th colspan="2" scope="row">정리일자</th>
-                              <td>
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                              <td>
-                                <div class="row">
-                                  <input type="text" name="start-date" aria-label="시작일" class="it date">
-                                  ~
-                                  <input type="text" name="start-date" aria-label="종료일" class="it date">
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th colspan="2" scope="row">대장면적</th>
-                              <td colspan="2">
-                                <div class="row">
-                                  <input type="text" aria-label="대장면적" class="it h26" value="0000">
-                                  ~
-                                  <input type="text" aria-label="대장면적" class="it h26" value="0000">
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th colspan="2" scope="row">바닥면적</th>
-                              <td colspan="2">
-                                <div class="row">
-                                  <input type="text" aria-label="바닥면적" class="it h26" value="0000">
-                                  ~
-                                  <input type="text" aria-label="바닥면적" class="it h26" value="0000">
-                                </div>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" rowspan="2">재산</th>
-                              <th scope="row">종목</th>
-                              <td colspan="2">
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" class="blnone">구분</th>
-                              <td colspan="2">
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" colspan="2">취득가액</th>
-                              <td colspan="2">
-                                <input type="search" aria-label="취득가액" class="it">
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" colspan="2">대장가액</th>
-                              <td colspan="2">
-                                <input type="search" aria-label="대장가액" class="it">
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" colspan="2">장부가액</th>
-                              <td colspan="2">
-                                <input type="search" aria-label="장부가액" class="it">
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" rowspan="2">사용</th>
-                              <th scope="row">주체</th>
-                              <td colspan="2">
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" class="blnone">실태</th>
-                              <td colspan="2">
-                                <select class="st">
-                                  <option value="">전체</option>
-                                  <option value="">전체</option>
-                                </select>
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" colspan="2">회계</th>
-                              <td colspan="2">
-                                <input type="search" aria-label="회계" class="it">
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" colspan="2">사용승인상태</th>
-                              <td colspan="2">
-                                <input type="search" aria-label="사용승인상태" class="it">
-                              </td>
-                            </tr>
-                            <tr class="h36">
-                              <th scope="row" colspan="2">***</th>
-                              <td colspan="2">
-                                <input type="search" aria-label="***" class="it">
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </div>
                   </div>
+
+
                 </div>
               </div>
             </div>
@@ -1065,9 +602,9 @@
 
                 <div class="row flexEnd sub_info">
                   <div class="g20 flexi">
-                    <div class="sub_tit">토지</div>
+                    <div class="sub_tit">검색결과</div>
                     <ul class="info">
-                      <li>건수 : 5,346,233건</li>
+                      <li>건수 : - 건</li>
                       <li>대장면적 : 234.45㎡</li>
                       <li class="benone2">대장가액 : 12,345,567,678원</li>
                     </ul>
@@ -1221,9 +758,10 @@
 
               </div>
             </div>
+
           </div>
         </section>
-        <!-- // section : 국유재산 건물 검색 -->
+        <!-- // section : 미등재 재산 검색 -->
       </main>
       <!--// main -->
 

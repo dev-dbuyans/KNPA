@@ -29,14 +29,16 @@ input, button, select {
 select {appearance:none; -webkit-appearance:none;  -moz-appearance:none;}
 button, select {cursor: pointer;}
 input:focus, select:focus, option:focus, textarea:focus, button:focus {outline: none;}
+textarea, textarea:focus {border: none; outline: none;}
+
 
 img, svg, video, canvas, audio, iframe {display: block;}
 img, video {max-width: 100%; height: auto;}
 
 body {
-    font: 400 16px/2.1rem 'Pretendard', 'Noto Sans KR', 'Malgun Gothic' ,'돋움', dotum, AppleGothic, sans-serif; 
-    background-color: #fff;
-    overflow-x: hidden;
+  font: 400 16px/2.1rem 'Pretendard', 'Noto Sans KR', 'Malgun Gothic' ,'돋움', dotum, AppleGothic, sans-serif; 
+  background-color: #fff;
+  overflow-x: hidden;
 }
 html {font-size: 62.5%;}
 
@@ -245,12 +247,11 @@ header#header h1 a img{flex-shrink: 0;}
 #gnb .dropMenu{
   width: 100vw; 
   overflow: hidden;
-  display: flex; align-items: flex-start; justify-content: space-between;
+  display: flex; align-items: flex-start; 
   background-color: #ffffff;
   position: fixed; top: 7rem; left: 0;
   z-index: 1000;
 
-  /* position: absolute; top: 100%; left: 0; */
   background-color: #ffffff;
   display: none;
 }
@@ -300,6 +301,7 @@ header#header h1 a img{flex-shrink: 0;}
   gap: 8px; height: 3.2rem;
   font-size: 14px; font-weight: 600; 
   color: var(--text4);
+  position: relative;
 }
 #util .newWindow {
   display: inline-flex;
@@ -320,16 +322,20 @@ header#header h1 a img{flex-shrink: 0;}
   position: absolute; left: 8px; top: 6px;
 }
 
+/*** 250801 수정 ***/
 #util .extention{
-  padding: 2.5px 3px 2.5px 8px;
+  width: 10.3rem;
+  padding: 2.5px 0;
+  display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--gray200); border-radius: 6px;
 }
 #util .extention span {
+  width: 43px;
   line-height: 2.1rem; color: var(--text4);
 }
 #util .extention .exBtn{
   height: 26px;
-  padding: 2.5px 8px; margin-left: 8px;
+  padding: 2.5px 8px; margin-left: 4px;
   line-height: 2.1rem; 
   background-color: var(--text4); color: #ffffff;
   border-radius: 4px;
@@ -357,6 +363,23 @@ header#header h1 a img{flex-shrink: 0;}
   background: url(/assets/img/ico_logout.svg) no-repeat center / contain;
   margin-right: 6px;
 }
+
+/*** 250801 툴팁 추가 ***/
+.toolTip{
+  max-width: 30rem; overflow: hidden;
+  border-radius: 6px;
+  background-color: rgba(24, 28, 32, 0.9);
+  border: 1px solid #485361; color: #ffffff;
+  position: absolute; top: 37px; left: -28px;
+  display: none;
+}
+.toolTip p{
+  padding: 4px 12px;
+  font-size: 13px; line-height: 2.1rem;
+  word-wrap: break-word; white-space: normal;
+}
+#util .user:hover .toolTip{ display: flex; }
+#util .user.noHover{pointer-events: none;}
 
 
 
@@ -787,7 +810,7 @@ footer .f_inner{
 }
 .f_txt .btn.basic{
   display: inline-block; 
-  height: 3.2rem; 
+  height: 3.2rem; line-height: 2.1rem;
   padding: 5.5px 12px; margin-bottom: 12px;
 }
 .f_txt address {margin-bottom: 2px;}
@@ -883,10 +906,9 @@ input, select, textarea, button {
   padding: 0 2.4rem;
   border-radius: 10rem;
   background-color: #fff;
+  font-size: 14px; font-weight: 500; color: var(--text4);
 }
-.it::placeholder{
-  color: var(--gray400);
-}
+.it::placeholder{ color: var(--gray400); }
 
 
 /* select */
@@ -896,7 +918,7 @@ input, select, textarea, button {
   line-height: 2.1rem; font-size: 14px; font-weight: 500; 
   color: var(--text1); background-color: #ffffff;
   border: 1px solid var(--gray100); border-radius: 4px;
-  background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ;
+  /* background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ; */
 }
 
 
@@ -954,7 +976,8 @@ select.st{
   background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ;
 }
 
-
+/*** 250801 textarea 추가 ***/ 
+textarea{ width: 100%; }
 
 
 

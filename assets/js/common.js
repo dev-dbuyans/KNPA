@@ -48,7 +48,28 @@ document.addEventListener("DOMContentLoaded", () => {
       label.closest(".st_box").classList.remove("on");
     });
   });
+
+
+  /*** 250801 : 전체체크박스 추가 ***/
+  document.querySelectorAll('.checkAll').forEach(checkAll => {
+    const group = checkAll.closest('.tbl2');
+    const rowChecks = group.querySelectorAll('.row-check');
+
+    checkAll.addEventListener('change', function () {
+      rowChecks.forEach(cb => cb.checked = this.checked);
+    });
+
+    rowChecks.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const allChecked = Array.from(rowChecks).every(chk => chk.checked);
+        checkAll.checked = allChecked;
+      });
+    });
+  });
+
+
 });
+
 
 
 
@@ -77,6 +98,7 @@ $(function () {
   //전체메뉴
   $(".menuBtn").click(function (e) {
     e.stopPropagation();
+
     $("#allMenu").toggleClass("on");
     $("#allMenu .dimmed").toggleClass("on");
     $(this).toggleClass("on")
@@ -85,6 +107,7 @@ $(function () {
     // gnb호버 제한
     if ($("#allMenu").hasClass("on")) {
       $("#gnb ul>.depth1 > li").off("mouseenter mouseleave");
+      $("#util .user").addClass("noHover")
 
       // ESC / 외부 클릭시 닫기
       $(document).on("click.closeMenu", function (e) {
@@ -108,47 +131,47 @@ $(function () {
     $("#allMenu .dimmed").removeClass("on");
     $(".menuBtn").removeClass("on");
     $(document).off(".closeMenu");
+    $("#util .user").removeClass("noHover")
   }
 
 
-  /*** 250730 : nav > .nav_box 닫히는 오류 수정 ***/ 
+  /*** 250730 : nav > .nav_box 닫히는 오류 수정 ***/
   // nav
   $(".btnbox").click(function () {
-  $(this).closest("#navigation").toggleClass("hide");
-  $(this).toggleClass("fold");
-  $(this).find(".folding_btn").toggleClass("fold");
+    $(this).closest("#navigation").toggleClass("hide");
+    $(this).toggleClass("fold");
+    $(this).find(".folding_btn").toggleClass("fold");
 
-  // 접고펼치면 클래스 초기화
-  $("#navigation ul.depth1 > li").removeClass("on");
-  $(".nav_box").removeClass("on");
-});
+    $("#navigation ul.depth1 > li").removeClass("on");
+    $(".nav_box").removeClass("on");
+  });
 
-$("#navigation ul.depth1 > li").click(function (e) {
-  if (!$(e.target).closest("li").is(this)) return;
+  $("#navigation ul.depth1 > li").click(function (e) {
+    if (!$(e.target).closest("li").is(this)) return;
 
-  // 접힌 상태면 nav 펼치기
-  if ($("#navigation").hasClass("hide")) {
-    $("#navigation").removeClass("hide");
-    $(".btnbox").removeClass("fold");
-    $(".folding_btn").removeClass("fold");
-  }
+    // 접힌 상태면 nav 펼치기
+    if ($("#navigation").hasClass("hide")) {
+      $("#navigation").removeClass("hide");
+      $(".btnbox").removeClass("fold");
+      $(".folding_btn").removeClass("fold");
+    }
 
-  const isActive = $(this).hasClass("on");
+    const isActive = $(this).hasClass("on");
 
-  // 모든 메뉴 초기화
-  $("#navigation ul.depth1 > li").removeClass("on");
-  $(".nav_box").removeClass("on");
+    // 모든 메뉴 초기화
+    $("#navigation ul.depth1 > li").removeClass("on");
+    $(".nav_box").removeClass("on");
 
-  // 현재 li 활성화
-  if (!isActive) {
-    $(this).addClass("on");
-    $(this).find(".nav_box").addClass("on");
-  }
-});
+    // 현재 li 활성화
+    if (!isActive) {
+      $(this).addClass("on");
+      $(this).find(".nav_box").addClass("on");
+    }
+  });
 
-$(".nav_box").on("click", function (e) {
-  e.stopPropagation();
-});
+  $(".nav_box").on("click", function (e) {
+    e.stopPropagation();
+  });
 
 
 });
@@ -170,8 +193,8 @@ function tabMenu(tabName, num) {
   });
 }
 
-/*** 250731 : datepicker, 검색영역 추가 ***/ 
-$(function(){
+/*** 250731 : datepicker, 검색영역 추가 ***/
+$(function () {
   $(".it.date").datepicker({
     dateFormat: "yy.mm.dd",
     prevText: "이전 달",
@@ -183,28 +206,44 @@ $(function(){
     dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
     showMonthAfterYear: true,
     yearSuffix: "년",
-
-    //  beforeShow: function(input, inst) {
-    //   setTimeout(function() {
-    //     const inputOffset = $(input).offset();
-    //     const inputHeight = $(input).outerHeight();
-        
-    //     $(inst.dpDiv).css({
-    //       top: inputOffset.top + inputHeight + 5 + "px", // 아래로 10px 띄움
-    //       left: inputOffset.left + -82 + "px"
-    //     });
-    //   }, 0);
-    // }
   });
 });
 
 
 // 검색버튼 클릭
-$(function(){
-  $(".btn.blueBtn.srch").click(function(){
+$(function () {
+  $(".btn.blueBtn.srch").click(function () {
     $(this).toggleClass("on");
     $(".sec_wrap2.bg").toggleClass("on");
   });
 })
+
+
+/*** 250801 : 검색결과 추가 ***/
+function resetToggle() {
+  $(".sec .moreBtn").removeClass("show");
+  $(".sec .sec_item").removeClass("on");
+}
+
+$(function () {
+  resetToggle();
+
+  $(".sec .moreBtn").click(function () {
+    const sec = $(this).closest(".sec");
+
+    $(this).toggleClass("show");
+
+    if ($(this).hasClass("show")) {
+      sec.find(".sec_item").addClass("on");
+    } else {
+      sec.find(".sec_item").removeClass("on");
+    }
+  });
+});
+
+// $(document).ready(function(){
+//   $('select').niceSelect();
+// });
+
 
 

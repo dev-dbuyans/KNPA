@@ -67,18 +67,22 @@
   background-color: var(--tabDisable);
 }
 .sub_info ul.info li{
+  height: 3.2rem; 
   display: flex; align-content: center;
   background-color: var(--tabDisable); color: var(--text1);
-  height: 3.2rem; 
-  border-radius: 6px;
+  border-radius: 6px; 
   overflow: hidden; text-overflow: ellipsis;
   display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
+  position: relative; 
+  /* 250801 font 추가 */
+  font-size: 1.4rem; font-weight: 500;
 }
 .sub_info ul.info li + li::before{
   display: inline-block; content: '';
   width: 1px; height: 14px;
   background-color: var(--gray200); 
   margin: 0 10px;
+  position: relative; top: 3px;
 }
 
 /* type2 */
@@ -96,7 +100,6 @@
 /* ------------------------------------------------------------------------- */
 /* 국유재산(토지) 검색
 /* ------------------------------------------------------------------------- */
-/* .sec_wrap2.type3{padding: 0;} */
 .sec_wrap2.pd0{padding: 0;}
 .sec_wrap2.pd0>.inner{ padding: 4rem; background-color: #ffffff;}
 .sec_wrap2.bg { 
@@ -133,15 +136,26 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 }
 .tbl2 .imgbox.mt10{margin-top: 10px;}
 
-.sec_wrap2.type3.bg span.fm_tit{ font-size: 14px;}
+.sec_wrap2 span.fm_tit{ font-size: 14px;}
 .mt8 {margin-top: 8px;}
 
 
-
-
-
-
-
+/**** 250801 추가 ****/
+/* ------------------------------------------------------------------------- */
+/* 상호점유 관리 - 상세정보
+/* ------------------------------------------------------------------------- */
+.sec_wrap2 .s_tit.underLine{
+  border-bottom: 1px solid var(--primary2);
+  padding-bottom: 9px;
+}
+.sec_wrap2 .s_tit.underLine .moreBtn{
+  display: inline-block; content: '';
+  width: 30px; height: 30px;
+  background: url(/assets/img/ico_arrowDown_02.svg) no-repeat top 5px center / 24px 24px;
+}
+.sec_wrap2 .s_tit.underLine .moreBtn.show{   background: url(/assets/img/ico_arrowUp_02.svg) no-repeat top 5px center / 24px 24px;}
+.sec_item { display: none; }
+.sec_item.on{ display: block; }
 
 
 
