@@ -91,10 +91,6 @@
 
 
 
-/* btn */
-
-
-
 
 /**** 250730, 250731 추가 ****/
 /* ------------------------------------------------------------------------- */
@@ -103,9 +99,11 @@
 .sec_wrap2.pd0{padding: 0;}
 .sec_wrap2.pd0>.inner{ padding: 4rem; background-color: #ffffff;}
 .sec_wrap2.bg { 
+  width: 100%;
   background-color: var(--bg); padding: 4rem;
   box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.12);
   transition: flex 0.3s ease;
+  left: 0;
   display: none;
 }
 .sec_wrap2.bg.on{display: block;}

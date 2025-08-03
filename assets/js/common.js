@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // header
   const header = document.querySelector("header#header");
+  const nav = document.querySelector("#navigation");
+  const btnbox = document.querySelector(".btnbox");
   let lastScroll = 0;
 
   window.addEventListener("scroll", () => {
@@ -8,92 +10,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (currentScroll > lastScroll && currentScroll > 100) {
       header.classList.add("hide");
+      nav.classList.add("up");
+      btnbox.classList.add("up");
     } else {
       header.classList.remove("hide");
+      nav.classList.remove("up");
+      btnbox.classList.remove("up");
     }
 
     lastScroll = currentScroll;
   });
 
-
-
-  // ul>li -> select
-  const labels = document.querySelectorAll(".st_box .label.st");
-  const resetBtn = document.querySelector(".resetSelectBtn");
-
-  labels.forEach((label) => {
-    const box = label.closest(".st_box");
-    const options = box.querySelectorAll(".opts");
-
-    label.addEventListener("click", () => {
-      document.querySelectorAll(".st_box.on").forEach((openBox) => {
-        if (openBox !== box) openBox.classList.remove("on");
-      });
-
-      box.classList.toggle("on");
-    });
-
-    options.forEach((opt) => {
-      opt.addEventListener("click", () => {
-        label.textContent = opt.textContent;
-        box.classList.remove("on");
-      });
-    });
-  });
-
-  resetBtn?.addEventListener("click", () => {
-    labels.forEach((label) => {
-      const defaultText = label.dataset.default;
-      if (defaultText) label.textContent = defaultText;
-      label.closest(".st_box").classList.remove("on");
-    });
-  });
-
-
   /*** 250801 : 전체체크박스 추가 ***/
-  document.querySelectorAll('.checkAll').forEach(checkAll => {
-    const group = checkAll.closest('.tbl2');
-    const rowChecks = group.querySelectorAll('.row-check');
+  document.querySelectorAll(".checkAll").forEach((checkAll) => {
+    const group = checkAll.closest(".tbl2");
+    const rowChecks = group.querySelectorAll(".row-check");
 
-    checkAll.addEventListener('change', function () {
-      rowChecks.forEach(cb => cb.checked = this.checked);
+    checkAll.addEventListener("change", function () {
+      rowChecks.forEach((cb) => (cb.checked = this.checked));
     });
 
-    rowChecks.forEach(cb => {
-      cb.addEventListener('change', () => {
-        const allChecked = Array.from(rowChecks).every(chk => chk.checked);
+    rowChecks.forEach((cb) => {
+      cb.addEventListener("change", () => {
+        const allChecked = Array.from(rowChecks).every((chk) => chk.checked);
         checkAll.checked = allChecked;
       });
     });
   });
-
-
 });
 
-
-
-
 $(function () {
-  $("#gnb ul.depth1 > li").hover(
+  $("#gnb ul.depth1 > li").hover(function () {
+    if ($(this).hasClass("noHover")) return;
+    $("#gnb ul.depth1 > li")
+      .removeClass("on")
+      .find(".dropMenu")
+      .removeClass("on");
 
-    function () {
-      if ($(this).hasClass("noHover")) return;
-      $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
-
-      $(this).addClass("on");
-      $(this).find(".dropMenu").addClass("on");
-      $("#gnb .dimmed").addClass("on");
-    },
-
-  );
+    $(this).addClass("on");
+    $(this).find(".dropMenu").addClass("on");
+    $("#gnb .dimmed").addClass("on");
+  });
 
   // 마우스가 전체 GNB를 벗어나면 드롭메뉴 닫기
   $("#gnb").on("mouseleave", function () {
-    $("#gnb ul.depth1 > li").removeClass("on").find(".dropMenu").removeClass("on");
+    $("#gnb ul.depth1 > li")
+      .removeClass("on")
+      .find(".dropMenu")
+      .removeClass("on");
     $("#gnb .dimmed").removeClass("on");
-    $("body").removeClass("no-scroll")
+    $("body").removeClass("no-scroll");
   });
-
 
   //전체메뉴
   $(".menuBtn").click(function (e) {
@@ -101,13 +68,12 @@ $(function () {
 
     $("#allMenu").toggleClass("on");
     $("#allMenu .dimmed").toggleClass("on");
-    $(this).toggleClass("on")
-
+    $(this).toggleClass("on");
 
     // gnb호버 제한
     if ($("#allMenu").hasClass("on")) {
       $("#gnb ul>.depth1 > li").off("mouseenter mouseleave");
-      $("#util .user").addClass("noHover")
+      $("#util .user").addClass("noHover");
 
       // ESC / 외부 클릭시 닫기
       $(document).on("click.closeMenu", function (e) {
@@ -131,9 +97,8 @@ $(function () {
     $("#allMenu .dimmed").removeClass("on");
     $(".menuBtn").removeClass("on");
     $(document).off(".closeMenu");
-    $("#util .user").removeClass("noHover")
+    $("#util .user").removeClass("noHover");
   }
-
 
   /*** 250730 : nav > .nav_box 닫히는 오류 수정 ***/
   // nav
@@ -141,6 +106,9 @@ $(function () {
     $(this).closest("#navigation").toggleClass("hide");
     $(this).toggleClass("fold");
     $(this).find(".folding_btn").toggleClass("fold");
+    $(".sec_wrap").toggleClass("full");
+    $(".sec_wrap2").toggleClass("full");
+    $(".main_inner").toggleClass("full");
 
     $("#navigation ul.depth1 > li").removeClass("on");
     $(".nav_box").removeClass("on");
@@ -154,6 +122,9 @@ $(function () {
       $("#navigation").removeClass("hide");
       $(".btnbox").removeClass("fold");
       $(".folding_btn").removeClass("fold");
+      $(".sec_wrap").removeClass("full");
+      $(".sec_wrap2").removeClass("full");
+      $(".main_inner").removeClass("full");
     }
 
     const isActive = $(this).hasClass("on");
@@ -172,8 +143,6 @@ $(function () {
   $(".nav_box").on("click", function (e) {
     e.stopPropagation();
   });
-
-
 });
 
 /* 탭메뉴  */
@@ -199,8 +168,34 @@ $(function () {
     dateFormat: "yy.mm.dd",
     prevText: "이전 달",
     nextText: "다음 달",
-    monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
-    monthNamesShort: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+    monthNames: [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ],
+    monthNamesShort: [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ],
     dayNames: ["일", "월", "화", "수", "목", "금", "토"],
     dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
     dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
@@ -209,15 +204,13 @@ $(function () {
   });
 });
 
-
 // 검색버튼 클릭
 $(function () {
   $(".btn.blueBtn.srch").click(function () {
     $(this).toggleClass("on");
     $(".sec_wrap2.bg").toggleClass("on");
   });
-})
-
+});
 
 /*** 250801 : 검색결과 추가 ***/
 function resetToggle() {
@@ -241,9 +234,8 @@ $(function () {
   });
 });
 
-// $(document).ready(function(){
-//   $('select').niceSelect();
-// });
-
-
-
+$(document).ready(function () {
+  if ($(".st.type2").length) {
+    $(".st.type2").niceSelect();
+  }
+});
