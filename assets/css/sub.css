@@ -10,27 +10,26 @@
 .tbl2.w25{width: calc(25% - 8px);}
 .tbl2.w25{width: 25%;}
 .tbl2.w33{width: 33%;}
-.tbl2.w67{width: 65%;}
+.tbl2.w67{width: calc(67% - 8px);}
 .tbl2.w38{width: 38%;}
 .col.w38{width: 38%;}
 .tbl2.img{ width: 25%;}
 
-.tbl2 table th {background-color: var(--bg);}
+.tbl2 table th ,
+.tbl2 tbody tr.h36 th {background-color: var(--bg);}
 .tbl2 thead tr th {height: 3.9rem;}
 .tbl2 table th.nobg{background-color: #ffffff;}
 
-.tbl2.h36 table tr td,
-.tbl2 tbody tr.h36 td,
-.tbl2 thead tr th.h36 {height: 3.6rem;}
-.tbl2 tbody tr.h36 th { background-color: var(--bg); }
+.tbl2 .h36{height: 3.6rem;}
 .tbl2 table tbody.pd0 td {padding: 0;}
 
 .tbl2 table td.bdnone:first-child{ border: 0; }
-.tbl2 table td.blnone:first-child{ border-left: 0; }
+.tbl2 table td.blnone:first-child,
 .tbl2 table th.blnone:first-child{ border-left: 0; }
 
+.tbl2.noHover tr:hover td.bg,
 .tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
-.tbl2.noHover tr:hover td.bg {background-color: #ffffff;}
+
 .tbl2 tr td.bold{ font-weight: 600; color: var(--text1); }
 .tbl2.img table td div img{width: 100%; height: 100%; margin: auto;}
 .tbl2 tfoot tr.hlight th,
@@ -42,6 +41,7 @@
   background-color: #ffffff; 
   border-left: 0; border-right: 0; border: 0;
 }
+.tbl2 tbody tr.h36.disabled th,
 .tbl2 tr.disabled th,
 .tbl2 tr.disabled td,
 .tbl2.noHover tr.disabled:hover td {background-color: var(--tabDisable);}
@@ -152,6 +152,7 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 .sec_wrap2 .s_tit.underLine{
   border-bottom: 1px solid var(--primary2);
   padding-bottom: 9px;
+  cursor: pointer;
 }
 .sec_wrap2 .s_tit.underLine .moreBtn{
   display: inline-block; content: '';
@@ -165,8 +166,7 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 /* ------------------------------------------------------------------------- */
 /* 미등재 재산 - 상세정보
 /* ------------------------------------------------------------------------- */
-/* .tbl2 table tr.h38 th,
-.tbl2 table tr.h38 td { height: 3.8rem; } */
+
 
 
 

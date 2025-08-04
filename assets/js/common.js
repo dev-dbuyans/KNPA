@@ -221,7 +221,7 @@ function resetToggle() {
 $(function () {
   resetToggle();
 
-  $(".sec .moreBtn").click(function () {
+  $("header.underLine").click(function () {
     const sec = $(this).closest(".sec");
 
     $(this).toggleClass("show");

@@ -120,6 +120,7 @@ html {font-size: 62.5%;}
   --tfootbg:#FFEFE4;
   --tdcolor:#303741;
   --pagebg:#F9F9F9;
+  --pagetxt:#76768E;
 
   --bg:#F9FAFC;
   --gray200:#CFCFCF;
@@ -341,6 +342,7 @@ header#header h1 a img{flex-shrink: 0;}
   border-radius: 4px;
 }
 #util .user { height: 3.2rem;}
+#util .user { height: 3.2rem;}
 #util .user .my { height: 100%; display: inline-flex; align-items: center; }
 #util .user .my::before{
   display: inline-block; content:'';
@@ -348,6 +350,9 @@ header#header h1 a img{flex-shrink: 0;}
   background: url(/assets/img/ico_profile.svg) no-repeat center / contain;
   margin-right: 6px;
 }
+/*** 250804 호버 추가 ***/
+#util .user:hover .my{color: var(--primary);}
+#util .user:hover .my::before{  background: url(/assets/img/ico_profileOn.svg) no-repeat center / contain;}
 
 #util .logOut {display: flex; align-items: center;}
 #util .logOut::before{
@@ -374,8 +379,8 @@ header#header h1 a img{flex-shrink: 0;}
   display: none;
 }
 .toolTip p{
-  padding: 4px 12px;
-  font-size: 13px; line-height: 2.1rem;
+  padding: 4px 12px; 
+  font-size: 13px; font-weight: 500; line-height: 2.1rem;
   word-wrap: break-word; white-space: normal;
 }
 #util .user:hover .toolTip{ display: flex; }
@@ -1149,13 +1154,14 @@ textarea{ width: 100%; }
   min-width: 28px; min-height: 28px;
   padding: 0 6px;
   border-radius: 5px;
-  font-weight: 500; font-size: 14px; line-height: 22px; text-align: center; color: var(--text9);
-  background-color: #ffffff; border: 1px solid var(--gray100);
+  font-weight: 500; font-size: 14px; line-height: 22px; text-align: center; 
+  color: var(--text9); background-color: var(--pagebg); border: 1px solid var(--gray100);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /*** 250804 버튼 수정 ***/
-.pagination button:not(.first, .prev, .next, .last).on { color: #ffffff; background-color: var(--primary); border-color:var(--primary) }
+.pagination button:not(.first, .prev, .next, .last){border: var(--pagebg);}
+.pagination button:not(.first, .prev, .next, .last).on { color: #ffffff; background-color: var(--primary);}
 .pagination button.first:disabled {background-image: url(/assets/img/ico_page_first.svg); background-position: center top -1px;}
 .pagination button.prev:disabled {background-image: url(/assets/img/ico_page_prev.svg); background-position: center top -1px;}
 .pagination button.next:disabled {background-image: url(/assets/img/ico_page_next.svg); background-position: center top -1px;}
