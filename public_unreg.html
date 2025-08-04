@@ -383,7 +383,7 @@
           <div class="sec">
             <div class="sec_con">
               <div class="scroll_wrap">
-                <div class="alend g16">
+                <div class="fstart g16">
                   <div class="col w75 g8">
                     <div class="tbl2 noHover w33">
                       <table>
@@ -391,7 +391,7 @@
                           <col style="width: 120px;">
                           <col style="width: auto;">
                         </colgroup>
-                        <tbody>
+                        <tbody class="pd0">
                           <tr class="h36">
                             <th scope="row">처분 구분</th>
                             <td>
@@ -473,7 +473,7 @@
                             <th scope="col">관서 집계</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="pd0">
                           <tr class="h36">
                             <td>
                               <select class="st">
@@ -518,7 +518,7 @@
                             <th scope="col">세부관서</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="pd0">
                           <tr class="h36">
                             <td>
                               <select class="st">
@@ -526,6 +526,50 @@
                                 <option value="">전체</option>
                               </select>
                             </td>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">전체</option>
+                              </select>
+                            </td>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">전체</option>
+                              </select>
+                            </td>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">전체</option>
+                              </select>
+                            </td>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">전체</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="tbl2 g8 noHover mt8">
+                      <table>
+                        <colgroup>
+                          <col span="4" style="width: auto;">
+                        </colgroup>
+                        <thead>
+                          <tr class="h36">
+                            <th scope="col">미등재 사유</th>
+                            <th scope="col">상호 점유</th>
+                            <th scope="col">조치단계</th>
+                            <th scope="col">철거계획</th>
+                          </tr>
+                        </thead>
+                        <tbody class="pd0">
+                          <tr class="h36">
                             <td>
                               <select class="st">
                                 <option value="">전체</option>
@@ -568,7 +612,7 @@
                           <col style="width: 20%;">
                           <col style="width: auto;">
                         </colgroup>
-                        <tbody>
+                        <tbody class="pd0">
                           <tr class="h36">
                             <th scope="row">대장면적</th>
                             <td colspan="2">
@@ -627,49 +671,6 @@
                   </div>
                 </div>
 
-                <div class="tbl2 g8 noHover mt8">
-                  <table>
-                    <colgroup>
-                      <col span="4" style="width: auto;">
-                    </colgroup>
-                    <thead>
-                      <tr class="h36">
-                        <th scope="col">미등재 사유</th>
-                        <th scope="col">상호 점유</th>
-                        <th scope="col">조치단계</th>
-                        <th scope="col">철거계획</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="h36">
-                        <td>
-                          <select class="st">
-                            <option value="">전체</option>
-                            <option value="">전체</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="st">
-                            <option value="">전체</option>
-                            <option value="">전체</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="st">
-                            <option value="">전체</option>
-                            <option value="">전체</option>
-                          </select>
-                        </td>
-                        <td>
-                          <select class="st">
-                            <option value="">전체</option>
-                            <option value="">전체</option>
-                          </select>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </div>
           </div>
@@ -719,23 +720,35 @@
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
-                      <col span="2" style="width: 8%;">
-                      <col span="2" style="width: 18%;">
-                      <col span="3" style="width: 10%;">
-                      <col style="width: 18%;">
+                      <col style="width: 60px;">
+                      <col span="6" style="width: auto;">
                     </colgroup>
                     <thead>
                       <tr class="btntbl">
                         <th>NO</th>
                         <th>
-                          등재여부
+                          시도청
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          세부자산명
+                          경찰서
+                          <div class="updown">
+                            <button type="button" class="upbtn"></button>
+                            <button type="button" class="downbtn"></button>
+                          </div>
+                        </th>
+                        <th>
+                          세부관서명
+                          <div class="updown">
+                            <button type="button" class="upbtn"></button>
+                            <button type="button" class="downbtn"></button>
+                          </div>
+                        </th>
+                        <th>
+                          자산명
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
@@ -749,28 +762,7 @@
                           </div>
                         </th>
                         <th>
-                          대장번호
-                          <div class="updown">
-                            <button type="button" class="upbtn"></button>
-                            <button type="button" class="downbtn"></button>
-                          </div>
-                        </th>
-                        <th>
-                          대장면적(㎡)
-                          <div class="updown">
-                            <button type="button" class="upbtn"></button>
-                            <button type="button" class="downbtn"></button>
-                          </div>
-                        </th>
-                        <th>
-                          대장가액(원)
-                          <div class="updown">
-                            <button type="button" class="upbtn"></button>
-                            <button type="button" class="downbtn"></button>
-                          </div>
-                        </th>
-                        <th>
-                          소유자
+                          도로명주소
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
@@ -781,43 +773,39 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <td>3</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <td>4</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
@@ -826,8 +814,8 @@
 
               <!-- pagination -->
               <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
                 <div class="g4">
                   <button class="on" aria-label="1 페이지">1</button>
                   <button aria-label="2 페이지">2</button>

@@ -806,6 +806,11 @@
                     </table>
                   </div>
                 </div>
+
+                <div class="rowbox end mt8">
+                  <button type="button" class="btn Dgray">수정</button>
+                </div>
+
               </div>
             </div>
           </div>
@@ -848,11 +853,10 @@
               </div>
 
               <div class="tabMenu_etc">
-                <button class=" on" onclick="tabMenu('etc',0)">공작물</button>
-                <button onclick="tabMenu('etc',1)">기계지구</button>
-                <button onclick="tabMenu('etc',2)">무체재산</button>
-                <button onclick="tabMenu('etc',3)">선박/항공기</button>
-                <button onclick="tabMenu('etc',4)">입축목</button>
+                <button class=" on" onclick="tabMenu('etc',0)">재산이력</button>
+                <button onclick="tabMenu('etc',1)">변경이력(구,재산이력)</button>
+                <button onclick="tabMenu('etc',2)">재산담당자</button>
+                <button onclick="tabMenu('etc',3)">관리자료</button>
               </div>
 
               <div class="tabCont_etc0 on">
@@ -968,12 +972,11 @@
               <div class="tabCont_etc1">탭 영역2</div>
               <div class="tabCont_etc2">탭 영역3</div>
               <div class="tabCont_etc3">탭 영역4</div>
-              <div class="tabCont_etc4">탭 영역5</div>
 
               <!-- pagination -->
               <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
                 <div class="g4">
                   <button class="on" aria-label="1 페이지">1</button>
                   <button aria-label="2 페이지">2</button>

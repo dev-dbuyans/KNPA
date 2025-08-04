@@ -391,7 +391,7 @@
                           <col style="width: 120px;">
                           <col style="width: auto;">
                         </colgroup>
-                        <tbody>
+                        <tbody class="pd0">
                           <tr class="h36">
                             <th scope="row">완료 구분</th>
                             <td>
@@ -414,7 +414,7 @@
                             <col style="width: 120px;">
                             <col style="width: auto;">
                           </colgroup>
-                          <tbody>
+                          <tbody class="pd0">
                             <tr class="h36">
                               <th scope="row">자산/사업명</th>
                               <td colspan="3">
@@ -486,7 +486,7 @@
                             <th scope="col">세부관서</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="pd0">
                           <tr class="h36">
                             <td>
                               <select class="st">
@@ -535,7 +535,7 @@
                               <th scope="col">교환희망</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="pd0">
                             <tr class="h36">
                               <td>
                                 <select class="st">
@@ -560,7 +560,7 @@
                             <col span="2" style="width: 120px;">
                             <col style="width: auto;">
                           </colgroup>
-                          <tbody>
+                          <tbody class="pd0">
                             <tr class="h36">
                               <th rowspan="2" scope="row">소유 관계</th>
                               <th scope="row">구분</th>
@@ -609,11 +609,24 @@
               <div class="row flexEnd sub_info">
                 <div class="g20 flexi">
                   <div class="sub_tit">검색결과</div>
-                  <ul class="info">
-                    <li>건수 : - 건</li>
-                    <li>대장면적 : 234.45㎡</li>
-                    <li class="benone2">대장가액 : 12,345,567,678원</li>
-                  </ul>
+                  <div class="row g8 fwrap">
+                    <ul class="info type2">
+                      <li><b>합계</b> &nbsp;건수 :&nbsp; &nbsp;- 건 /&nbsp; &nbsp;- 건</li>
+                      <li>전체 점유 면적 : &nbsp;&nbsp;㎡ / &nbsp;&nbsp;㎡</li>
+                      <li>실 점유 면적 : &nbsp;&nbsp;원 / &nbsp;&nbsp;원</li>
+                    </ul>
+                    <ul class="info type2">
+                      <li><b>토지</b> &nbsp;건수 :&nbsp; &nbsp;- 건 /&nbsp; &nbsp;- 건</li>
+                      <li>전체 점유 면적 : &nbsp;&nbsp;㎡ / &nbsp;&nbsp;㎡</li>
+                      <li>실 점유 면적 : &nbsp;&nbsp;원 / &nbsp;&nbsp;원</li>
+                    </ul>
+                    <ul class="info type2">
+                      <li><b>건물</b> &nbsp;건수 :&nbsp; &nbsp;- 건 /&nbsp; &nbsp;- 건</li>
+                      <li>전체 점유 면적 : &nbsp;&nbsp;㎡ / &nbsp;&nbsp;㎡</li>
+                      <li>실 점유 면적 : &nbsp;&nbsp;원 / &nbsp;&nbsp;원</li>
+                    </ul>
+
+                  </div>
                 </div>
 
                 <div class="flexi g8">
@@ -638,58 +651,90 @@
                 <div class="scroll_wrap">
                   <table>
                     <colgroup>
-                      <col span="2" style="width: 8%;">
-                      <col span="2" style="width: 18%;">
-                      <col span="3" style="width: 10%;">
-                      <col style="width: 18%;">
+                      <col style="width: 60px;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                      <col span="2" style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: 140px;">
+                      <col span="4" style="width: 120px;">
                     </colgroup>
                     <thead>
                       <tr class="btntbl">
                         <th>NO</th>
                         <th>
-                          등재여부
+                          세부관서명
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          세부자산명
+                          사업명(이용현황)
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          지번주소
+                          자산명
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          대장번호
+                          재산구분
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          대장면적(㎡)
+                          주소
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          대장가액(원)
+                          소유구분
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
                           </div>
                         </th>
                         <th>
-                          소유자
+                          소유자 상세
+                          <div class="updown">
+                            <button type="button" class="upbtn"></button>
+                            <button type="button" class="downbtn"></button>
+                          </div>
+                        </th>
+                        <th>
+                          전체 면적
+                          <div class="updown">
+                            <button type="button" class="upbtn"></button>
+                            <button type="button" class="downbtn"></button>
+                          </div>
+                        </th>
+                        <th>
+                          실점유면적
+                          <div class="updown">
+                            <button type="button" class="upbtn"></button>
+                            <button type="button" class="downbtn"></button>
+                          </div>
+                        </th>
+                        <th>
+                          실점유가액
+                          <div class="updown">
+                            <button type="button" class="upbtn"></button>
+                            <button type="button" class="downbtn"></button>
+                          </div>
+                        </th>
+                        <th>
+                          희망여부
                           <div class="updown">
                             <button type="button" class="upbtn"></button>
                             <button type="button" class="downbtn"></button>
@@ -700,43 +745,59 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <td>3</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <td>4</td>
-                        <td>등재</td>
-                        <td class="tal">리모델링리모델링리모</td>
-                        <td class="tal">2010.12.26~2012.10.25</td>
-                        <td>12-346-889</td>
-                        <td class="tar">23.34</td>
-                        <td class="tar">123,345,677</td>
-                        <td>소유자명</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
@@ -745,8 +806,8 @@
 
               <!-- pagination -->
               <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
                 <div class="g4">
                   <button class="on" aria-label="1 페이지">1</button>
                   <button aria-label="2 페이지">2</button>

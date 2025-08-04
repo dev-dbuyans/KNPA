@@ -470,7 +470,7 @@
                               <col span="2" style="width: 120px;">
                               <col style="width: auto;">
                             </colgroup>
-                            <tbody>
+                            <tbody class="pd0">
                               <tr class="h36">
                                 <th rowspan="2" scope="row">소재지</th>
                                 <th scope="row">지번</th>
@@ -503,7 +503,7 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
+                            <tr class="h36">
                               <td></td>
                               <td></td>
                               <td></td>
@@ -528,14 +528,14 @@
                             <th scope="row" colspan="4">건물</th>
                           </tr>
                           <tr>
-                            <th scope="row" class="blnone">건수</th>
-                            <th scope="row">면적</th>
-                            <th scope="row">실점유 면적</th>
-                            <th scope="row">가액</th>
-                            <th scope="row">건수</th>
-                            <th scope="row">면적</th>
-                            <th scope="row">실점유 면적</th>
-                            <th scope="row">가액</th>
+                            <th scope="row" class="blnone h36">건수</th>
+                            <th scope="row" class="h36">면적</th>
+                            <th scope="row" class="h36">실점유 면적</th>
+                            <th scope="row" class="h36">가액</th>
+                            <th scope="row" class="h36">건수</th>
+                            <th scope="row" class="h36">면적</th>
+                            <th scope="row" class="h36">실점유 면적</th>
+                            <th scope="row" class="h36">가액</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -589,19 +589,19 @@
                             <th scope="row" class="blnone">소속</th>
                             <td>OOOOO경찰서</td>
                           </tr>
-                          <tr>
+                          <tr class="h36">
                             <th scope="row" class="blnone">계급</th>
                             <td>경위</td>
                           </tr>
-                          <tr>
+                          <tr  class="h36">
                             <th scope="row" class="blnone">성명</th>
                             <td>홍길동</td>
                           </tr>
-                          <tr>
+                          <tr class="h36">
                             <th scope="row" class="blnone">경비전화</th>
                             <td>02-1234-1234</td>
                           </tr>
-                          <tr>
+                          <tr class="h36">
                             <th scope="row" class="blnone">비고</th>
                             <td></td>
                           </tr>
@@ -662,6 +662,13 @@
                 <div class="row flexEnd sub_info">
                   <div class="g20 flexi">
                     <div class="sub_tit">토지정보</div>
+                    <ul class="info">
+                      <li>대표소유자 : OOO</li>
+                      <li class="benone2">전체 점유 면적 : -건</li>
+                      <li class="benone2">전체 점유 가액 : 234.45㎡</li>
+                      <li class="benone2">실 점유 면적 : 504.45㎡</li>
+                      <li class="benone2">실 점유 가액 : 123,456원</li>
+                    </ul>
                   </div>
 
                   <div class="flexi g8">
@@ -675,161 +682,116 @@
 
                     <button type="button" class="btn blueBtn">추가</button>
 
-                    <a href="#" download class="btn blueBtn">다운로드</a>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
                   </div>
                 </div>
 
-                <div class="tabMenu_etc">
-                  <button class=" on" onclick="tabMenu('etc',0)">재산이력</button>
-                  <button onclick="tabMenu('etc',1)">변경이력(구, 재산이력)</button>
-                  <button onclick="tabMenu('etc',2)">재산담당자</button>
-                  <button onclick="tabMenu('etc',3)">관련자료</button>
-                </div>
-
-                <div class="tabCont_etc0 on">
-                  <div class="tbl2 noHover">
-                    <div class="scroll_wrap">
-                      <table>
-                        <colgroup>
-                          <col style="width: 40px;">
-                          <col style="width: 120px;">
-                          <col span="2" style="width: auto;">
-                          <col span="3" style="width: 160px;">
-                          <col style="width: auto;">
-                        </colgroup>
-                        <thead>
-                          <tr class="btntbl">
-                            <th>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="checkAll">
-                                </label>
-                              </div>
-                            </th>
-                            <th>
-                              등재여부
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              세부자산명
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              지번주소
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              대장번호
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              대장면적(㎡)
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              대장가액(원)
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              소유자
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" checked class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                <div class="tbl2 noHover">
+                  <div class="scroll_wrap">
+                    <table>
+                      <colgroup>
+                        <col style="width: 40px;">
+                        <col span="3" style="width: 120px;">
+                        <col style="width: auto;">
+                        <col span="5" style="width: 120px;">
+                      </colgroup>
+                      <thead>
+                        <tr class="btntbl">
+                          <th>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="checkAll">
+                              </label>
+                            </div>
+                          </th>
+                          <th>자산명</th>
+                          <th>소유자 구분</th>
+                          <th>소유자 상세</th>
+                          <th>소재지</th>
+                          <th>재산가액</th>
+                          <th>공시지가</th>
+                          <th>점유 면적</th>
+                          <th>점유 면적 가액</th>
+                          <th>등록일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" checked class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-                <div class="tabCont_etc1">탭 영역2</div>
-                <div class="tabCont_etc2">탭 영역3</div>
-                <div class="tabCont_etc3">탭 영역4</div>
 
                 <div class="rowbox end mt8">
                   <button type="button" class="btn Dgray">수정</button>
@@ -855,6 +817,13 @@
                 <div class="row flexEnd sub_info">
                   <div class="g20 flexi">
                     <div class="sub_tit">건물정보</div>
+                    <ul class="info">
+                      <li>대표소유자 : OOO</li>
+                      <li class="benone2">전체 점유 면적 : -건</li>
+                      <li class="benone2">전체 점유 가액 : 234.45㎡</li>
+                      <li class="benone2">실 점유 면적 : 504.45㎡</li>
+                      <li class="benone2">실 점유 가액 : 123,456원</li>
+                    </ul>
                   </div>
 
                   <div class="flexi g8">
@@ -867,6 +836,163 @@
                     </select>
 
                     <button type="button" class="btn blueBtn">추가</button>
+
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <div class="tbl2 noHover">
+                  <div class="scroll_wrap">
+                    <table>
+                      <colgroup>
+                        <col style="width: 40px;">
+                        <col span="3" style="width: 120px;">
+                        <col style="width: auto;">
+                        <col span="5" style="width: 120px;">
+                      </colgroup>
+                      <thead>
+                        <tr class="btntbl">
+                          <th>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="checkAll">
+                              </label>
+                            </div>
+                          </th>
+                          <th>자산명</th>
+                          <th>소유자 구분</th>
+                          <th>소유자 상세</th>
+                          <th>소재지</th>
+                          <th>재산가액</th>
+                          <th>공시지가</th>
+                          <th>점유 면적</th>
+                          <th>점유 면적 가액</th>
+                          <th>등록일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" checked class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flexible">
+                              <label class="check_btn">
+                                <input type="checkbox" class="row-check">
+                              </label>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="rowbox end mt8">
+                  <button type="button" class="btn Dgray">수정</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 검색 결과3 -->
+          <div class="sec">
+            <div class="sec_con">
+              <header class="s_tit flexEnd underLine">
+                <h4>재산이력</h4>
+                <button type="button" class="moreBtn">
+                  <span class="soundOnly">더보기</span>
+                </button>
+              </header>
+
+              <div class="sec_item">
+
+                <div class="row flexEnd sub_info">
+                  <div class="g20 flexi">
+                    <div class="sub_tit">재산이력</div>
+                  </div>
+
+                  <div class="flexi g8">
+                    <span class="fm_tit">재산유형</span>
+                    <select name="numlist" class="st mini">
+                      <option value="">전체</option>
+                      <option value="">전체</option>
+                      <option value="">전체</option>
+                    </select>
+
+                    <span class="fm_tit">이력유형</span>
+                    <select name="numlist" class="st mini">
+                      <option value="">전체</option>
+                      <option value="">전체</option>
+                      <option value="">전체</option>
+                    </select>
+
+                    <select name="numlist" class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                    </select>
 
                     <a href="#" download class="btn blueBtn">다운로드</a>
                   </div>
@@ -884,136 +1010,100 @@
                     <div class="scroll_wrap">
                       <table>
                         <colgroup>
-                          <col style="width: 40px;">
-                          <col style="width: 120px;">
-                          <col span="2" style="width: auto;">
-                          <col span="3" style="width: 160px;">
-                          <col style="width: auto;">
+                          <col style="width: 60px;">
+                          <col span="3" style="width: 120px;">
+                          <col style="width: 18%;">
+                          <col span="2" style="width: 120px;">
+                          <col style="width: 18%;">
+                          <col span="3" style="width: 120px;">
+                          <col style="width: 80px;">
                         </colgroup>
                         <thead>
                           <tr class="btntbl">
-                            <th>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="checkAll">
-                                </label>
-                              </div>
-                            </th>
-                            <th>
-                              등재여부
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              세부자산명
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              지번주소
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              대장번호
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              대장면적(㎡)
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              대장가액(원)
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
-                            <th>
-                              소유자
-                              <div class="updown">
-                                <button type="button" class="upbtn"></button>
-                                <button type="button" class="downbtn"></button>
-                              </div>
-                            </th>
+                            <th>NO</th>
+                            <th>이력번호(ID)</th>
+                            <th>재산구분</th>
+                            <th>재산명</th>
+                            <th>재산위치(주소)</th>
+                            <th>관리기관</th>
+                            <th>이력유형</th>
+                            <th>사유</th>
+                            <th>처분일자</th>
+                            <th>담당자</th>
+                            <th>첨부 문서</th>
+                            <th>비고</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
+                            <td>1</td>
+                            <td></td>
+                            <td>건물</td>
+                            <td>OOO청사</td>
+                            <td>서웉특별시 중구 OOO</td>
+                            <td>OO경찰서</td>
+                            <td>취득</td>
+                            <td>신규편입</td>
+                            <td>2002.03.26</td>
+                            <td>홍길동</td>
+                            <td>-</td>
+                            <td></td>
                           </tr>
                           <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" checked class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>건물</td>
+                            <td>OOO청사</td>
+                            <td>서웉특별시 중구 OOO</td>
+                            <td>OO경찰서</td>
+                            <td>변경</td>
+                            <td>명칭 정정</td>
+                            <td>2002.03.26</td>
+                            <td>홍길동</td>
+                            <td>-</td>
+                            <td></td>
                           </tr>
                           <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
+                            <td>3</td>
+                            <td></td>
+                            <td>건물</td>
+                            <td>OOO청사</td>
+                            <td>서웉특별시 중구 OOO</td>
+                            <td>OO경찰서</td>
+                            <td>운용</td>
+                            <td>공간 재배치</td>
+                            <td>2002.03.26</td>
+                            <td>홍길동</td>
+                            <td>-</td>
+                            <td></td>
                           </tr>
                           <tr>
-                            <td>
-                              <div class="flexible">
-                                <label class="check_btn">
-                                  <input type="checkbox" class="row-check">
-                                </label>
-                              </div>
-                            </td>
-                            <td>등재</td>
-                            <td class="tal">리모델링리모델링리모</td>
-                            <td class="tal">2010.12.26~2012.10.25</td>
-                            <td>12-346-889</td>
-                            <td class="tar">23.34</td>
-                            <td class="tar">123,345,677</td>
-                            <td>소유자명</td>
+                            <td>4</td>
+                            <td></td>
+                            <td>건물</td>
+                            <td>OOO청사</td>
+                            <td>서웉특별시 중구 OOO</td>
+                            <td>OO경찰서</td>
+                            <td>취득</td>
+                            <td>명ㅇ칭정정</td>
+                            <td>2002.03.26</td>
+                            <td>홍길동</td>
+                            <td>-</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>건물</td>
+                            <td>OOO청사</td>
+                            <td>서웉특별시 중구 OOO</td>
+                            <td>OO경찰서</td>
+                            <td>취득</td>
+                            <td>신규편입</td>
+                            <td>2002.03.26</td>
+                            <td>홍길동</td>
+                            <td>-</td>
+                            <td></td>
                           </tr>
                         </tbody>
                       </table>
@@ -1024,9 +1114,6 @@
                 <div class="tabCont_etc2">탭 영역3</div>
                 <div class="tabCont_etc3">탭 영역4</div>
 
-                <div class="rowbox end mt8">
-                  <button type="button" class="btn Dgray">수정</button>
-                </div>
               </div>
 
             </div>

@@ -552,8 +552,8 @@
 
               <!-- pagination -->
               <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
                 <div class="g4">
                   <button class="on" aria-label="1 페이지">1</button>
                   <button aria-label="2 페이지">2</button>
@@ -710,8 +710,8 @@
 
               <!-- pagination -->
               <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
                 <div class="g4">
                   <button class="on" aria-label="1 페이지">1</button>
                   <button aria-label="2 페이지">2</button>
@@ -735,23 +735,23 @@
                   <div class="row g8 fwrap">
                     <ul class="info type2">
                       <li><b>공작물</b> 건수 : 5,346,233건</li>
-                      <li class="benone2">대장가액 : 12,345,567,678원</li>
+                      <li>대장가액 : 12,345,567,678원</li>
                     </ul>
                     <ul class="info type2">
                       <li><b>기계기구</b> 건수 : 5,346,233건</li>
-                      <li class="benone2">대장가액 : 12,345,567,678원</li>
+                      <li>대장가액 : 12,345,567,678원</li>
                     </ul>
                     <ul class="info type2">
                       <li><b>무채재산</b> 건수 : 5,346,233건</li>
-                      <li class="benone2">대장가액 : 12,345,567,678원</li>
+                      <li>대장가액 : 12,345,567,678원</li>
                     </ul>
                     <ul class="info type2">
                       <li><b>선박/항공기</b> 건수 : 5,346,233건</li>
-                      <li class="benone2">대장가액 : 12,345,567,678원</li>
+                      <li>대장가액 : 12,345,567,678원</li>
                     </ul>
                     <ul class="info type2">
                       <li><b>입축목</b> 건수 : 5,346,233건</li>
-                      <li class="benone2">대장가액 : 12,345,567,678원</li>
+                      <li>대장가액 : 12,345,567,678원</li>
                     </ul>
                   </div>
                 </div>
@@ -899,8 +899,8 @@
 
               <!-- pagination -->
               <div class="pagination">
-                <button class="first" aria-label="처음 리스트"></button>
-                <button class="prev" aria-label="이전 리스트"></button>
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
                 <div class="g4">
                   <button class="on" aria-label="1 페이지">1</button>
                   <button aria-label="2 페이지">2</button>
@@ -914,6 +914,530 @@
             </div>
           </div>
 
+          <!-- 상호점유 -->
+          <div class="sec">
+            <div class="sec_con">
+
+              <div class="row flexEnd sub_info">
+                <div class="g20 flexi">
+                  <div class="sub_tit">상호점유</div>
+                  <div class="row g8 fwrap">
+                    <ul class="info type2">
+                      <li><b>건수</b> 토지 : &nbsp; &nbsp;건</li>
+                      <li class="benone2">건물 : &nbsp;&nbsp;건</li>
+                    </ul>
+                    <ul class="info type2">
+                      <li><b>실점유면적</b> 토지 : &nbsp;&nbsp;㎡</li>
+                      <li class="benone2">건물 &nbsp;&nbsp; ㎡</li>
+                    </ul>
+                    <ul class="info type2">
+                      <li><b>실점유가액</b> 토지 : &nbsp;&nbsp;원</li>
+                      <li class="benone2">건물 &nbsp;&nbsp;원</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="flexi g8">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <select class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+
+                  <a href="#" download class="btn blueBtn">다운로드</a>
+                </div>
+              </div>
+
+              <div class="tabMenu_sam">
+                <button class=" on" onclick="tabMenu('sam',0)">총계</button>
+                <button onclick="tabMenu('sam',1)">경찰청</button>
+                <button onclick="tabMenu('sam',2)">지자체</button>
+                <button onclick="tabMenu('sam',3)">기타</button>
+              </div>
+
+              <div class="tabCont_sam0 on">
+                <div class="tbl2 noHover">
+                  <div class="scroll_wrap">
+                    <table>
+                      <colgroup>
+                        <col span="2" style="width: 8%;">
+                        <col span="2" style="width: 18%;">
+                        <col span="3" style="width: 10%;">
+                        <col style="width: 18%;">
+                      </colgroup>
+                      <thead>
+                        <tr class="btntbl">
+                          <th>NO</th>
+                          <th>
+                            등재여부
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            세부자산명
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            지번주소
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대장번호
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대장면적(㎡)
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대장가액(원)
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            소유자
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabCont_sam1">탭 영역2</div>
+              <div class="tabCont_sam2">탭 영역3</div>
+              <div class="tabCont_sam3">탭 영역4</div>
+
+              <!-- pagination -->
+              <div class="pagination">
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
+                <div class="g4">
+                  <button class="on" aria-label="1 페이지">1</button>
+                  <button aria-label="2 페이지">2</button>
+                  <button aria-label="3 페이지">3</button>
+                  <button aria-label="4 페이지">4</button>
+                  <button aria-label="5 페이지">5</button>
+                </div>
+                <button class="next" aria-label="다음 리스트"></button>
+                <button class="last" aria-label="마지막 리스트"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 건축사업 현황 -->
+          <div class="sec">
+            <div class="sec_con">
+
+              <div class="row flexEnd sub_info">
+                <div class="g20 flexi">
+                  <div class="sub_tit">건축사업 현황</div>
+                  <div class="row g8 fwrap">
+                    <ul class="info type2">
+                      <li><b>집행건수</b> :  &nbsp; &nbsp;- 건</li>
+                    </ul>
+                    <ul class="info type2">
+                      <li><b>예산액</b> : 123,456,678원</li>
+                    </ul>
+                    <ul class="info type2">
+                      <li><b>집행액</b> : 46,233원</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="flexi g8">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <select class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+
+                  <a href="#" download class="btn blueBtn">다운로드</a>
+                </div>
+              </div>
+
+              <div class="tabMenu_samp">
+                <button class=" on" onclick="tabMenu('samp',0)">진행</button>
+                <button onclick="tabMenu('samp',1)">완료</button>
+              </div>
+
+              <div class="tabCont_samp0 on">
+                <div class="tbl2 noHover">
+                  <div class="scroll_wrap">
+                    <table>
+                      <colgroup>
+                        <col span="2" style="width: 8%;">
+                        <col span="2" style="width: 18%;">
+                        <col span="3" style="width: 10%;">
+                        <col style="width: 18%;">
+                      </colgroup>
+                      <thead>
+                        <tr class="btntbl">
+                          <th>NO</th>
+                          <th>
+                            등재여부
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            세부자산명
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            지번주소
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대장번호
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대장면적(㎡)
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대장가액(원)
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            소유자
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabCont_samp1">탭 영역2</div>
+
+              <!-- pagination -->
+              <div class="pagination">
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
+                <div class="g4">
+                  <button class="on" aria-label="1 페이지">1</button>
+                  <button aria-label="2 페이지">2</button>
+                  <button aria-label="3 페이지">3</button>
+                  <button aria-label="4 페이지">4</button>
+                  <button aria-label="5 페이지">5</button>
+                </div>
+                <button class="next" aria-label="다음 리스트"></button>
+                <button class="last" aria-label="마지막 리스트"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 시설사업 현황 -->
+          <div class="sec">
+            <div class="sec_con">
+
+              <div class="row flexEnd sub_info">
+                <div class="g20 flexi">
+                  <div class="sub_tit">시설사업 현황</div>
+                  <div class="row g8 fwrap">
+                    <ul class="info type2">
+                      <li><b>건수</b> :  &nbsp; &nbsp;- 건</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="flexi g8">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <select class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+
+                  <a href="#" download class="btn blueBtn">다운로드</a>
+                </div>
+              </div>
+
+              <div class="tabMenu_sampl">
+                <button class=" on" onclick="tabMenu('sampl',0)">전체</button>
+                <button onclick="tabMenu('sampl',1)">리모델링</button>
+                <button onclick="tabMenu('sampl',2)">석면제거</button>
+                <button onclick="tabMenu('sampl',3)">내진보강</button>
+                <button onclick="tabMenu('sampl',4)">기타시설</button>
+                <button onclick="tabMenu('sampl',5)">법정시설</button>
+              </div>
+
+              <div class="tabCont_sampl0 on">
+                <div class="tbl2 noHover">
+                  <div class="scroll_wrap">
+                    <table>
+                      <colgroup>
+                        <col span="2" style="width: 8%;">
+                        <col span="2" style="width: 18%;">
+                        <col span="3" style="width: 10%;">
+                        <col style="width: 18%;">
+                      </colgroup>
+                      <thead>
+                        <tr class="btntbl">
+                          <th>NO</th>
+                          <th>
+                            시설명
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            설치유무
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            대수
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            설치 및 준공연도
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            노후도
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            교체 필요 여부
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                          <th>
+                            교체 수량
+                            <div class="updown">
+                              <button type="button" class="upbtn"></button>
+                              <button type="button" class="downbtn"></button>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>등재</td>
+                          <td class="tal">리모델링리모델링리모</td>
+                          <td class="tal">2010.12.26~2012.10.25</td>
+                          <td>12-346-889</td>
+                          <td class="tar">23.34</td>
+                          <td class="tar">123,345,677</td>
+                          <td>소유자명</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabCont_sampl1">탭 영역2</div>
+              <div class="tabCont_sampl2">탭 영역3</div>
+              <div class="tabCont_sampl3">탭 영역4</div>
+              <div class="tabCont_sampl4">탭 영역5</div>
+              <div class="tabCont_sampl5">탭 영역6</div>
+
+              <!-- pagination -->
+              <div class="pagination">
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
+                <div class="g4">
+                  <button class="on" aria-label="1 페이지">1</button>
+                  <button aria-label="2 페이지">2</button>
+                  <button aria-label="3 페이지">3</button>
+                  <button aria-label="4 페이지">4</button>
+                  <button aria-label="5 페이지">5</button>
+                </div>
+                <button class="next" aria-label="다음 리스트"></button>
+                <button class="last" aria-label="마지막 리스트"></button>
+              </div>
+            </div>
+          </div>
 
         </section>
         <!--// section : 관서 재산현황 -->

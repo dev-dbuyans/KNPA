@@ -14,7 +14,6 @@
 
 .btnbox{
   position: absolute; top: 22.4rem; right: -2.8rem;
-  transition: 0.2s ease;
 }
 .btnbox.up{top: 0.4rem;}
 
