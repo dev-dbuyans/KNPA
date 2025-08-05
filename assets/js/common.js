@@ -50,6 +50,7 @@ $(function () {
     $(this).addClass("on");
     $(this).find(".dropMenu").addClass("on");
     $("#gnb .dimmed").addClass("on");
+    $("header#header").css({borderColor:'#ffffff'})
   });
 
   // 마우스가 전체 GNB를 벗어나면 드롭메뉴 닫기

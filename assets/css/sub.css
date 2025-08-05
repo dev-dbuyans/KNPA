@@ -4,17 +4,16 @@
 /* 관서현황보고서(요약)
 /* ------------------------------------------------------------------------- *
 /* 관서현황 */
+.mt0 {margin-top: 0;}
+
 .sec_wrap2.type2 .sec + .sec{margin-top: 3.2rem;}
 
-.tbl2.w50{width: 50%; }
-.tbl2.w25{width: calc(25% - 8px);}
-.tbl2.w25{width: 25%;}
-.tbl2.w33{width: 33%;}
-.tbl2.w67{width: calc(67% - 8px);}
-.tbl2.w38{width: 38%;}
-.col.w38{width: 38%;}
-.tbl2.img{ width: 25%;}
-
+.w50, .tbl2.w50{width: calc(50% - 4px);}
+.w25, .tbl2.w25{width: calc(25% - 4px);}
+.w33, .tbl2.w33{width: calc(33% - 4px)}
+.w67, .tbl2.w67{width: calc(67% - 4px);}
+.w38, .tbl2.w38{width: calc(38% - 4px);}
+.w75 { width: calc(75% - 4px); }
 .tbl2 table th ,
 .tbl2 tbody tr.h36 th {background-color: var(--bg);}
 .tbl2 thead tr th {height: 3.9rem;}
@@ -69,8 +68,8 @@
   background-color: var(--tabDisable);
 }
 .sub_info ul.info li{
-  height: 3.2rem; 
-  display: flex; align-content: center;
+  height: 3.2rem; line-height: 3.2rem;
+  display: flex; align-items: center;
   background-color: var(--tabDisable); color: var(--text1);
   border-radius: 6px; 
   overflow: hidden; text-overflow: ellipsis;
@@ -88,15 +87,15 @@
 }
 
 /* type2 */
-.sub_info .row.fwrap{ flex-wrap: wrap; gap: 8px; }
+.sub_info .row.fwrap{ flex-wrap: wrap; margin-right: 2rem;}
 .sub_info ul.info.type2{ margin-right: 0;}
-
+.sub_info ul.info.type2 {margin-bottom: 8px;}
 
 
 
 /**** 250730, 250731 추가 ****/
 /* ------------------------------------------------------------------------- */
-/* 국유재산(토지) 검색
+/* 국유재산 검색
 /* ------------------------------------------------------------------------- */
 .sec_wrap2.pd0{ padding: 0;}
 .sec_wrap2.pd0>.inner{ padding: 4rem; background-color: #ffffff;}
@@ -116,6 +115,10 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   margin: 0 8px;
   font-size: 14px; font-weight: 600; color: var(--text4);
 }
+.alend{justify-content: space-between; }
+.alend .col.w75 {width: calc(75% - 8px);}
+.alend .col.w25 {width: calc(25% - 8px);}
+.col.w75 > *:not(:last-child){margin-bottom: 8px;}
 
 /* 대장정보조회 */
 .tbl2 table td .it.h26{ 
@@ -126,28 +129,40 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 
 
 /* ------------------------------------------------------------------------- */
-/* 국유재산(토지) 상세정보
+/* 국유재산 건물 상세정보
 /* ------------------------------------------------------------------------- */
-/* 건물 */
 /*** 250802 수정 ***/
-.tbl2 .imgbox{
-  padding: 10px; 
+.col > *:not(:last-child){margin-bottom: 8px;}
+.tbl2 figure.imgbox{
+  width: 100%; height: 100%;
+  padding: 10px;
   border: 1px solid var(--gray100); border-radius: 12px;
-  aspect-ratio: 16 / 9;
+  padding-bottom: 56.25%; 
+  position: relative;
 }
 .tbl2 .imgbox img{
   width: 100%; height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  padding: 10px;
   object-fit: cover;
 }
-.tbl2 .imgbox.mt10{margin-top: 10px;}
+.tbl2 td.pt10{padding-top: 10px;}
 
 .sec_wrap2 span.fm_tit{ font-size: 14px; line-height: 2.8rem;}
 .mt8 {margin-top: 8px;}
 
+.tbl2 .alend > *{margin-right: 16px;}
+
+
+
+
+
+
 
 /**** 250801 추가 ****/
 /* ------------------------------------------------------------------------- */
-/* 상호점유 관리 - 상세정보
+/* 상호점유 관리 - 검색 / 상세정보
 /* ------------------------------------------------------------------------- */
 .sec_wrap2 .s_tit.underLine{
   border-bottom: 1px solid var(--primary2);
@@ -164,9 +179,9 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 .sec_item.on{ display: block; }
 
 /* ------------------------------------------------------------------------- */
-/* 미등재 재산 - 상세정보
+/* 미등재 재산 - 검색 / 상세
 /* ------------------------------------------------------------------------- */
-
+.sec_wrap2 .s_tit h4 { height: 3.6rem; line-height: 3.6rem; }
 
 
 
@@ -177,10 +192,29 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 /* ------------------------------------------------------------------------- */
 @media screen and (max-width : 1280px){
   .sub_info ul.info li.benone::before {display: none;}
+  /* ul 5개 */
+  .sub_info ul.info.type2{margin-left: 0;}
 }
 
 
 
 @media screen and (max-width : 960px){
   .sub_info ul.info li.benone2::before {display: none;}
+
+  /* 대표이미지*/
+  .row.imgwrap, .fstart.imgwrap{ width: 100%; flex-direction: column;}
+  .row.imgwrap .tbl2.w25, .imgwrap .tbl2.w25, .imgwrap .w50{ width: 100%; }
+  .row.imgwrap .w75, .w75 { width: 100%; margin-left: 0; margin-top: 4rem;}
+  .w50.full, .w25.full{width: 100%;}
+
+  .imgwrap .alend.w75{ width: 100%; flex-direction: column;}
+  .imgwrap .alend.w75 .w50 .tbl2:last-child{ margin-bottom: 8px; }
+
+  .tbl2 table tr.h41 td{ height: 14rem; }
+  .tbl2 tr.h41 td >.row {display: flex; align-items: center; justify-content: center;}
+  .tbl2 tr.h41 td >.row .check_btn { 
+    flex-direction: column; 
+    white-space: normal; word-break: break-word; 
+  }
+  .tbl2 tr.h41 td>.row .check_btn > span { padding-left: 0; padding-top: 6px; word-break: break-word; text-align: center;}
 }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ------------------------------------------------------------------------- */
-/* 메인 콘텐츠 영역
+/* LAYOUT
 /* ------------------------------------------------------------------------- */
 /* nav -> fixed */
 #navigation { 
@@ -12,9 +12,7 @@
 }
 #navigation.up{padding-top: 0rem;}
 
-.btnbox{
-  position: absolute; top: 22.4rem; right: -2.8rem;
-}
+.btnbox{ position: absolute; top: 22.4rem; right: -2.8rem; }
 .btnbox.up{top: 0.4rem;}
 
 .main_inner{
@@ -25,28 +23,28 @@
 }
 .main_inner.full{ width: calc(100% - 12.5rem); left: 6.25rem;}
 
-.sec_wrap {
-  flex: 1 1 clamp(45.1rem, 62%, 68.49%);
+/* 콘텐츠 영역 */
+.sec_wrap.type2 {
   overflow: hidden;
-  width: calc(100% - 40rem); min-width: 45.1rem; 
+  width: calc(100% - 40rem); 
   height: 100%;
-  padding: 2.4rem 4rem;
+  padding: 2.4rem 4rem 4rem 4rem;
   box-shadow: var(--boxshadow);
   background-color: #ffffff;
 }
-
-.sec + .sec {margin-top: 4rem;}
+.sec + .sec { margin-top: 4rem; }
 .sec .sec_head { height: 3.2rem; margin-bottom: 12px; }
 .sec .sec_head h3{ 
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center;
   font-size: 18px; font-weight: 600; line-height: 2.55rem; 
   color: var(--text1); 
 }
 .sec .sec_head h3>span{
+  margin-left: 8px;
   font-size: 14px; font-weight: 400; line-height: 2.1rem;
   color: var(--text5);
 }
-.sec .sec_con{
+.sec_wrap.type2 .sec_con{
   width: 100%; height: 100%;
   padding: 2.4rem;
   border-radius: 1.2rem; box-shadow: var(--boxshadow);
@@ -54,19 +52,18 @@
 }
 .sec .sec_con .row{
   width: 100%; overflow: hidden;
-  display: flex; align-items: center; gap: 2.4rem;
+  display: flex; align-items: center; justify-content: space-between;
 }
 
 /******** 차트 ********/
 .sec .piechart{
-  width: 27%; 
+  width: calc(27% - 12px); 
   display: flex; flex-direction: column;
 }
 .sec .piechart .container{ 
   width: 100%; min-height: 15.5rem; 
   margin: 20px 0; 
   background-color: var(--bg);
-  
 }
 .sec .piechart p.total{  
   width: 100%;
@@ -81,7 +78,8 @@
   background-color: var(--gray100);
   margin: 12px 0;
 }
-.sec .piechart .budgets{ display: flex; flex-direction: column; gap: 8px; }
+.sec .piechart .budgets{ display: flex; flex-direction: column;}
+.sec .piechart .budgets > *{margin-bottom: 8px;}
 .sec .piechart .budgets p{ 
   display: flex; align-items: center;
   font-size: 14px; font-weight: 500; color: var(--text5); 
@@ -96,7 +94,7 @@
 
 
 .sec .barchart{
-  width: 73%; height: 33.1rem;
+  width: calc(73% - 12px); height: 33.1rem;
   background-color: var(--bg);
   border-radius: 1.2rem;
 }
@@ -111,8 +109,14 @@
 /* Tab : 공지사항
 /* ------------------------------------------------------------------------- */
 /******** 공지사항 ********/
+.tabMenu_commu{
+  height: 3.2rem; 
+  margin-left: 2rem; margin-bottom: 0; 
+  display: flex; align-items: center;
+}
+.tabMenu_commu > *:not(:last-child){margin-right: 8px;}
 .btn.tab02{
-  padding: 8px 14.5px; 
+  padding: 0 14.5px; 
   display: flex; align-items: center;
   font-size: 14px; font-weight: 500; 
   color: var(--disableText); background-color: var(--disablebg);
@@ -120,11 +124,6 @@
 }
 .btn.tab02.on{ font-weight: 600; background-color: var(--menuHover); color: var(--secondary); border: none; }
 
-.tabMenu_commu{
-  height: 3.2rem; 
-  margin-left: 2rem; margin-bottom: 0; 
-  display: flex; align-items: center; gap: 8px;
-}
 .btn.viewAll{ display: flex; align-items: center; padding: 3px 12px 3px 8px;}
 .btn.viewAll::before{
   display: inline-block; content: '';
@@ -136,20 +135,19 @@
 [class*="tabCont_commu"].on {display: block;}
 
 /* 스와이퍼 슬라이드 */
-[class*=tabCont_commu].swiper{width: 100%; height: 100%;  position: relative; overflow: visible;}
+[class*=tabCont_commu].swiper-container{width: 100%; height: 100%; min-height: 16.6rem; overflow: visible;  position: relative;}
 [class*=tabCont_commu] .swiper-wrapper{width: 100%; height: 100%; display: flex; }
 [class*=tabCont_commu] .con.swiper-slide{
   /* width: calc((100% - 6rem) / 4); */
-  min-height: 16.6rem;
+  height: 16.6rem;
   padding: 2rem 2.4rem;
-  display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
+  display: flex; flex-direction: column; justify-content: space-between; 
   background-color: var(--bg); border-radius: 4px;
   position: relative;
 }
-[class*=tabCont_commu] .con.swiper-slide .con_tit { gap: 8px;}
-[class*=tabCont_commu] .con.swiper-slide .con_tit .row{margin-bottom: 1.2rem; }
+[class*=tabCont_commu] .con.swiper-slide .con_tit .row {margin-bottom: 1.2rem; }
 [class*=tabCont_commu] .con.swiper-slide .con_tit h4 {
-  max-width: 18.5rem;
+  max-width: 18.5rem; margin-right: 8px;
   font-weight: 500; color: var(--text1);
   display: -webkit-box;  -webkit-box-orient: vertical;
   overflow: hidden; -webkit-line-clamp: 1;
@@ -159,6 +157,7 @@
   display: -webkit-box;  -webkit-box-orient: vertical;
   overflow: hidden; -webkit-line-clamp: 3;
 }
+
 [class*=tabCont_commu] .con.swiper-slide .con_tit .new{
   display: inline-block;
   padding: 2px 6px; 
@@ -176,7 +175,7 @@
 /* 스와이퍼 버튼 */
 .swiper-button-next, .swiper-button-prev { 
   width: 36px; height: 36px; 
-  background: #fff url(/assets/img/ico_slideArrow.svg) no-repeat  center / 24px 24px;
+  background: #fff url(/assets/img/ico_slideArrow.svg) no-repeat left 6px center / 24px 24px;
   border: 1px solid var(--gray200); border-radius: 100%;
   box-shadow: var(--boxshodow);
   text-indent: -9999px;
@@ -185,18 +184,19 @@
   z-index: 150 !important; overflow: visible;
 }
 .swiper-button-prev {transform: rotate(180deg); position: absolute; top: 50%; left: -16px;}
-.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-  bottom: var(--swiper-scrollbar-bottom,0px);
+.swiper-scrollbar,.swiper-scrollbar-drag{
+  height: 4px; 
+  position: relative; top: 16.6rem; z-index: 500;
 }
-
+.swiper-scrollbar-drag{ color: var(--gray300) !important; }
 
 /* ------------------------------------------------------------------------- */
 /* 나의 할일 영역 : aside
 /* ------------------------------------------------------------------------- */
 /******** aside : 나의 할일 ********/
 #aside {
-  flex: 0 0 clamp(30.4rem, 30%, 40rem);
-  min-width: 30.4rem;
+  /* flex: 0 0 clamp(30.4rem, 30%, 40rem); */
+  min-width: 30.4rem; width: 40rem;
   height: 100%;
 }
 
@@ -336,26 +336,54 @@ header.todo_head h3::before {
 /* ------------------------------------------------------------------------- */
 /* MediaQuery
 /* ------------------------------------------------------------------------- */
+@media screen and (max-width : 1600px){
+    /* 통합검색 */
+  #searchAll { 
+    justify-content: space-between;
+    background-position: top 100% left -8%;
+  }
+  #searchAll .s_wrap { width: 100%; justify-content: flex-start;}
+  #searchAll .s_wrap .group { width: 65%;  }
+  #searchAll>.s_wrap .group .srchField {width: 100%;}
+  #todolist{width: 28%;}
+}
+@media screen and (max-width : 1400px){
+  #gnb ul.depth1>li:nth-child(4) { display: none; }
+
+  /* 통합검색 */
+  #searchAll { height: 20rem;}
+  #searchAll>.s_wrap .group .srchField {margin-bottom: 2rem;}
+  #searchAll .st_wrap { width: 100%;  }
+  #searchAll .st_wrap .st_group { flex-wrap: wrap; position: relative; z-index: 10;}
+  #searchAll .st_wrap .st_group .st.type2{
+    width: calc((100% - 24px )/ 3);
+    margin-bottom: 8px;
+  }
+  #searchAll .st_wrap .st_group .st.type2:nth-child(4),
+  #searchAll .st_wrap .st_group .st.type2:nth-child(5),
+  #searchAll .st_wrap .st_group .st.type2:nth-child(6) {margin-bottom: 0;}
+
+  .sec_wrap.type2{width: 66%;}
+  /* 네비게이션 */
+  #navigation{ padding-top: 27rem;}
+  .btnbox{ position: absolute; top: 27.4rem; right: -2.8rem; }
+}
+
 
 /********** 1280px **********/
 @media screen and (max-width : 1280px){
-
   /* 파이차트 */
-  .sec .sec_con .row{
-    flex-direction: column;
-    gap: 2.4rem;
-  }
-  .sec .piechart { 
-    width: 100%; 
-    display: flex; flex-direction: row; gap: 2rem; 
-    position: relative; 
-  }
+  .sec .sec_con .row{ flex-direction: column; }
+  .sec_wrap.type2 .sec .sec_con .row > *:not(:last-child) {margin-bottom: 2.4rem;}
+  .sec .piechart {  width: 100%;  display: flex; position: relative; }
+  .sec .piechart > .st{margin-bottom: 2rem;}
+
   .sec .piechart .chart_st{ width: calc(50% - 2rem); position: absolute; right: 0;}
-  .sec .piechart figure { width: 50%; }
+  .sec .piechart figure { width: 50%; margin-bottom: 0;}
   .sec .piechart .container { width: 100%; margin: 0; }
   .sec .piechart .underline {
     width: calc(50% - 2rem);
-    position: absolute; right: 0; top: 46.5%;
+    position: absolute; right: 0; top: 50.5%;
     transform: translateY(-50%);
   }
   .sec .piechart p.total {
@@ -371,22 +399,18 @@ header.todo_head h3::before {
   .sec .piechart .budgets p>span{ margin-left: auto; }
 
   /* 바 차트 */
-  .sec .barchart { width: 100%; height: 32.7rem; }
+  .sec .barchart { width: 100%; height: 32.7rem; margin: 0; margin-bottom: 0; }
 
 
   /* 슬라이드 */
-  [class*=tabCont_commu] .con.swiper-slide {
-    width: calc((100% - 6rem) / 2);
-  }
+  [class*=tabCont_commu] .con.swiper-slide { width: calc((100% - 6rem) / 2); }
 
 }
 
 /********** 960px **********/
 @media screen and (max-width : 960px){
 
-  .sec_wrap {
-    min-width: calc(100% - 55.4rem); 
-  }
+  .sec_wrap.type2 { min-width: calc(100% - 55.4rem);}
 
   .sec .piechart .chart_st{ width: calc(55% - 2rem);}
   .sec .piechart figure { width: 45%; }
@@ -394,11 +418,13 @@ header.todo_head h3::before {
   .sec .piechart p.total { width: calc(55% - 2rem); }
   .sec .piechart .budgets { width: calc(55% - 2rem); }
 
+  .todo_tit>span{padding: 0 16px 0 45px;}
+  #todolist>.inner .todos:first-child:after{right: 5px;}
+  #todolist>.inner .todos:nth-child(2):after{right: -9px;}
+
   /* 공지사항 */
-  .sec .sec_head.plus{height: 100%;}
-  .sec .sec_head.plus .row {
-    flex-wrap: wrap;
-  }
+  .sec .sec_head.plus{ height: 100%; }
+  .sec .sec_head.plus .row { flex-wrap: wrap;}
   .tabMenu_commu{
     height: 100%; 
     margin-left: 0;
