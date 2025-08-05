@@ -234,6 +234,7 @@ $(function () {
   });
 });
 
+// 검색영역 select 
 $(document).ready(function () {
   if ($(".st.type2").length) {
     $(".st.type2").niceSelect();
