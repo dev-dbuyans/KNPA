@@ -61,6 +61,7 @@ $(function () {
       .removeClass("on");
     $("#gnb .dimmed").removeClass("on");
     $("body").removeClass("no-scroll");
+    $("header#header").css({borderColor:'var(--gray100)'})
   });
 
   //전체메뉴
@@ -74,22 +75,25 @@ $(function () {
     // gnb호버 제한
     if ($("#allMenu").hasClass("on")) {
       $("#gnb ul>.depth1 > li").off("mouseenter mouseleave");
-      $("#util .user").addClass("noHover");
+      $("#util .user").toggleClass("noHover");
 
       // ESC / 외부 클릭시 닫기
       $(document).on("click.closeMenu", function (e) {
         if (!$(e.target).closest("#allMenu,.menuBtn").length) {
           closeAllMenu();
+          $("#util .user").removeClass("noHover");
         }
       });
 
       $(document).on("keydown.closeMenu", function (event) {
         if (event.key === "Escape") {
           closeAllMenu();
+          $("#util .user").removeClass("noHover");
         }
       });
     } else {
       $(document).off(".closeMenu");
+      $("#util .user").removeClass("noHover");
     }
   });
 
@@ -101,7 +105,7 @@ $(function () {
     $("#util .user").removeClass("noHover");
   }
 
-  /*** 250730 : nav > .nav_box 닫히는 오류 수정 ***/
+  /*** 250730 : nav > .nav_box 수정 ***/
   // nav
   $(".btnbox").click(function () {
     $(this).closest("#navigation").toggleClass("hide");

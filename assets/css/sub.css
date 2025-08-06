@@ -5,21 +5,25 @@
 /* ------------------------------------------------------------------------- *
 /* 관서현황 */
 .mt0 {margin-top: 0;}
-
+.ml0 {margin-left: 0;}
 .sec_wrap2.type2 .sec + .sec{margin-top: 3.2rem;}
 
-.w50, .tbl2.w50{width: calc(50% - 4px);}
-.w25, .tbl2.w25{width: calc(25% - 4px);}
-.w33, .tbl2.w33{width: calc(33% - 4px)}
-.w67, .tbl2.w67{width: calc(67% - 4px);}
-.w38, .tbl2.w38{width: calc(38% - 4px);}
+.w25 { width: calc(25% - 4px); }
+.w30 { width: calc(30% - 4px); }
+.w33 { width: calc(33% - 4px); }
+.w38 { width: calc(38% - 4px); }
+.w50 { width: calc(50% - 4px); }
+.w67 { width: calc(67% - 4px); }
+.w70 { width: calc(70% - 4px); }
 .w75 { width: calc(75% - 4px); }
+
+.tbl2 thead tr th { height: 3.9rem;}
+.tbl2 .h36 { height: 3.6rem;}
+
 .tbl2 table th ,
 .tbl2 tbody tr.h36 th {background-color: var(--bg);}
-.tbl2 thead tr th {height: 3.9rem;}
 .tbl2 table th.nobg{background-color: #ffffff;}
 
-.tbl2 .h36{height: 3.6rem;}
 .tbl2 table tbody.pd0 td {padding: 0;}
 
 .tbl2 table td.bdnone:first-child{ border: 0; }
@@ -30,26 +34,24 @@
 .tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
 
 .tbl2 tr td.bold{ font-weight: 600; color: var(--text1); }
-.tbl2.img table td div img{width: 100%; height: 100%; margin: auto;}
 .tbl2 tfoot tr.hlight th,
 .tbl2 tfoot tr.hlight td { background-color: var(--tfootbg); }
-.tbl2 thead tr.btntbl{position: relative;}
+.tbl2 thead tr.btntbl { position: relative; }
 .tbl2 .tbl_tit.h74 {
   height: 7.4rem; 
   font-size: 2.4rem; line-height: 3.4rem;
   background-color: #ffffff; 
   border-left: 0; border-right: 0; border: 0;
 }
-.tbl2 tbody tr.h36.disabled th,
 .tbl2 tr.disabled th,
 .tbl2 tr.disabled td,
+.tbl2 tbody tr.h36.disabled th,
 .tbl2.noHover tr.disabled:hover td {background-color: var(--tabDisable);}
  
 
 
-
 /********** 현황보고서 (상세) **********/
-.sub_info{ margin-bottom: 8px; gap: 8px; }
+.sub_info{ margin-bottom: 8px;}
 .sub_info .sub_tit{
   display: flex; align-items: center;
   font-size: 16px; font-weight: 600; line-height: 2.4rem;
@@ -88,8 +90,8 @@
 
 /* type2 */
 .sub_info .row.fwrap{ flex-wrap: wrap; margin-right: 2rem;}
-.sub_info ul.info.type2{ margin-right: 0;}
-.sub_info ul.info.type2 {margin-bottom: 8px;}
+.sub_info ul.info.type2{ margin-right: 0; margin-bottom: 8px;}
+/* .sub_info ul.info.type2:last-child { margin-left: 0;} */
 
 
 
@@ -190,10 +192,12 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 /* ------------------------------------------------------------------------- */
 /* MediaQuery
 /* ------------------------------------------------------------------------- */
+@media screen and (max-width : 1400px){
+  /* .sub_info ul.info.type2{margin-left: 0;} */
+}
 @media screen and (max-width : 1280px){
   .sub_info ul.info li.benone::before {display: none;}
-  /* ul 5개 */
-  .sub_info ul.info.type2{margin-left: 0;}
+  .sub_info ul.info.type2.none1{ margin-left: 0;}
 }
 
 
@@ -201,20 +205,32 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 @media screen and (max-width : 960px){
   .sub_info ul.info li.benone2::before {display: none;}
 
-  /* 대표이미지*/
-  .row.imgwrap, .fstart.imgwrap{ width: 100%; flex-direction: column;}
-  .row.imgwrap .tbl2.w25, .imgwrap .tbl2.w25, .imgwrap .w50{ width: 100%; }
-  .row.imgwrap .w75, .w75 { width: 100%; margin-left: 0; margin-top: 4rem;}
-  .w50.full, .w25.full{width: 100%;}
+  /* 대표이미지 부분 wrap*/
+  .full { width: 100%; }
+  .drop { width: 100%; flex-direction: column; } 
+  .drop.row > * + * {margin-left: 0;}
+  .drop > .tbl2 {margin-left: 0; margin-right: 0; margin-bottom: 8px;}
 
-  .imgwrap .alend.w75{ width: 100%; flex-direction: column;}
-  .imgwrap .alend.w75 .w50 .tbl2:last-child{ margin-bottom: 8px; }
+  .mt {margin-top: 8px;}
+  .mb {margin-bottom: 8px;}
+  .mbx{margin-bottom: 0;}
+  .col > .mbx,
+  .col.w75 > * + .mbx, 
+  .tbl2.mbx, .drop > .tbl2 + .mbx {margin-bottom: 0;}
 
-  .tbl2 table tr.h41 td{ height: 14rem; }
-  .tbl2 tr.h41 td >.row {display: flex; align-items: center; justify-content: center;}
-  .tbl2 tr.h41 td >.row .check_btn { 
+
+  .tbl2.fulldrop table tr.h41 td { height: 14rem; }
+  .tbl2.fulldrop table tr.h41 td >.row {display: flex; align-items: center; justify-content: center;}
+  .tbl2.fulldrop table tr.h41 td >.row .check_btn { 
     flex-direction: column; 
     white-space: normal; word-break: break-word; 
+    
   }
-  .tbl2 tr.h41 td>.row .check_btn > span { padding-left: 0; padding-top: 6px; word-break: break-word; text-align: center;}
+  .tbl2.fulldrop table tr.h41 td>.row .check_btn > span { 
+    padding-left: 0; padding-top: 6px; word-break: break-word; text-align: center;
+    overflow: hidden; text-overflow: ellipsis; white-space: normal;
+    display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+
+
 }
