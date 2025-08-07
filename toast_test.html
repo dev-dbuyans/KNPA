@@ -736,6 +736,34 @@
 <!-- GRID -->
 <script>
   // let grid;
+  //   function resetToggle() {
+  //   $(".sec .moreBtn").removeClass("show");
+  //   $(".sec .sec_item").removeClass("on");
+  // }
+
+  // $(function () {
+  //   resetToggle();
+
+  //   $("header.underLine").click(function () {
+  //     const sec = $(this).closest(".sec");
+
+  //     $(this).toggleClass("show");
+
+  //     if ($(this).hasClass("show")) {
+  //       sec.find(".sec_item").addClass("on");
+
+  //       setTimeout(() => {
+  //         if (typeof grid !== 'undefined' && grid.refreshLayout) {
+  //           grid.refreshLayout();
+  //         }
+  //       }, 0);
+
+  //     } else {
+  //       sec.find(".sec_item").removeClass("on");
+  //     }
+  //   });
+  // });
+  
 
   document.addEventListener('DOMContentLoaded', function () {
     const gridData = [
@@ -751,24 +779,26 @@
       scrollX: true,
       scrollY: false,
       rowHeaders: ['checkbox'],
-      // rowHeight: 36,
       header: {
         height: 39,
       },
-
-        columns: [
-          { header: '자산명', name: 'name', width: 120, height: 39, align: 'center' },
-          { header: '소유자 구분', name: 'ownerType', width: 120, align: 'center' },
-          { header: '소유자 상세', name: 'ownerDetail', width: 120, align: 'center' },
-          { header: '소재지', name: 'location', minWidth: 200, align: 'center' },
-          { header: '재산가액', name: 'price', width: 120, align: 'right' },
-          { header: '공시지가', name: 'noticePrice', width: 120, align: 'right' },
-          { header: '점유 면적', name: 'area', width: 120, align: 'center' },
-          { header: '점유 면적 가액', name: 'areaPrice', width: 120, align: 'right' },
-          { header: '등록일', name: 'regDate', width: 120, align: 'center' }
-        ]
-      });
+      
+      columns: [
+        { header: '자산명', name: 'name', width: 120, height: 39, align: 'center', sortable:'ture' },
+        { header: '소유자 구분', name: 'ownerType', width: 120, align: 'center', sortable:'ture' },
+        { header: '소유자 상세', name: 'ownerDetail', width: 120, align: 'center', sortable:'ture' },
+        { header: '소재지', name: 'location', minWidth: 200, align: 'center', sortable:'ture' },
+        { header: '재산가액', name: 'price', width: 120, align: 'right', sortable:'ture' },
+        { header: '공시지가', name: 'noticePrice', width: 120, align: 'right', sortable:'ture' },
+        { header: '점유 면적', name: 'area', width: 120, align: 'center', sortable:'ture' },
+        { header: '점유 면적 가액', name: 'areaPrice', width: 120, align: 'right', sortable:'ture' },
+        { header: '등록일', name: 'regDate', width: 120, align: 'center', sortable:'ture' }
+      ]
+    });
   });
+
+
+
 </script>
 
 

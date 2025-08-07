@@ -12,23 +12,25 @@
 .tui-grid-scrollbar-frozen-border {border-width: 0;}
 
 /* table */
-.tui-grid-container{ border: 1px solid var(--tablebd); border-top-color: var(--tableTop); border-bottom-color: var(--gray100) ;}
+.tui-grid-container{ border: 1px solid var(--tablebd) !important; border-top-color: var(--tableTop) !important; border-bottom-color: var(--gray100) ;}
 .tui-grid-cell{
   box-sizing: border-box;
   padding: 0 6px;
   font-weight: 500; color: var(--text4);
   background-color: #ffffff !important;
-  border-right: 1px solid var(--tablebd); border-bottom: 1px solid var(--tablebd);
+  border-right: 1px solid var(--tablebd) !important; border-bottom: 1px solid var(--tablebd) !important;
+  border-color: var(--tablebd) !important;
 }
-.tui-grid-border-line { border-color: var(--tablebd); border-top: none; border-collapse: collapse; box-sizing: border-box;}
+.tui-grid-border-line { border-color: var(--tablebd) !important; border-top: none !important; border-collapse: collapse; box-sizing: border-box;}
 .tui-grid-lside-area { border-right: 1px solid var(--tablebd); box-sizing: border-box; }
 
 /* thead */
 .tui-grid-header-area { border-color: var(--tablebd) !important;}
 .tui-grid-cell-header{
   font-weight: 600; 
-  color: var(--text1); background-color: var(--bg) !important; border-color: var(--tablebd);
-  border-top: 0; border-right: 0;
+  color: var(--text1); background-color: var(--bg) !important; border-color: var(--tablebd) !important;
+  border-top: 0; border-right: 0; 
+  position: relative;
 }
 
 /* checkbox */
@@ -53,3 +55,9 @@
   background-image: url(/assets/img/ico_checked.svg) !important; 
 }
 
+/* button */
+.tui-grid-btn-sorting {
+  position: absolute;
+  top: 50%; right: 8px; transform: translateY(-50%);
+  margin: 0 !important;
+}

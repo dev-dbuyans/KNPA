@@ -53,6 +53,7 @@
 /********** 현황보고서 (상세) **********/
 .sub_info{ margin-bottom: 8px;}
 .sub_info .sub_tit{
+  margin-right: 2rem;
   display: flex; align-items: center;
   font-size: 16px; font-weight: 600; line-height: 2.4rem;
   color: var(--primary);
@@ -104,12 +105,11 @@
   width: 100%;
   background-color: var(--bg); padding: 4rem;
   box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.12);
-  transition: flex 0.3s ease;
+  transition: max-height 0.3s ease;
   left: 0;
-  display: none;
 }
-.sec_wrap2.bg.on{display: block;}
-
+.sec_wrap2.bg { visibility: hidden; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.sec_wrap2.bg.on{ visibility: visible; max-height: 1000px; }
 table .it{ height: 3.6rem; padding: 0 12px; }
 .tbl2 table td .it.date, .tbl2 table td .it.edit { 
   min-width: 77px;

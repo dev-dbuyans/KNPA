@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경찰청 - 국유재산</title>
+
+  <!-- CSS -->
+  <link rel="icon" href="/assets/img/ico_favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui.grid/latest/tui-grid.min.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/sub.css">
+  <link rel="stylesheet" href="/assets/css/toast_test.css">
+
+  <!-- JS -->
+  <script src="/assets/js/jquery1.12.4.min.js"></script>
+  <script src="/assets/js/jquery-ui.min.js"></script>
+  <script src="https://uicdn.toast.com/tui.grid/latest/tui-grid.min.js"></script>
+  <script src="/assets/js/common.js"></script>
+</head>
+
+<body>
+  <!-- 기금사업 - 상세 -->
+
+  <!-- wrap -->
+  <div id="wrap">
+
+    <!-- header -->
+    <header id="header">
+      <div class="h_inner flexEnd">
+        <div id="logo" class="flexi">
+          <h1>
+            <a href="/main.html">
+              <img src="./assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
+            </a>
+          </h1>
+          <a href="/main.html" class="bold">국유재산 정보시스템</a>
+        </div>
+
+        <!-- gnb -->
+        <div id="gnb" class="flexible">
+          <div class="dimmed"></div>
+
+          <ul class="depth1 flexible relative">
+            <li class="noHover"><button class="menuBtn"></button></li>
+            <li class="on">
+              <a href="#">국유재산관리</a>
+
+              <!-- dropMenu0 : 각 li.on .dropMenu -->
+              <div class="dropMenu">
+                <ul class="depth2">
+                  <li>
+                    <a href="#">관서별 재산현황</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">재산대장 관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">국유재산(토지)</a></li>
+                      <li><a href="#">국유재산(기타)</a></li>
+                      <li><a href="#">국유재산(건물)</a></li>
+                      <li><a href="#">미등재 재산</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">상호점유 관리</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">취득</a>
+                    <ul class="depth3">
+                      <li><a href="#">재산교환</a></li>
+                      <li><a href="#">기부채납</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">운용</a>
+                    <ul class="depth3">
+                      <li><a href="#">대부/사용허가</a></li>
+                      <li><a href="#">변상금(무단점유 등)</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">처분</a>
+                    <ul class="depth3">
+                      <li><a href="#">양여</a></li>
+                      <li><a href="#">멸실</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">용도폐지</a></li>
+                      <li><a href="#">사용승인</a></li>
+                      <li><a href="#">기부대양여</a></li>
+                      <li><a href="#">실태조사</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">기금사업관리</a>
+              <!-- dropMenu1 -->
+              <div class="dropMenu">
+                <ul class="depth2">
+                  <li>
+                    <a href="#">드롭메뉴 2</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">재산대장 관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">국유재산(토지)</a></li>
+                      <li><a href="#">국유재산(기타)</a></li>
+                      <li><a href="#">국유재산(건물)</a></li>
+                      <li><a href="#">미등재 재산</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">상호점유 관리</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">취득</a>
+                    <ul class="depth3">
+                      <li><a href="#">재산교환</a></li>
+                      <li><a href="#">기부채납</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">운용</a>
+                    <ul class="depth3">
+                      <li><a href="#">대부/사용허가</a></li>
+                      <li><a href="#">변상금(무단점유 등)</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">처분</a>
+                    <ul class="depth3">
+                      <li><a href="#">양여</a></li>
+                      <li><a href="#">멸실</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">용도폐지</a></li>
+                      <li><a href="#">사용승인</a></li>
+                      <li><a href="#">기부대양여</a></li>
+                      <li><a href="#">실태조사</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">시설사업관리</a>
+            </li>
+            <li>
+              <a href="#">통계정보</a>
+            </li>
+            <li>
+              <a href="#">이용안내</a>
+            </li>
+            <li>
+              <a href="#">나의할일</a>
+            </li>
+            <li>
+              <a href="#">관리센터</a>
+            </li>
+          </ul>
+        </div>
+        <!-- //gnb -->
+
+        <div id="util" class="flexi">
+          <a href="#" target="_blank" class="newWindow">
+            <span>새창열기</span>
+          </a>
+          <div class="extention">
+            <span id="time-label" hidden>남은 시간</span>
+            <span aria-labelledby="time-label">19:27</span>
+            <button type="button" class="exBtn">연장</button>
+          </div>
+          <div class="flexi">
+            <div class="user">
+              <a href="#" class="my">MY</a>
+              <div class="toolTip">
+                <p><b>[본청 기획조정]</b><b>시스템관리자</b>님이 로그인하셨습니다.</p>
+              </div>
+            </div>
+            <div class="logOut">
+              <button type="button">
+                <span>로그아웃</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 전체메뉴 -->
+    <div id="allMenu">
+      <div class="dimmed"></div>
+      <div class="m_wrap">
+        <ul class="depth1 flexEnd">
+          <li>
+            <a href="#">국유재산관리</a>
+            <ul class="depth2">
+              <li>
+                <a href="#">관서별 재산현황</a>
+              </li>
+              <li>
+                <a href="#">재산대장 관리</a>
+                <ul class="depth3">
+                  <li><a href="#">국유재산(토지)</a></li>
+                  <li><a href="#">국유재산(기타)</a></li>
+                  <li><a href="#">국유재산(건물)</a></li>
+                  <li><a href="#">미등재 재산</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">상호점유관리</a>
+              </li>
+              <li>
+                <a href="#">취득</a>
+                <ul class="depth3">
+                  <li><a href="#">재산교환</a></li>
+                  <li><a href="#">기부채납</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">운용</a>
+                <ul class="depth3">
+                  <li><a href="#">대부/사용허가</a></li>
+                  <li><a href="#">변상금(무단점유 등)</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">처분</a>
+                <ul class="depth3">
+                  <li><a href="#">양여</a></li>
+                  <li><a href="#">멸실</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">관리</a>
+                <ul class="depth3">
+                  <li><a href="#">용도패지</a></li>
+                  <li><a href="#">사용승인</a></li>
+                  <li><a href="#">기부대양여</a></li>
+                  <li><a href="#">실태조사</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">기금사업관리</a>
+            <ul class="depth2">
+              <li><a href="#">기금사업관리</a></li>
+              <li><a href="#">총 사업비 관리</a></li>
+              <li><a href="#">집행관리</a></li>
+              <li><a href="#">신증축 우선순위</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">시설사업관리</a>
+            <ul class="depth2">
+              <li><a href="#">관서별 시설현황</a></li>
+              <li><a href="#">시설사업</a></li>
+              <li><a href="#">진행관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">통계정보</a>
+            <ul class="depth2">
+              <li><a href="#">국유재산 통계</a></li>
+              <li><a href="#">건축사업 통계</a></li>
+              <li><a href="#">시설사업 통계</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+            <ul class="depth2">
+              <li><a href="#">전체</a></li>
+              <li><a href="#">국유재산</a></li>
+              <li><a href="#">건축사업</a></li>
+              <li><a href="#">시설사업</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">나의할일</a>
+            <ul class="depth2">
+              <li><a href="#">국유재산</a></li>
+              <li><a href="#">기금사업</a></li>
+              <li><a href="#">시설사업</a></li>
+              <li><a href="#">권한관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">관리자센터</a>
+            <ul class="depth2">
+              <li><a href="#">조직관리</a></li>
+              <li><a href="#">사용자 권한관리</a></li>
+              <li><a href="#">사용자 통계</a></li>
+              <li><a href="#">정현원 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--// 전체메뉴 -->
+
+    <!-- main -->
+    <main>
+
+      <!-- navigation : -->
+      <nav id="navigation" class="tree_wrap">
+        <ul class="depth1">
+          <li class="d1_01 on">
+            <a href="#"><span>관서현황보고서</span></a>
+            <div class="tree_box nav_box on">
+              <div class="scrollY">
+                <!-- 스크롤 테스트 -->
+                <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="d1_02">
+            <a href="#"><span>기금사업</span></a>
+            <div class="tree_box nav_box">
+              <div class="scrollY">
+                <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="d1_03">
+            <a href="#"><span>시설사업</span></a>
+            <div class="tree_box nav_box">
+              <div class="scrollY">
+                <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="btnbox">
+          <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
+        </div>
+      </nav>
+      <!-- //navigation -->
+
+
+    </main>
+    <!-- // main -->
+
+    <!-- footer -->
+    <footer>
+      <div class="f_inner">
+        <div class="f_txt">
+          <a href="#" class="btn basic">이용안내</a>
+          <address>(03739) 서울특별시 서대문구 통일로 97</address>
+          <span>© 2018. KOREAN NATIONAL POLICE AGENCY</span>
+        </div>
+
+        <div class="f_logo">
+          <a href="#">
+            <img src="./assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+  </div>
+  <!-- //wrap -->
+</body>
+
+</html>
