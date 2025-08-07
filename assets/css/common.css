@@ -35,7 +35,7 @@ textarea, textarea:focus {border: none; outline: none;}
 img, svg, video, canvas, audio, iframe {display: block;}
 img, video {max-width: 100%; height: auto;}
 
-body {
+body, .tui-grid-table {
   font: 400 16px/2.1rem 'Pretendard', 'Noto Sans KR', 'Malgun Gothic' ,'돋움', dotum, AppleGothic, sans-serif; 
   background-color: #fff;
   overflow-x: hidden;
@@ -115,7 +115,8 @@ html {font-size: 62.5%;}
   --disableText:#788AA2;
   --disablebg:#EEF1F7;
   --newBtn:#FF9900;
-  --tablebd:#606E82;
+  --tableTop:#606E82;
+  --tablebd:#C9D0DA;
   --tablebg:#E6F1FF;
   --tfootbg:#FFEFE4;
   --tdcolor:#303741;
@@ -988,9 +989,9 @@ textarea{ width: 100%; }
 }
 
 /*** 250730 : input > check 추가 ***/
-.check_btn input[type="checkbox"] {background-image: url(../img/ico_check.svg);}
-.check_btn input[type="checkbox"]:checked {background-image: url(../img/ico_checked.svg);}
-.check_btn input[type="checkbox"]:checked:disabled {background-image: url(../img/ico_checked_dis.svg);}
+.check_btn input[type="checkbox"] {background-image: url(/assets/img/ico_check.svg);}
+.check_btn input[type="checkbox"]:checked {background-image: url(/assets/img/ico_checked.svg);}
+.check_btn input[type="checkbox"]:checked:disabled {background-image: url(/assets/img/ico_checked_dis.svg);}
 .check_btn input[type="radio"] {background-image: url(/assets/img/ico_radio.svg);}
 .check_btn input[type="radio"]:checked {background-image: url(/assets/img/ico_radio_checked.svg);}
 .check_btn > span {
@@ -1032,18 +1033,18 @@ textarea{ width: 100%; }
 /* ------------------------------------------------------------------------- */
 .tbl2{
   width: 100%;
-  border-top: 1px solid var(--tablebd);
+  border-top: 1px solid var(--tableTop);
   position: relative;
   white-space: nowrap;
 }
-.tbl2 table { width: 100%;  overflow: visible; border-collapse: separate;  table-layout: fixed; }
+.tbl2 table { width: 100%;  overflow: visible; border-collapse: collapse;  table-layout: fixed; }
 
 .tbl2 table th,
 .tbl2 table td {
   min-width: 45px; 
   height: 3.2rem;
   padding: 0 10px;
-  border: 1px solid var(--border); border-left: none;
+  border: 1px solid var(--tablebd); border-left: none;
   font-weight: 500; font-size: 14px; text-align: center; color: var(--text4);
   background-color: #ffffff;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -1051,21 +1052,21 @@ textarea{ width: 100%; }
 .tbl2 table th {
   font-weight: 600;  color: var(--text1);
   background-color: #ffffff;
-  border: 1px solid var(--gray200);  border-top: 0; 
+  border: 1px solid var(--tablebd);  border-top: 0; 
   position: relative;
 }
 .tbl2 table th + th,
 .tbl2 table th + td,
 .tbl2 table td + td,
-.tbl2 table td + th {border-left: 1px solid var(--border);}
+.tbl2 table td + th {border-left: 1px solid var(--tablebd);}
 .tbl2 thead tr th { height: 4rem; background-color: var(--bg); border-left: 0;}
-.tbl2 thead tr th:first-child { border-left: 1px solid var(--gray200);}
+.tbl2 thead tr th:first-child { border-left: 1px solid var(--tablebd);}
 
 .tbl2 tbody tr:hover td {background-color: var(--tablebg);}
 .tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
 
-.tbl2 table td { border-right: 1px solid var(--gray200);  border-bottom: 1px solid var(--gray200); transition: background-color 0.2s ease;}
-.tbl2 table td:first-child { border-left: 1px solid var(--gray200);}
+.tbl2 table td { border-right: 1px solid var(--tablebd);  border-bottom: 1px solid var(--tablebd); transition: background-color 0.2s ease;}
+.tbl2 table td:first-child { border-left: 1px solid var(--tablebd);}
 
 .tbl2 table td.tal,
 .tbl2 table tr.tal td {padding-left: 12px; text-align: left;}
@@ -1088,8 +1089,8 @@ textarea{ width: 100%; }
 /*** 250730 : table >  td(checkbox) 추가 ***/
 .tbl2 tr.h41 td { min-height: 4.1rem; max-height: 15rem;}
 .tbl2 tr.bdnone td{border-left: 0; border-right: 0; border-bottom: 0;}
-.tbl2 tr.bdnone:last-child td{border-bottom: 1px solid var(--gray200);}
-.tbl2 tr.bdnone td:last-child{border-right: 1px solid var(--gray200);}
+.tbl2 tr.bdnone:last-child td{border-bottom: 1px solid var(--tablebd);}
+.tbl2 tr.bdnone td:last-child{border-right: 1px solid var(--tablebd);}
 
 .tbl2 table td a {
     max-height: 40px;

@@ -233,11 +233,19 @@ $(function () {
 
     if ($(this).hasClass("show")) {
       sec.find(".sec_item").addClass("on");
+
+      setTimeout(() => {
+        if (typeof grid !== 'undefined' && grid.refreshLayout) {
+          grid.refreshLayout();
+        }
+      }, 0);
+
     } else {
       sec.find(".sec_item").removeClass("on");
     }
   });
 });
+
 
 // 검색영역 select 
 $(document).ready(function () {

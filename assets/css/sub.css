@@ -2,7 +2,7 @@
 
 /* ------------------------------------------------------------------------- */
 /* 관서현황보고서(요약)
-/* ------------------------------------------------------------------------- *
+/* ------------------------------------------------------------------------- */
 /* 관서현황 */
 .mt0 {margin-top: 0;}
 .ml0 {margin-left: 0;}
@@ -91,7 +91,6 @@
 /* type2 */
 .sub_info .row.fwrap{ flex-wrap: wrap; margin-right: 2rem;}
 .sub_info ul.info.type2{ margin-right: 0; margin-bottom: 8px;}
-/* .sub_info ul.info.type2:last-child { margin-left: 0;} */
 
 
 
@@ -177,9 +176,11 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   background: url(/assets/img/ico_arrowDown_02.svg) no-repeat top 5px center / 24px 24px;
 }
 .sec_wrap2 .s_tit.underLine .moreBtn.show{   background: url(/assets/img/ico_arrowUp_02.svg) no-repeat top 5px center / 24px 24px;}
-.sec_item { display: none; }
-.sec_item.on{ display: block; }
+/* .sec_item { display: none; }
+.sec_item.on{ display: block; } */
 
+.sec_item { visibility: hidden; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.sec_item.on{ visibility: visible; max-height: 1000px; }
 /* ------------------------------------------------------------------------- */
 /* 미등재 재산 - 검색 / 상세
 /* ------------------------------------------------------------------------- */

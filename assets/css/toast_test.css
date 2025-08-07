@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------- */
+/* 토스트 그리드
+/* ------------------------------------------------------------------------- */
+.tui-grid-table { font: 400 14px/2.1rem 'Pretendard', 'Noto Sans KR', 'Malgun Gothic' ,'돋움', dotum, AppleGothic, sans-serif !important; }
+
+/* 스크롤 커스텀 */
+.tui-grid-container ::-webkit-scrollbar{-webkit-appearance: none;}
+.tui-grid-container ::-webkit-scrollbar-thumb {border: 6px solid transparent;}
+.tui-grid-scrollbar-left-bottom {border: 0; background-color: transparent;}
+.tui-grid-scrollbar-frozen-border {border-width: 0;}
+
+/* table */
+.tui-grid-container{ border: 1px solid var(--tablebd); border-top-color: var(--tableTop); border-bottom-color: var(--gray100) ;}
+.tui-grid-cell{
+  box-sizing: border-box;
+  padding: 0 6px;
+  font-weight: 500; color: var(--text4);
+  background-color: #ffffff !important;
+  border-right: 1px solid var(--tablebd); border-bottom: 1px solid var(--tablebd);
+}
+.tui-grid-border-line { border-color: var(--tablebd); border-top: none; border-collapse: collapse; box-sizing: border-box;}
+.tui-grid-lside-area { border-right: 1px solid var(--tablebd); box-sizing: border-box; }
+
+/* thead */
+.tui-grid-header-area { border-color: var(--tablebd) !important;}
+.tui-grid-cell-header{
+  font-weight: 600; 
+  color: var(--text1); background-color: var(--bg) !important; border-color: var(--tablebd);
+  border-top: 0; border-right: 0;
+}
+
+/* checkbox */
+.tui-grid-cell-header > span{ display: flex; align-items: center; justify-content: center;}
+.tui-grid-row-header-checkbox { display: flex; align-items: center; justify-content: center;}
+
+.tui-grid-cell-row-header span > input[type="checkbox"],
+.tui-grid-row-header-checkbox > input[type="checkbox"]{
+  position: relative;
+  width: 18px; height: 18px; 
+}
+.tui-grid-cell-row-header span > input[type="checkbox"]::before,
+.tui-grid-row-header-checkbox > input[type="checkbox"]::before{
+  display: inline-block; content: '';
+  width: 20px; height: 20px;
+  position: absolute; top: -1px; left: -1px;
+  background-image: url(/assets/img/ico_check.svg) !important; 
+  background-repeat: no-repeat; background-size: contain; 
+}
+.tui-grid-cell-row-header span > input[type="checkbox"]:checked::before,
+.tui-grid-row-header-checkbox > input[type="checkbox"]:checked::before{
+  background-image: url(/assets/img/ico_checked.svg) !important; 
+}
+
