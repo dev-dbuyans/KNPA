@@ -104,6 +104,8 @@ html {font-size: 62.5%;}
   --primary: #00479D;
   --primary2: #10298E;
   --secondary:#0C1B70;
+  --addfile:#0F509A;
+  --addfileHover:#16457C;
   --l_Blue:#D2E6FF;
   --l_Blueborder:#58ADFF;
   --l_Bluetxt:#D2E6FF;
@@ -908,7 +910,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   border: 1px solid var(--gray100); border-radius: 6px; 
   background: #fff url(/assets/img/ico_selectArrow.svg) no-repeat right 8px center / 24px 24px ;
 }
-.tbl2 table td > .st{ border: 0;}
+.tbl2 table td > .st{ height: 2.6rem; padding: 0 34px 0 4px;}
 .st.mini{ 
   min-width: 7rem; height: 2.8rem;
   padding: 0 31px 0 12px;
@@ -1015,17 +1017,18 @@ textarea{ width: 100%; }
 /* ------------------------------------------------------------------------- */
 /* TAB
 /* ------------------------------------------------------------------------- */
-[class*=tabMenu_] {
+[class*=tabMenu_], [class*=tabMenuG_] {
   width: 100%; height: 4.4rem; margin-bottom: 1.2rem;
   display: flex; align-items: center; justify-content: space-around;
 }
-[class*=tabMenu_] button {
+[class*=tabMenu_] button, [class*=tabMenuG_] button {
   width: 100%; height: 100%;
   background-color: var(--disablebg); color: var(--disableText);
   border-bottom: 1px solid var(--gray200); 
   display: flex; align-items: center; justify-content: center;
 }
-[class*=tabMenu_] button.on{
+[class*=tabMenu_] button.on,
+[class*=tabMenuG_] button.on{
   background-color: #ffffff; color: var(--text1);
   border: 1px solid var(--gray200); border-bottom: 0;
 }
@@ -1051,8 +1054,8 @@ textarea{ width: 100%; }
 .tbl2 table th,
 .tbl2 table td {
   min-width: 45px; 
-  height: 3.2rem;
-  padding: 0 10px;
+  height: 3.6rem;
+  padding: 0 4px;
   border: 1px solid var(--tablebd); border-left: none;
   font-weight: 500; font-size: 14px; text-align: center; color: var(--text4);
   background-color: #ffffff;

@@ -20,6 +20,9 @@
   background-color: #ffffff !important;
   border-right: 1px solid var(--tablebd) !important; border-bottom: 1px solid var(--tablebd) !important;
   border-color: var(--tablebd) !important;
+  white-space: normal;  overflow-wrap: break-word; word-break: break-all;
+  line-height: 1.4;
+
 }
 .tui-grid-border-line { border-color: var(--tablebd) !important; border-top: none !important; border-collapse: collapse; box-sizing: border-box;}
 .tui-grid-lside-area { border-right: 1px solid var(--tablebd); box-sizing: border-box; }

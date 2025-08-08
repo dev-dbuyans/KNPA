@@ -53,6 +53,8 @@
 /********** 현황보고서 (상세) **********/
 .sub_info{ margin-bottom: 8px;}
 .sub_info .sub_tit{
+  /*** 250808 추가 ***/
+  /* min-width: 8rem; */
   margin-right: 2rem;
   display: flex; align-items: center;
   font-size: 16px; font-weight: 600; line-height: 2.4rem;
@@ -116,8 +118,18 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   margin: 0 8px;
   font-size: 14px; font-weight: 600; color: var(--text4);
 }
+/*** 250808 추가 ***/
+.tbl2 table td .it.date:first-child,
+.tbl2 table td .it.edit:first-child,
+.tbl2 table td .it.h26:first-child { margin-left: 0; }
+.tbl2 table td .it.date:last-child,
+.tbl2 table td .it.edit:last-child,
+.tbl2 table td .it.h26:last-child { margin-right: 0; }
+
 .alend{justify-content: space-between; }
 .alend .col.w75 {width: calc(75% - 8px);}
+.alend .col.w50 {width: calc(50% - 8px);}
+.alend .col.w50.g4 {width: calc(50% - 4px);}
 .alend .col.w25 {width: calc(25% - 8px);}
 .col.w75 > *:not(:last-child){margin-bottom: 8px;}
 
@@ -181,10 +193,45 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 
 .sec_item { visibility: hidden; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
 .sec_item.on{ visibility: visible; max-height: 1000px; }
+
+
 /* ------------------------------------------------------------------------- */
 /* 미등재 재산 - 검색 / 상세
 /* ------------------------------------------------------------------------- */
 .sec_wrap2 .s_tit h4 { height: 3.6rem; line-height: 3.6rem; }
+
+
+/* ------------------------------------------------------------------------- */
+/* 기금사업
+/* ------------------------------------------------------------------------- */
+.mt32 {margin-top: 3.2rem;}
+.mlauto{margin-left: auto;}
+.sec_item .group + .group{margin-top: 3.2rem;}
+
+[class*=tabContG_] {max-height: 0; opacity: 0;}
+[class*=tabContG_].on {max-height: 1000px; opacity: 1;}
+
+/* 첨부파일 */
+.addfile { height: 100%; display: flex; align-items: center; position: relative;}
+.addfile_btn {position: absolute; right: 0;}
+.addfile_btn input {
+  width: calc(100% + 80px); height: 100%;
+  background-color: var(--text4);
+  position: absolute; right: 0; top: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+.addfile_btn span {
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 500; font-size: 13px; line-height: 26px; 
+  background-color: var(--addfile); color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+.addfile_btn:hover span{background-color: var(--addfileHover);}
+
+
 
 
 
@@ -207,8 +254,8 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   .sub_info ul.info li.benone2::before {display: none;}
 
   /* 대표이미지 부분 wrap*/
-  .full { width: 100%; }
-  .drop { width: 100%; flex-direction: column; } 
+  .sec .full { width: 100% !important; }
+  .drop { width: 100% !important; flex-direction: column; } 
   .drop.row > * + * {margin-left: 0;}
   .drop > .tbl2 {margin-left: 0; margin-right: 0; margin-bottom: 8px;}
 
@@ -233,5 +280,13 @@ table .it{ height: 3.6rem; padding: 0 12px; }
     display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
   }
 
+  /* 기금사업 */
+  .flexi.ver2{margin-left: auto;}
+  .alend .col.w75 {width: 100%;}
+  .alend .col.w25 {width: 100%; margin-top: 4rem;}
 
+  .sub_info .sub_tit{min-width: 8rem;}
+  .sub_info .row.fwrap {margin-right: 0;}
+
+  .drop > .col.full {margin-top: 4rem;}
 }

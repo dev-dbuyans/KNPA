@@ -37,6 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // 첨부파일 선택
+  const addFileBtn = document.querySelectorAll(`.addfile_btn input[type="file"]`);
+  addFileBtn.forEach((item) => {
+    item.addEventListener('change', (btn) => {
+      btnTarget = btn.currentTarget;
+      const addFileName = btnTarget.closest('.addfile').querySelector('.addfile_name');
+      addFileName.innerText = btnTarget.value.split('\\').pop();
+    })
+  })
 });
 
 $(function () {
@@ -50,7 +60,7 @@ $(function () {
     $(this).addClass("on");
     $(this).find(".dropMenu").addClass("on");
     $("#gnb .dimmed").addClass("on");
-    $("header#header").css({borderColor:'#ffffff'})
+    $("header#header").css({ borderColor: '#ffffff' })
   });
 
   // 마우스가 전체 GNB를 벗어나면 드롭메뉴 닫기
@@ -61,7 +71,7 @@ $(function () {
       .removeClass("on");
     $("#gnb .dimmed").removeClass("on");
     $("body").removeClass("no-scroll");
-    $("header#header").css({borderColor:'var(--gray100)'})
+    $("header#header").css({ borderColor: 'var(--gray100)' })
   });
 
   //전체메뉴
@@ -153,18 +163,39 @@ $(function () {
 /* 탭메뉴  */
 function tabMenu(tabName, num) {
   const tablist = document.querySelectorAll(".tabMenu_" + tabName + " button");
+  const tablistG = document.querySelectorAll(".tabMenuG_" + tabName + " button");
 
   tablist.forEach((item, index) => {
     const tabcont = document.querySelector(".tabCont_" + tabName + index);
+    const tabcontG = document.querySelector(".tabContG_" + tabName + index);
 
     if (index == num) {
       tabcont.classList.add("on");
       item.classList.add("on");
+      tabcontG.classList.add("on");
+      item.classList.add("on");
     } else {
       tabcont.classList.remove("on");
       item.classList.remove("on");
+      tabcontG.classList.remove("on");
+      item.classList.remove("on");
     }
   });
+
+  /*** 250808 ***/ 
+  // 탭메뉴 > 토스트 그리드 추가
+  tablistG.forEach((item, index) => {
+    const tabcontG = document.querySelector(".tabContG_" + tabName + index);
+
+    if (index == num) {
+      tabcontG.classList.add("on");
+      item.classList.add("on");
+    } else {
+      tabcontG.classList.remove("on");
+      item.classList.remove("on");
+    }
+  });
+
 }
 
 /*** 250731 : datepicker, 검색영역 추가 ***/
@@ -253,3 +284,4 @@ $(document).ready(function () {
     $(".st.type2").niceSelect();
   }
 });
+

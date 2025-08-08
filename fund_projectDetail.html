@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://uicdn.toast.com/tui.grid/latest/tui-grid.min.css">
   <link rel="stylesheet" href="/assets/css/common.css">
   <link rel="stylesheet" href="/assets/css/sub.css">
-  <link rel="stylesheet" href="/assets/css/toast_test.css">
+  <link rel="stylesheet" href="/assets/css/toast_grid.css">
 
   <!-- JS -->
   <script src="/assets/js/jquery1.12.4.min.js"></script>
@@ -374,6 +374,753 @@
       </nav>
       <!-- //navigation -->
 
+      <!-- 기금사업 - 상세 -->
+      <section class="sec_wrap2">
+        <header class="sec_head type2 flexible">
+          <h3>기금사업 - 상세정보</h3>
+        </header>
+
+        <div class="sec">
+          <div class="sec_con">
+            <div class="fstart drop">
+              <div class="col w75 full">
+
+                <div class="row drop">
+                  <div class="tbl2 w25 full noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 100%;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="bdnone pt10">
+                            <figure class="flexible imgbox">
+                              <img src="./assets/img/ico_officeSample.png" alt="관서 대표 이미지">
+                            </figure>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="col w75 full">
+                    <div class="row">
+                      <div class="tbl2 noHover">
+                        <table>
+                          <colgroup>
+                            <col style="width: 120px;">
+                            <col style="width: auto;">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">관서명</th>
+                              <td>
+                                <input type="text" aria-label="관서명" class="it">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="tbl2 noHover">
+                        <table>
+                          <colgroup>
+                            <col style="width: 120px;">
+                            <col style="width: auto;">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">사업명</th>
+                              <td>
+                                <input type="text" aria-label="사업명" class="it">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="tbl2 noHover">
+                        <table>
+                          <colgroup>
+                            <col style="width: 120px;">
+                            <col style="width: auto;">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">내부사업</th>
+                              <td>
+                                <input type="text" aria-label="내부사업" class="it">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tbl2 noHover">
+                      <table>
+                        <colgroup>
+                          <col style="width: 120px;">
+                          <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">사업 내 내역</th>
+                            <td>사업 내 내역의 요약 내용</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tbl2 noHover">
+                      <table>
+                        <colgroup>
+                          <col span="2" style="width: 120px;">
+                          <col style="width: auto;">
+                          <col style="width: 120px;">
+                          <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                          <tr class="disabled">
+                            <th scope="row">소재지</th>
+                            <th scope="row">지번</th>
+                            <td>-</td>
+                            <th scope="row">도로명</th>
+                            <td>-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tbl2 noHover">
+                      <table>
+                        <colgroup>
+                          <col span="6" style="width: auto;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">관서단위</th>
+                            <th scope="col">시도청</th>
+                            <th scope="col">경찰서</th>
+                            <th scope="col">지/파출소</th>
+                            <th scope="col">치안센터</th>
+                            <th scope="col">세부관서</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col span="4" style="width: auto;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">사업유형</th>
+                        <th scope="col">단위사업</th>
+                        <th scope="col">급지</th>
+                        <th scope="col">관리/비관리</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>전체</td>
+                        <td>전체</td>
+                        <td>전체</td>
+                        <td>전체</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col span="4" style="width: auto;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">사업구분</th>
+                        <th scope="col">진행단계</th>
+                        <th scope="col">협소도</th>
+                        <th scope="col">리모델링 반영여부</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>전체</td>
+                        <td>전체</td>
+                        <td>전체</td>
+                        <td>전체</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col span="5" style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" rowspan="2">안전성 평가</th>
+                        <th scope="col">평가여부</th>
+                        <th scope="col">기재부 평가연도</th>
+                        <th scope="col">기재부 평가등급</th>
+                        <th scope="col">자체 평가연도</th>
+                        <th scope="col">자체 평가등급</th>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+
+              <!-- 기금사업정보 -->
+              <div class="col w25 full">
+                <header class="s_tit ">
+                  <h4>기금사업 정보</h4>
+                </header>
+                <div class="tbl2">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>준공일자</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>노후도</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>완료일자(준공기준)</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>기금편성 연도</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>예산안 반영</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>기금총액</th>
+                        <td></td>
+                      </tr>
+                      <tr></tr>
+                      <th>부지연면적</th>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <th>건축연면적</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>사업담당자</th>
+                        <td>홍길동</td>
+                      </tr>
+                      <tr>
+                        <th>신증축반영여부</th>
+                        <td>Y/N</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="rowbox end mt8">
+              <button type="button" class="btn Dgray">신규등록</button>
+              <button type="button" class="btn Dgray">수정</button>
+              <button type="button" class="btn Dgray">삭제</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 관련재산 : 건물 -->
+        <div class="sec">
+          <div class="sec_con">
+            <header class="s_tit flexEnd underLine">
+              <h4>관련재산</h4>
+              <button type="button" class="moreBtn">
+                <span class="soundOnly">더보기</span>
+              </button>
+            </header>
+
+            <div class="sec_item">
+              <div class="group">
+                <div class="row flexEnd sub_info">
+                  <div class="flexi">
+                    <div class="sub_tit">건물</div>
+                    <ul class="info">
+                      <li class="benone2">건수 : -건</li>
+                      <li class="benone2 ">대장면적 : 234.45㎡</li>
+                      <li class="benone">가액 : 123,456원</li>
+                    </ul>
+                  </div>
+
+                  <div class="flexi">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <!-- 토스트 그리드1 -->
+                <div id="grid1" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
+                  </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="group">
+                <div class="row flexEnd sub_info">
+                  <div class="flexi mlauto">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <!-- 토스트 그리드1_2 -->
+                <div id="grid1_2" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
+                  </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 진행단계 : 설계 / 공사 -->
+        <div class="sec">
+          <div class="sec_con">
+            <header class="s_tit flexEnd underLine">
+              <h4>진행단계</h4>
+              <button type="button" class="moreBtn">
+                <span class="soundOnly">더보기</span>
+              </button>
+            </header>
+
+            <div class="sec_item">
+              <div class="row flexEnd sub_info group">
+                <div class="flexi">
+                  <div class="sub_tit">설계</div>
+                  <ul class="info">
+                    <li class="benone2">설계진행률 : 33%</li>
+                    <li class="benone2 ">인증진행률 : 33%</li>
+                    <li class="benone">조달검토진행률 : 40%</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="scroll_wrap">
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col span="10" style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" rowspan="3">설계</th>
+                        <th scope="row" colspan="4">기본설계</th>
+                        <th scope="row" colspan="4">실시설계</th>
+                        <th scope="row" colspan="2">설계완료(최종)</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">최초계약일</th>
+                        <th scope="col">계약서</th>
+                        <th scope="col">최종 기본설계 도면 취득일</th>
+                        <th scope="col">설계도면</th>
+                        <th scope="col">최초 계약일</th>
+                        <th scope="col">계약서</th>
+                        <th scope="col">최종 기본설계 도면 취득일</th>
+                        <th scope="col">설계도면</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">설계도면</th>
+                      </tr>
+                      <tr>
+                        <td>000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tbl2 mt8 noHover">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col span="8" style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th rowspan="6" scope="row">인증</th>
+                        <th colspan="4" scope="col">녹색건축</th>
+                        <th colspan="4" scope="col">제로 에너지 건축물</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">인증결과</th>
+                        <th scope="col">인증서</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">인증결과</th>
+                        <th scope="col">인증서</th>
+                      </tr>
+                      <tr>
+                        <td>000.00.00</td>
+                        <td>000.00.00</td>
+                        <td>완료</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>000.00.00</td>
+                        <td>000.00.00</td>
+                        <td>완료</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th colspan="4" scope="col">신재생에너지</th>
+                        <th colspan="4" scope="col">장애물 없는 생활(BF)</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">인증결과</th>
+                        <th scope="col">인증서</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">인증결과</th>
+                        <th scope="col">인증서</th>
+                      </tr>
+                      <tr>
+                        <td>000.00.00</td>
+                        <td>-</td>
+                        <td>보안 필요</td>
+                        <td></td>
+                        <td>000.00.00</td>
+                        <td>-</td>
+                        <td>인증 중</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tbl2 mt8 noHover">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col span="9" style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" rowspan="3">조달청</th>
+                        <th scope="col" colspan="3">계획설계 적정성 검토</th>
+                        <th scope="col" colspan="3">중간설계 적정성 검토</th>
+                        <th scope="col" colspan="3">실시설계 적정성 검토</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">결과보고서</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">결과보고서</th>
+                        <th scope="col">신청일</th>
+                        <th scope="col">완료일</th>
+                        <th scope="col">결과보고서</th>
+                      </tr>
+                      <tr>
+                        <td>0000.00.00</td>
+                        <td>0000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>0000.00.00</td>
+                        <td>0000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>0000.00.00</td>
+                        <td>0000.00.00</td>
+                        <td>
+                          <div class="addfile">
+                            <div class="addfile_btn">
+                              <input type="file">
+                              <span>첨부</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sec_item">
+                  <div class="row flexEnd sub_info mt32">
+                    <div class="flexi">
+                      <div class="sub_tit">공사</div>
+                      <ul class="info">
+                        <li class="benone2">공사진행률 : 33%</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col span="6" style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row" rowspan="3">공사</th>
+                          <th scope="col" colspan="2">공사 계약서</th>
+                          <th scope="col" colspan="2">완공</th>
+                          <th scope="col" colspan="2">준공</th>
+                        </tr>
+                        <tr>
+                          <th scope="col">계약기간</th>
+                          <th scope="col">계약서류</th>
+                          <th scope="col">존공신청일</th>
+                          <th scope="col">준공신청 서류</th>
+                          <th scope="col">준공일</th>
+                          <th scope="col">준공도서</th>
+                        </tr>
+                        <tr>
+                          <td>0000.00.00 - 0000.00.00</td>
+                          <td>
+                            <div class="addfile">
+                              <div class="addfile_btn">
+                                <input type="file">
+                                <span>첨부</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>0000.00.00 - 0000.00.00</td>
+                          <td>
+                            <div class="addfile">
+                              <div class="addfile_btn">
+                                <input type="file">
+                                <span>첨부</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>0000.00.00 - 0000.00.00</td>
+                          <td>
+                            <div class="addfile">
+                              <div class="addfile_btn">
+                                <input type="file">
+                                <span>첨부</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 이력관리 -->
+        <div class="sec">
+          <div class="sec_con">
+            <header class="s_tit flexEnd underLine">
+              <h4>이력관리</h4>
+              <button type="button" class="moreBtn">
+                <span class="soundOnly">더보기</span>
+              </button>
+            </header>
+
+            <div class="sec_item">
+                <div class="row flexEnd sub_info">
+                  <div class="flexi mlauto">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <div class="tabMenuG_grid">
+                  <button class=" on" onclick="tabMenu('grid',0)">변경이력</button>
+                  <button onclick="tabMenu('grid',1)">사업담당자</button>
+                  <button onclick="tabMenu('grid',2)">관련자료</button>
+                </div>
+
+                <div class="tabContG_grid0 on">
+                  <!-- 토스트 그리드1 -->
+                  <div id="grid3" style="height: auto;"></div>
+                  <!-- pagination -->
+                  <div class="pagination">
+                    <button class="first" aria-label="처음 리스트" disabled></button>
+                    <button class="prev" aria-label="이전 리스트" disabled></button>
+                    <div class="g4">
+                      <button class="on" aria-label="1 페이지">1</button>
+                      <button aria-label="2 페이지">2</button>
+                      <button aria-label="3 페이지">3</button>
+                      <button aria-label="4 페이지">4</button>
+                      <button aria-label="5 페이지">5</button>
+                    </div>
+                    <button class="next" aria-label="다음 리스트"></button>
+                    <button class="last" aria-label="마지막 리스트"></button>
+                  </div>
+                </div>
+
+                <div class="tabContG_grid1">탭 영역2</div>
+                <div class="tabContG_grid2">탭 영역3</div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!--// 기금사업 - 상세 -->
+
 
     </main>
     <!-- // main -->
@@ -399,5 +1146,141 @@
   </div>
   <!-- //wrap -->
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 관련재산 
+    const gridData1 = [
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+    ];
+
+    const grid1 = new tui.Grid({
+      el: document.getElementById('grid1'),
+      data: gridData1,
+      scrollX: true,
+      scrollY: false,
+      rowHeaders: ['checkbox'],
+      header: {
+        height: 80,
+        complexColumns: [
+          {
+            header: '건물 준공전',
+            name: 'projectInfo',
+            childNames: ['NO', '시도청', '경찰서', '세부관서명', '사업명', 'tit5', 'tit6', 'tit7', 'tit8', 'tit9', 'tit10', 'tit11', 'tit12', 'tit13', 'tit14', 'tit15', 'tit16']
+          },
+        ]
+      },
+
+      columns: [
+        { header: '', name: 'NO', width: 120, height: 39, align: 'center' },
+        { header: '', name: '시도청', width: 120, height: 39, align: 'center' },
+        { header: '', name: '경찰서', width: 120, height: 39, align: 'center' },
+        { header: '', name: '세부관서명', width: 120, height: 39, align: 'center' },
+        { header: '', name: '사업명', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
+      ]
+    });
+
+
+    // 관련재산 1_2
+    const gridData1_2 = [
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+    ];
+
+    const grid1_2 = new tui.Grid({
+      el: document.getElementById('grid1_2'),
+      data: gridData1_2,
+      scrollX: true,
+      scrollY: false,
+      rowHeaders: ['checkbox'],
+      header: {
+        height: 80,
+        complexColumns: [
+          {
+            header: '건물 준공전',
+            name: 'projectInfo',
+            childNames: ['NO', '시도청', '경찰서', '세부관서명', '사업명', 'tit5', 'tit6', 'tit7', 'tit8', 'tit9', 'tit10', 'tit11', 'tit12', 'tit13', 'tit14', 'tit15', 'tit16']
+          },
+        ]
+      },
+
+      columns: [
+        { header: '', name: 'NO', width: 120, height: 39, align: 'center' },
+        { header: '', name: '시도청', width: 120, height: 39, align: 'center' },
+        { header: '', name: '경찰서', width: 120, height: 39, align: 'center' },
+        { header: '', name: '세부관서명', width: 120, height: 39, align: 'center' },
+        { header: '', name: '사업명', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
+      ]
+    });
+
+    // 이력관리
+    const gridData3 = [
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+    ];
+
+    const grid3 = new tui.Grid({
+      el: document.getElementById('grid3'),
+      data: gridData3,
+      scrollX: true,
+      scrollY: false,
+      rowHeaders: ['checkbox'],
+      header: {
+        height: 39,
+      },
+
+      columns: [
+        { header: '', name: 'NO', width: 120, height: 39, align: 'center' },
+        { header: '', name: '시도청', width: 120, height: 39, align: 'center' },
+        { header: '', name: '경찰서', width: 120, height: 39, align: 'center' },
+        { header: '', name: '세부관서명', width: 120, height: 39, align: 'center' },
+        { header: '', name: '사업명', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
+        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
+      ]
+    });
+    
+  });
+</script>
 
 </html>
