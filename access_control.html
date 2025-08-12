@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- 건축사업관리 > 집행관리 -->
+  <!-- 권한관리 -->
 
   <!-- wrap -->
   <div id="wrap">
@@ -374,9 +374,62 @@
       </nav>
       <!-- //navigation -->
 
+      <!-- 권한관리 -->
+      <section class="sec_wrap2">
+        <header class="sec_head type2 flexible">
+          <h3>권한관리</h3>
+        </header>
 
+        <div class="sec">
+          <div class="sec_con">
+            <div class="row flexEnd sub_info">
+              <div class="flexi mlauto">
+                <select class="st mini">
+                  <option value="">5</option>
+                  <option value="">10</option>
+                  <option value="">30</option>
+                  <option value="">50</option>
+                </select>
 
-      
+                <button type="button" class="btn blueBtn">등록</button>
+                <button type="button" class="btn blueBtn">수정</button>
+                <a href="#" download class="btn blueBtn">선택삭제</a>
+              </div>
+            </div>
+
+            <div class="tabMenuG_grid">
+              <button class=" on" onclick="tabMenu('grid',0)">전체</button>
+              <button onclick="tabMenu('grid',1)">본청</button>
+              <button onclick="tabMenu('grid',2)">시도청</button>
+            </div>
+
+            <div class="tabContG_grid0 on">
+              <!-- 토스트 그리드1 -->
+              <div id="grid1" style="height: auto;"></div>
+
+              <!-- pagination -->
+              <div class="pagination">
+                <button class="first" aria-label="처음 리스트" disabled></button>
+                <button class="prev" aria-label="이전 리스트" disabled></button>
+                <div class="g4">
+                  <button class="on" aria-label="1 페이지">1</button>
+                  <button aria-label="2 페이지">2</button>
+                  <button aria-label="3 페이지">3</button>
+                  <button aria-label="4 페이지">4</button>
+                  <button aria-label="5 페이지">5</button>
+                </div>
+                <button class="next" aria-label="다음 리스트"></button>
+                <button class="last" aria-label="마지막 리스트"></button>
+              </div>
+            </div>
+
+            <div class="tabContG_grid1">탭 영역2</div>
+            <div class="tabContG_grid2">탭 영역2</div>
+          </div>
+        </div>
+
+      </section>
+      <!-- // 권한관리 -->
 
     </main>
     <!-- //main -->
@@ -401,6 +454,110 @@
 
   </div>
   <!--// wrap -->
+
+  <script>
+    //권한관리
+    const gridData1 = [
+      { t1: 'Admin 관리자', t2: 'Y', t3: 'Y', t4: '', t5: '', t6: '', t7: '', t8: 'Y', t9: 'Y', t10: 'Y', t11: '', t12: 'Y', t13: 'Y', t14: 'Y', t15: 'Y', t16: 'Y', t17: 'Y', t18: 'Y' },
+      { t1: '본청 관리자', t2: 'Y', t3: '', t4: 'Y', t5: '', t6: '', t7: '', t8: 'Y', t9: 'Y', t10: 'Y', t11: '', t12: 'Y', t13: 'Y', t14: 'Y', t15: 'Y', t16: 'Y', t17: 'Y', t18: 'Y' },
+      { t1: '본청 관리자(조회)', t2: '', t3: '', t4: 'Y', t5: '', t6: '', t7: '', t8: '', t9: 'Y', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: 'Y', t18: 'Y' },
+      { t1: '본청 업무(국유)관리자', t2: 'Y', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: 'Y', t9: 'Y', t10: 'Y', t11: 'Y', t12: '', t13: '', t14: '', t15: '', t16: '', t17: 'Y', t18: 'Y' },
+      { t1: '본청 업무(국유)사용자', t2: '', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: 'Y', t9: '', t10: 'Y', t11: 'Y', t12: '', t13: '', t14: '', t15: '', t16: '', t17: 'Y', t18: 'Y' },
+      { t1: '본청 업무(기금)관리자', t2: 'Y', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: 'Y', t9: 'Y', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: 'Y', t18: 'Y' },
+      { t1: '본청 업무(기금)사용자', t2: '', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: 'Y', t9: '', t10: '', t11: '', t12: '', t13: 'Y', t14: 'Y', t15: '', t16: '', t17: 'Y', t18: 'Y' },
+      { t1: '본청 업무(시설)관리자', t2: 'Y', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: 'Y', t9: 'Y', t10: '', t11: '', t12: '', t13: 'Y', t14: 'Y', t15: 'Y', t16: 'Y', t17: 'Y', t18: 'Y' },
+      { t1: '본청 업무(시설)사용자', t2: '', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: 'Y', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: 'Y', t16: 'Y', t17: 'Y', t18: 'Y' },
+      { t1: '본청 일반 사용자(조회)', t2: '', t3: '', t4: '', t5: 'Y', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '' },
+    ];
+
+    const grid1 = new tui.Grid({
+      el: document.getElementById('grid1'),
+      data: gridData1,
+      scrollX: true,
+      scrollY: false,
+      rowHeaders: ['checkbox'],
+      rowHeight:30,
+      
+      header: {
+        height: 100,
+        complexColumns: [
+          {
+            header: '본청',
+            name: 'projectInfo1',
+            childNames: ['t4', 't5']
+          },
+          {
+            header: '시도청',
+            name: 'projectInfo2',
+            childNames: ['t6', 't7']
+          },
+          {
+            header: '',
+            name: 'projectInfo3',
+            childNames: ['t8', 't9'],
+          },
+          {
+            header: '국유재산',
+            name: 'projectInfo4',
+            childNames: ['t10', 't11']
+          },
+          {
+            header: '기금사업',
+            name: 'projectInfo5',
+            childNames: ['t12', 't13']
+          },
+          {
+            header: '시설사업',
+            name: 'projectInfo6',
+            childNames: ['t14', 't15']
+          },
+          {
+            header: '조회',
+            name: 'projectInfo7',
+            childNames: ['t16', 't17', 't18']
+          },
+
+          {
+            header: '관한 레벨',
+            name: 'projectInfo0',
+            childNames: ['t3_1', 'projectInfo1', 'projectInfo2'],
+          },
+          {
+            header: '걸제 업무 관리',
+            name: 'projectInfo01',
+            childNames: ['projectInfo3'],
+          },
+          {
+            header: '업무별',
+            name: 'projectInfo02',
+            childNames: ['projectInfo4', 'projectInfo5', 'projectInfo6'],
+          },
+        ]
+      },
+
+      columns: [
+        { name: 't1', header: '권한명', width: 240, height: 39, align: 'center' },
+        { name: 't2', header: '관리권한부여', width: 120, height: 39, align: 'center' },
+        { name: 't3', header: '관리자(Admin)', width: 120, height: 39, align: 'center' },
+        { name: 't4', header: '관리자', width: 120, height: 39, align: 'center' },
+        { name: 't5', header: '사용자', width: 120, height: 39, align: 'center' },
+        { name: 't6', header: '관리자', width: 120, height: 39, align: 'center' },
+        { name: 't7', header: '사용자', width: 120, height: 39, align: 'center' },
+        { name: 't8', header: '신청', width: 80, height: 39, align: 'center', },
+        { name: 't9', header: '승인/반려', width: 80, height: 39, align: 'center' },
+        { name: 't10', header: '등록/수정', width: 120, height: 39, align: 'center' },
+        { name: 't11', header: '삭제', width: 120, height: 39, align: 'center' },
+        { name: 't12', header: '등록/수정', width: 120, height: 39, align: 'center' },
+        { name: 't13', header: '삭제', width: 120, height: 39, align: 'center' },
+        { name: 't14', header: '등록/수정', width: 120, height: 39, align: 'center' },
+        { name: 't15', header: '삭제', width: 120, height: 39, align: 'center' },
+        { name: 't16', header: '본청', width: 120, height: 39, align: 'center' },
+        { name: 't17', header: '시도청', width: 120, height: 39, align: 'center' },
+        { name: 't18', header: '현소속', width: 120, height: 39, align: 'center' }
+      ]
+    });
+
+  </script>
 
 </body>
 

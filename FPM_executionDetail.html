@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- 건축사업관리 > 집행관리 -->
+  <!-- 기금사업관리 > 집행관리 -->
 
   <!-- wrap -->
   <div id="wrap">
@@ -32,7 +32,7 @@
         <div id="logo" class="flexi">
           <h1>
             <a href="/main.html">
-              <img src="/assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
+              <img src="./assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
             </a>
           </h1>
           <a href="/main.html" class="bold">국유재산 정보시스템</a>
@@ -374,9 +374,160 @@
       </nav>
       <!-- //navigation -->
 
+      <!-- 집행관리 - 상세 -->
+      <section class="sec_wrap2">
+        <header class="sec_head type2 flexible">
+          <h3>집행관리 - 상세정보</h3>
+        </header>
 
+        <div class="sec">
+          <div class="sec_con">
+            <div class="alend drop">
+              <div class="col w75">
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사업명</th>
+                        <td>OOOOOOOOOOOOOOOOOOO사업</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="row">
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">사업구분</th>
+                          <td>전체</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">완료 구분</th>
+                          <td>전체</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">관리/비관리</th>
+                          <td>전체</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col span="5" style="width: auto;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>시도청</th>
+                        <th>경찰서</th>
+                        <th>지/파출소</th>
+                        <th>치안센터</th>
+                        <th>세부관서</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>본청</td>
+                        <td>OOO경찰서</td>
+                        <td>********파출소</td>
+                        <td>******치안센터</td>
+                        <td>OOOOOOOO기관</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
-      
+              <!-- 사업명 정보 -->
+              <div class="col w25">
+                <header class="s_tit ">
+                  <h4>사업명 정보</h4>
+                </header>
+                <div class="tbl2">
+                  <table>
+                    <colgroup>
+                      <col style="width: 60px;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row" rowspan="3">사업별</th>
+                        <th scope="row">단위사업명</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">세부사업명</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">내역사업명</th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="rowbox end mt8">
+              <button type="button" class="btn Dgray">수정</button>
+              <button type="button" class="btn Dgray">삭제</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="sec_con">
+            <div class="row flexEnd sub_info">
+              <div class="flexi">
+                <div class="sub_tit">집행관리 세부화면</div>
+              </div>
+            </div>
+
+            <!-- 토스트 그리드1 -->
+            <div id="grid1" style="height: auto;"></div>
+
+          </div>
+        </div>
+        <div class="rowbox end">
+          <button type="button" class="btn back">
+            <span>목록으로</span>
+          </button>
+        </div>
+      </section>
+      <!--// 집행관리 - 상세 -->
 
     </main>
     <!-- //main -->
@@ -392,7 +543,7 @@
 
         <div class="f_logo">
           <a href="#">
-            <img src="/assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
+            <img src="./assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
           </a>
         </div>
       </div>
@@ -402,6 +553,98 @@
   </div>
   <!--// wrap -->
 
+  <script>
+    // 집행관리 세부화면
+    const gridData1 = [
+      { t1: '', t2: '', t3: '총괄', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '건설보상비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '기본설계비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '실시설계비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '공사비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '감리비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '시설부대비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '자산취득비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '예비비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '서울 구로경찰서 재건축', t2: '계속', t3: '총괄', t4: '38,549,000,000', t5: '15 ~ 26', t6: '경찰서', t7: '관리', t8: '11,859,039,710', t9: '30.8%', t10: '1,429,266,980', t11: '5,277,000,000', t12: '5,277,000,000', t13: '6,706,226,980', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '건설보상비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '기본설계비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '실시설계비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '공사비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '감리비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '시설부대비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '자산취득비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+      { t1: '', t2: '', t3: '예비비', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '', t16: '', t17: '', t18: '', t19: '', t20: '', t21: '', t22: '', t23: '' },
+    ];
+
+    const grid1 = new tui.Grid({
+      el: document.getElementById('grid1'),
+      data: gridData1,
+      scrollX: true,
+      scrollY: true,
+      header: {
+        height: 120,
+        complexColumns: [
+          {
+            header: '~ 24년 까지',
+            name: 'colspan1',
+            childNames: ['t8', 't9']
+          },
+          {
+            header: '집행현황',
+            name: 'colspan2',
+            childNames: ['t17', 't18', 't19', 't20']
+          },
+          {
+            header: '집행변경',
+            name: 'colspan3',
+            childNames: ['t21', 't22']
+          },
+        ]
+      },
+
+      // rowspan 
+      columns: [
+        {
+          header: '내역사업',
+          name: 't1',
+          width: 200,
+          align: 'center',
+          rowSpan: true,
+          colSpan: true,
+          complexColumns: [
+            {
+              header: '합계',
+              name: 'colspan4',
+              childNames: ['t1', 't2']
+            }
+          ],
+        },
+        { header: '25년 구분', name: 't2', width: 60, align: 'center', rowSpan: true,},
+        { header: '세목', name: 't3', width: 100, align: 'center' },
+        { header: '총사업비(A)', name: 't4', width: 150, align: 'center' },
+        { header: '사업기간', name: 't5', width: 100, align: 'center' },
+        { header: '사업구분', name: 't6', width: 100, align: 'center' },
+        { header: '관리구분', name: 't7', width: 100, align: 'center' },
+        { header: '집행액(B)', name: 't8', width: 150, align: 'center' },
+        { header: '집행률(B/A,%)', name: 't9', width: 100, align: 'center' },
+        { header: '24년 편성예산(C)', name: 't10', width: 150, align: 'center' },
+        { header: '25년 편성예산(당초)', name: 't11', width: 150, align: 'center' },
+        { header: '25년 편성예산(수정,D)', name: 't12', width: 150, align: 'center' },
+        { header: '예산한액(E=C+D)', name: 't13', width: 150, align: 'center' },
+        { header: '잔여 총사업비 (A-B-E)', name: 't14', width: 150, align: 'center' },
+        { header: '배정 예산', name: 't15', width: 150, align: 'center' },
+        { header: '배정 지급', name: 't16', width: 100, align: 'center' },
+        { header: '24년 이월예산(F)', name: 't17', width: 100, align: 'center' },
+        { header: '25년 편성예산(G)', name: 't18', width: 100, align: 'center' },
+        { header: '전체 (H=F+G)', name: 't19', width: 100, align: 'center' },
+        { header: '집행률 (H/E,%)', name: 't20', width: 100, align: 'center' },
+        { header: '기금운용 계획변경', name: 't21', width: 100, align: 'center' },
+        { header: '내역조종 세목조정 내역변경', name: 't22', width: 100, align: 'center' },
+        { header: '추경', name: 't23', width: 100, align: 'center' }
+      ]
+    });
+  </script>
 </body>
+
 
 </html>

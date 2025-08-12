@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- 건축사업관리 > 집행관리 -->
+  <!-- 관서 기금사업현황 -->
 
   <!-- wrap -->
   <div id="wrap">
@@ -32,7 +32,7 @@
         <div id="logo" class="flexi">
           <h1>
             <a href="/main.html">
-              <img src="/assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
+              <img src="./assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
             </a>
           </h1>
           <a href="/main.html" class="bold">국유재산 정보시스템</a>
@@ -374,12 +374,168 @@
       </nav>
       <!-- //navigation -->
 
+      <!-- section : 관서 기금사업 현황 -->
+      <section class="sec_wrap2">
+        <header class="sec_head type2 flexible">
+          <h3>관서 기금사업현황</h3>
+        </header>
+
+        <div class="sec">
+          <div class="sec_con">
+            <div class="tbl2 noHover">
+              <table>
+                <colgroup>
+                  <col style="width: 120px;">
+                  <col style="width: auto;">
+                  <col style="width: 120px;">
+                  <col style="width: auto;">
+                  <col style="width: 120px;">
+                  <col style="width: auto;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">관서명</th>
+                    <td>소속 관서명 자동입력</td>
+                    <th scope="row">관서 단위</th>
+                    <td>소속 관서단위 자동입력</td>
+                    <th scope="row">급지</th>
+                    <td>소속 관서의 급지 자동입력(1.경찰청,시도청 : 해당없음 / 2.경찰서 이하 : 1급지/2급지/3급지)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="row mt8 drop">
+              <div class="tbl2 noHover">
+                <table>
+                  <colgroup>
+                    <col span="2" style="width: 120px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="2">전체</th>
+                      <th scope="row">건수</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">예산액(원)</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="tbl2 noHover">
+                <table>
+                  <colgroup>
+                    <col span="2" style="width: 120px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="2">관리</th>
+                      <th scope="row">건수</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">예산액(원)</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="tbl2 noHover">
+                <table>
+                  <colgroup>
+                    <col span="2" style="width: 120px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="2">비관리</th>
+                      <th scope="row">건수</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">예산액(원)</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="rowbox end mt8">
+              <button type="button" class="btn blueBtn">
+                <span>등기부조회</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 토스트그리드 -->
+        <div class="sec">
+          <div class="sec_con">
+            <div class="row flexEnd">
+              <header class="s_tit ">
+                <h4>검색 결과</h4>
+              </header>
+
+              <div class="flexi">
+                <select class="st mini">
+                  <option value="">원</option>
+                  <option value="">천원</option>
+                  <option value="">백만원</option>
+                </select>
+
+                <select class="st mini">
+                  <option value="">5</option>
+                  <option value="">10</option>
+                  <option value="">30</option>
+                  <option value="">50</option>
+                </select>
+
+                <a href="#" download class="btn blueBtn">다운로드</a>
+              </div>
+            </div>
+
+            <div class="tabMenu_sam">
+              <button class=" on" onclick="tabMenu('sam',0)">전체</button>
+              <button onclick="tabMenu('sam',1)">관리</button>
+              <button onclick="tabMenu('sam',2)">비관리</button>
+            </div>
+
+            <!-- 토스트 그리드1 -->
+            <div class="tabCont_sam0 on">
+              <div id="gridTab0" style="height: auto; width: 100%;"></div>
 
 
-      
+            </div>
+            <div class="tabCont_sam1">탭영역2</div>
+            <div class="tabCont_sam2">탭영역3</div>
+          </div>
+          <!-- pagination -->
+          <div class="pagination">
+            <button class="first" aria-label="처음 리스트" disabled></button>
+            <button class="prev" aria-label="이전 리스트" disabled></button>
+            <div class="g4">
+              <button class="on" aria-label="1 페이지">1</button>
+              <button aria-label="2 페이지">2</button>
+              <button aria-label="3 페이지">3</button>
+              <button aria-label="4 페이지">4</button>
+              <button aria-label="5 페이지">5</button>
+            </div>
+            <button class="next" aria-label="다음 리스트"></button>
+            <button class="last" aria-label="마지막 리스트"></button>
+          </div>
+        </div>
+
+      </section>
+      <!-- //section : 관서 기금사업 현황 -->
 
     </main>
-    <!-- //main -->
+    <!-- // main -->
 
     <!-- footer -->
     <footer>
@@ -392,7 +548,7 @@
 
         <div class="f_logo">
           <a href="#">
-            <img src="/assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
+            <img src="./assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
           </a>
         </div>
       </div>
@@ -400,8 +556,45 @@
     <!-- //footer -->
 
   </div>
-  <!--// wrap -->
-
+  <!-- //wrap -->
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gridData = [
+        { name: '1', departmentName: '', assetName: '', landAddress: '', roadAddress: '', officialArea: '', currentArea: '', acquisitionPrice: '', bookPrice: '', reserved1: '', reserved2: '' },
+        { name: '2', departmentName: '', assetName: '', landAddress: '', roadAddress: '', officialArea: '', currentArea: '', acquisitionPrice: '', bookPrice: '', reserved1: '', reserved2: '' },
+        { name: '3', departmentName: '', assetName: '', landAddress: '', roadAddress: '', officialArea: '', currentArea: '', acquisitionPrice: '', bookPrice: '', reserved1: '', reserved2: '' },
+        { name: '4', departmentName: '', assetName: '', landAddress: '', roadAddress: '', officialArea: '', currentArea: '', acquisitionPrice: '', bookPrice: '', reserved1: '', reserved2: '' },
+        { name: '5', departmentName: '', assetName: '', landAddress: '', roadAddress: '', officialArea: '', currentArea: '', acquisitionPrice: '', bookPrice: '', reserved1: '', reserved2: '' },
+  
+      ];
+      const grid = new tui.Grid({
+        el: document.getElementById('gridTab0'),
+        data: gridData,
+        scrollX: true,
+        scrollY: false,
+        header: {
+          height: 39,
+        },
+  
+        columns: [
+          { header: 'NO', name: 'name', width: 120, height: 39, align: 'center' },
+          { header: '세부관서명', name: 'departmentName', width: 120, align: 'center' },
+          { header: '자산명', name: 'assetName', width: 120, align: 'center' },
+          { header: '지번주소', name: 'landAddress', minWidth: 200, align: 'center' },
+          { header: '도로명주소', name: 'roadAddress', width: 120, align: 'right' },
+          { header: '대장면적', name: 'officialArea', width: 120, align: 'right' },
+          { header: '현황면적', name: 'currentArea', width: 120, align: 'center' },
+          { header: '취득가액', name: 'acquisitionPrice', width: 120, align: 'right' },
+          { header: '대장가액', name: 'officialPrice', width: 120, align: 'center' },
+          { header: '장부가액', name: 'bookPrice', width: 120, align: 'center' },
+          { header: '****', name: 'reserved1', width: 120, align: 'center' },
+          { header: '****', name: 'reserved2', width: 120, align: 'center' },
+        ]
+      });
+    });
+  </script>
 </body>
+
 
 </html>

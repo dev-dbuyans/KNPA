@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- 건축사업관리 > 집행관리 -->
+  <!-- 시설사업관리 > 관서 시설사업현황 -->
 
   <!-- wrap -->
   <div id="wrap">
@@ -32,7 +32,7 @@
         <div id="logo" class="flexi">
           <h1>
             <a href="/main.html">
-              <img src="/assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
+              <img src="./assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
             </a>
           </h1>
           <a href="/main.html" class="bold">국유재산 정보시스템</a>
@@ -374,9 +374,102 @@
       </nav>
       <!-- //navigation -->
 
+      <!-- 관서 시설사업현황 -->
+      <section class="sec_wrap2">
+        <header class="sec_head type2 flexible">
+          <h3>관서 시설사업현황</h3>
+        </header>
 
+        <div class="sec">
+          <div class="sec_con">
+            <div class="col">
+              <div class="tbl2 noHover">
+                <table>
+                  <colgroup>
+                    <col style="width: 120px;">
+                    <col style="width: auto;">
+                    <col style="width: 120px;">
+                    <col style="width: auto;">
+                    <col style="width: 120px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">관서명</th>
+                      <td>소속 관서명 자동입력</td>
+                      <th scope="row">관서 단위</th>
+                      <td>소속 관서단위 자동입력</td>
+                      <th scope="row">급지</th>
+                      <td>소속 관서의 급지 자동입력</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tbl2 w67 full noHover">
+                <table>
+                  <colgroup>
+                    <col span="2" style="width: 120px;">
+                    <col style="width: auto;">
+                    <col style="width: 120px;">
+                    <col style="width: auto;">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사업현황</th>
+                      <th scope="row">건수</th>
+                      <td></td>
+                      <th scope="row">사업총액(원)</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      
+        <div class="sec">
+          <div class="sec_con">
+            <div class="row flexEnd sub_info drop">
+              <div class="flexi mlauto">
+                <select class="st mini">
+                  <option value="">원</option>
+                  <option value="">천원</option>
+                  <option value="">백만원</option>
+                </select>
+
+                <select class="st mini">
+                  <option value="">5</option>
+                  <option value="">10</option>
+                  <option value="">30</option>
+                  <option value="">50</option>
+                </select>
+
+                <a href="#" download class="btn blueBtn">다운로드</a>
+              </div>
+            </div>
+
+            <!-- 토스트그리드 -->
+            <div id="grid1" style="height: auto;"></div>
+
+            <!-- pagination -->
+            <div class="pagination">
+              <button class="first" aria-label="처음 리스트" disabled></button>
+              <button class="prev" aria-label="이전 리스트" disabled></button>
+              <div class="g4">
+                <button class="on" aria-label="1 페이지">1</button>
+                <button aria-label="2 페이지">2</button>
+                <button aria-label="3 페이지">3</button>
+                <button aria-label="4 페이지">4</button>
+                <button aria-label="5 페이지">5</button>
+              </div>
+              <button class="next" aria-label="다음 리스트"></button>
+              <button class="last" aria-label="마지막 리스트"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--// 관서 시설사업현황 -->
 
     </main>
     <!-- //main -->
@@ -392,7 +485,7 @@
 
         <div class="f_logo">
           <a href="#">
-            <img src="/assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
+            <img src="./assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
           </a>
         </div>
       </div>
@@ -401,6 +494,45 @@
 
   </div>
   <!--// wrap -->
+
+  <script>
+    // 관서 시설사업현황
+    const gridData1 = [
+      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:''},
+      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:''},
+      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:''},
+      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:''},
+      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:''}
+    ];
+  
+    const grid1 = new tui.Grid({
+      el: document.getElementById('grid1'),
+      data: gridData1,
+      scrollX: true,
+      scrollY: true,
+      header: {
+        height: 40,
+      },
+  
+      // rowspan 
+      columns: [
+        { name:'t1', header: 'NO', width: 60, align: 'center' },
+        { name:'t2', header: '세부관서명', width: 120, align: 'center' },
+        { name:'t3', header: '사업명', width: 120, align: 'center' },
+        { name:'t4', header: '지번주소', width: 120, align: 'center' },
+        { name:'t5', header: '도로명주소', width: 120, align: 'center' },
+        { name:'t6', header: '대장면적', width: 120, align: 'center' },
+        { name:'t7', header: '현황면적', width: 120, align: 'center' },
+        { name:'t8', header: '취득가액',  width: 120, align: 'center' },
+        { name:'t9', header: '대장가액',  width: 120, align: 'center' },
+        { name:'t10', header: '장부가액',  width: 120, align: 'center' },
+        { name:'t11', header: '****',  width: 120, align: 'center' },
+        { name:'t12', header: '******',  width: 120, align: 'center' },
+        { name:'t13', header: '***',  width: 120, align: 'center' },
+        { name:'t14', header: '******',  width: 120, align: 'center' }
+      ]
+    });
+  </script>
 
 </body>
 

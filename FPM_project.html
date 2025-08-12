@@ -531,7 +531,7 @@
                             <th>단위사업</th>
                             <th>세부사업명</th>
                             <th>내역사업명</th>
-                            <th>내내역사업명</th>
+                            <th>내역사업명</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -592,9 +592,9 @@
                             <th scope="row">협소도</th>
                             <td>
                               <div class="flexi">
-                                <input type="text" aria-label="협소도" class="it bd" placeholder="000,000,000">
+                                <input type="text" aria-label="협소도" class="it h26" placeholder="">
                                 ~
-                                <input type="text" aria-label="협소도" class="it bd" placeholder="000,000,000">
+                                <input type="text" aria-label="협소도" class="it h26" placeholder="">
                               </div>
                             </td>
                           </tr>
@@ -865,50 +865,52 @@
 
   </div>
   <!-- //wrap -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gridData1 = [
+        { name: '자산1', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+        { name: '자산2', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+        { name: '자산3', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+        { name: '자산4', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+        { name: '자산5', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
+      ];
+  
+      const grid = new tui.Grid({
+        el: document.getElementById('grid_pj'),
+        data: gridData1,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 39,
+        },
+  
+        columns: [
+          { header: '', name: 'name', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit1', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit2', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit3', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit4', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit5', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
+          { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
+  
+        ]
+      });
+    });
+  </script>
+  
 </body>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const gridData1 = [
-      { name: '자산1', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '자산2', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '자산3', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '자산4', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '자산5', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-    ];
-
-    const grid = new tui.Grid({
-      el: document.getElementById('grid_pj'),
-      data: gridData1,
-      scrollX: true,
-      scrollY: false,
-      rowHeaders: ['checkbox'],
-      header: {
-        height: 39,
-      },
-
-      columns: [
-        { header: '', name: 'name', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit1', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit2', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit3', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit4', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit5', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
-
-      ]
-    });
-  });
-</script>
 
 </html>

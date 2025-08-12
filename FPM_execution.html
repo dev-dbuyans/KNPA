@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- 총사업비관리 - 상세정보 -->
+  <!-- 기금사업관리 > 집행관리 -->
 
   <!-- wrap -->
   <div id="wrap">
@@ -374,110 +374,72 @@
       </nav>
       <!-- //navigation -->
 
-      <!-- 총사업비관리 - 상세정보 -->
-      <section class="sec_wrap2">
-        <header class="sec_head type2 flexible">
-          <h3>총사업비관리 - 상세정보</h3>
-        </header>
+      <!-- 집행관리 -->
+      <section class="sec_wrap2 pd0">
+        <div class="inner">
+          <header class="sec_head type2 flexible">
+            <h3>집행관리</h3>
+          </header>
 
-        <div class="sec">
-          <div class="sec_con">
-            <div class="alend drop">
-              <div class="col w50 drop">
-                <div class="row drop">
-                  <div class="tbl2 w50 full noHover">
-                    <table>
-                      <colgroup>
-                        <col style="width: 100%;">
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <td class="bdnone pt10">
-                            <figure class="flexible imgbox">
-                              <img src="./assets/img/ico_officeSample.png" alt="관서 대표 이미지">
-                            </figure>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class="col w50 g4 full">
+          <div class="sec">
+            <div class="sec_con">
+              <div class="alend drop">
+                <div class="col w75">
+                  <div class="row">
                     <div class="tbl2 noHover">
                       <table>
                         <colgroup>
                           <col style="width: 120px;">
-                          <col style="width: auto">
+                          <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">완료구분</th>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">완료</option>
+                                <option value="">미완료</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tbl2 noHover">
+                      <table>
+                        <colgroup>
+                          <col style="width: 120px;">
+                          <col style="width: auto;">
                         </colgroup>
                         <tbody>
                           <tr>
                             <th scope="row">사업명</th>
                             <td>
-                              <input type="text" class="it" aria-label="사업명">
+                              <input type="text" class="it" aria-label="사업명" placeholder="사업명 입력">
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
+                  </div>
+                  <div class="row">
                     <div class="tbl2 noHover">
                       <table>
                         <colgroup>
                           <col style="width: 120px;">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">사업 내 내역</th>
-                            <td>
-                              <input type="text" class="it" aria-label="사업내 내역의 요약 내용" placeholder="사업내 내역의 요약 내용">
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="tbl2 noHover">
-                      <table>
-                        <colgroup>
-                          <col style="width: 120px;">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row" colspan="2">관리/비관리</th>
-                            <td>전체</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="tbl2 noHover">
-                      <table>
-                        <colgroup>
-                          <col style="width: 120px;">
-                          <col style="width: auto">
+                          <col style="width: auto;">
                         </colgroup>
                         <tbody>
                           <tr>
                             <th scope="row">관리/비관리</th>
-                            <td>전체</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="tbl2 noHover">
-                      <table>
-                        <colgroup>
-                          <col span="2" style="width: 60px;">
-                          <col style="width: auto">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row" rowspan="2">사업명</th>
-                            <th scope="row">세부사업</th>
-                            <td>자동입력</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">내역사업</th>
-                            <td>자동입력</td>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">관리</option>
+                                <option value="">비관리</option>
+                              </select>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -486,168 +448,106 @@
                       <table>
                         <colgroup>
                           <col style="width: 120px;">
-                          <col style="width: auto">
+                          <col style="width: auto;">
                         </colgroup>
                         <tbody>
                           <tr>
-                            <th scope="row">부지주소</th>
-                            <td></td>
+                            <th scope="row">사업구분</th>
+                            <td>
+                              <select class="st">
+                                <option value="">전체</option>
+                                <option value="">신축</option>
+                                <option value="">이전신축</option>
+                                <option value="">증축</option>
+                                <option value="">재건축</option>
+                                <option value="">리모델링</option>
+                              </select>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
+
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col span="5" style="width: auto;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>시도청</th>
+                          <th>경찰서</th>
+                          <th>지/파출소</th>
+                          <th>치안센터</th>
+                          <th>세부관서</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <select class="st">
+                              <option value="">본청</option>
+                              <option value="">시청</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="st">
+                              <option value="">해당 시도청 경찰서</option>
+                              <option value="">해당 시도청 경찰서</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="st">
+                              <option value="">해당 경찰서 지/파출소</option>
+                              <option value="">해당 경찰서 지/파출소</option>
+                              <option value="">해당 경찰서 지/파출소</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="st">
+                              <option value="">해당 경찰서 지/파출소 치안센터</option>
+                              <option value="">해당 경찰서 지/파출소 치안센터</option>
+                              <option value="">해당 경찰서 지/파출소 치안센터</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="st">
+                              <option value="">부속기관/기동대</option>
+                              <option value="">부속기관/기동대</option>
+                            </select>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
 
-                <div class="tbl2">
-                  <table>
-                    <colgroup>
-                      <col span="6" style="width: auto;">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th>관서단위</th>
-                        <th>시도청</th>
-                        <th>경찰서</th>
-                        <th>지/파출소</th>
-                        <th>치안센터</th>
-                        <th>세부관서</th>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-
-              <!-- 사업기본정보 / 총사업비 내역 -->
-              <div class="flexEnd w50 drop">
-                <div class="col w50 full">
+                <!-- 사업명 정보 -->
+                <div class="col w25">
                   <header class="s_tit ">
-                    <h4>사업 기본 정보</h4>
+                    <h4>사업명 정보</h4>
                   </header>
                   <div class="tbl2 noHover">
                     <table>
                       <colgroup>
-                        <col style="width: 120px;">
                         <col style="width: 60px;">
+                        <col style="width: 120px;">
                         <col style="width: auto;">
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th scope="row">준공일자</th>
-                          <td colspan="2">신규</td>
+                          <th scope="row" rowspan="3">사업별</th>
+                          <th scope="row">단위사업명</th>
+                          <td></td>
                         </tr>
                         <tr>
-                          <th scope="row">단위사업</th>
-                          <td colspan="2">기타</td>
+                          <th scope="row">세부사업명</th>
+                          <td></td>
                         </tr>
                         <tr>
-                          <th scope="row">사업구분</th>
-                          <td colspan="2">신축</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" rowspan="2">사업기관</th>
-                          <th scope="row">최초</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">현행</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">토지취득구분</th>
-                          <td colspan="2">자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">토지연면적(㎡)</th>
-                          <td colspan="2">자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">건물연면적(㎡)</th>
-                          <td colspan="2">자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">㎡당 공사비</th>
-                          <td colspan="2">자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">완료연도(준공기준)</th>
-                          <td colspan="2">자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">사업담당자</th>
-                          <td colspan="2">자동입력</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <div class="col w50 full">
-                  <header class="s_tit ">
-                    <h4>총사업비 내역</h4>
-                  </header>
-                  </header>
-                  <div class="tbl2 noHover">
-                    <table>
-                      <colgroup>
-                        <col style="width: 120px;">
-                        <col span="2" style="width: 60px;">
-                        <col style="size: auto;">
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th scope="row" colspan="3">총 사업비 조정일</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" rowspan="9">사업기관</th>
-                          <th scope="row" rowspan="2">전체금액</th>
-                          <th scope="row">최초</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">현행</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">기타</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">보상비</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">기본설계비</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">기본설계비</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">시설비</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">감리비</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="2">시설부대비</th>
-                          <td>자동입력</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" colspan="3">자율조정한도액</th>
-                          <td>자동입력</td>
+                          <th scope="row">내역사업명</th>
+                          <td></td>
                         </tr>
                       </tbody>
                     </table>
@@ -656,70 +556,69 @@
               </div>
             </div>
           </div>
+
+          <!-- 초기화 / 검색버튼 -->
+          <div class="flexible btngroup">
+            <button type="button" class="btn blueBtn reset">검색 초기화</button>
+            <button type="button" class="btn blueBtn srch">검색</button>
+          </div>
         </div>
 
-        <!-- 총사업비 조정 현황 -->
-        <div class="sec">
-          <div class="sec_con">
-            <div class="row flexEnd sub_info">
-              <div class="flexi">
-                <div class="sub_tit">총 사업비 조정 현황</div>
-                <ul class="info">
-                  <li class="benone2">건수 : -건</li>
-                  <li class="benone2 ">대장면적 : 234.45㎡</li>
-                  <li class="benone">가액 : 123,456원</li>
-                </ul>
+        <!-- 검색결과 -->
+        <div class="sec_wrap2 bg">
+          <div class="inner">
+            <div class="sec">
+              <header class="s_tit ">
+                <h4>검색 결과</h4>
+              </header>
+
+              <div class="sec_con">
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">검색 건수</div>
+                    <div class="row fwrap">
+                      <ul class="info">
+                        <li>건수합계 : OO건</li>
+                        <li>예산액 : 123,456,660 원</li>
+                        <li>집행액 : 42,366 원</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="flexi ver2">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <select class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">신규등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <button type="button" class="btn blueBtn">선택삭제</button>
+                    <a href="#" download class="btn blueBtn">다운로드</a>
+                  </div>
+                </div>
+
+                <!-- 토스트그리드 -->
+                <div id="grid1" style="height: auto;"></div>
+
               </div>
-
-              <div class="flexi">
-                <select class="st mini">
-                  <option value="">원</option>
-                  <option value="">천원</option>
-                  <option value="">백만원</option>
-                </select>
-
-                <select class="st mini">
-                  <option value="">5</option>
-                  <option value="">10</option>
-                  <option value="">30</option>
-                  <option value="">50</option>
-                </select>
-
-                <button type="button" class="btn blueBtn">수정</button>
-                <a href="#" download class="btn blueBtn">선택삭제</a>
-              </div>
-            </div>
-
-            <!-- 토스트 그리드1 -->
-            <div id="grid_total" style="height: auto;"></div>
-
-            <!-- pagination -->
-            <div class="pagination">
-              <button class="first" aria-label="처음 리스트" disabled></button>
-              <button class="prev" aria-label="이전 리스트" disabled></button>
-              <div class="g4">
-                <button class="on" aria-label="1 페이지">1</button>
-                <button aria-label="2 페이지">2</button>
-                <button aria-label="3 페이지">3</button>
-                <button aria-label="4 페이지">4</button>
-                <button aria-label="5 페이지">5</button>
-              </div>
-              <button class="next" aria-label="다음 리스트"></button>
-              <button class="last" aria-label="마지막 리스트"></button>
             </div>
           </div>
         </div>
 
-        <div class="rowbox end">
-          <button type="button" class="btn back">
-            <span>목록으로</span>
-          </button>
-        </div>
       </section>
-      <!-- //총사업비관리 - 상세정보 -->
+      <!--// 집행관리 -->
 
     </main>
-    <!--// main -->
+    <!-- //main -->
 
     <!-- footer -->
     <footer>
@@ -741,83 +640,47 @@
 
   </div>
   <!--// wrap -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gridData1 = [
+        { NO: '1', t1: '', t2: '', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'',t10:'',t11:'',t12:'',t13:'',t14:''},
+        { NO: '2', t1: '', t2: '', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'',t10:'',t11:'',t12:'',t13:'',t14:''},
+        { NO: '3', t1: '', t2: '', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'',t10:'',t11:'',t12:'',t13:'',t14:''},
+        { NO: '4', t1: '', t2: '', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'',t10:'',t11:'',t12:'',t13:'',t14:''},
+        { NO: '5', t1: '', t2: '', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'',t10:'',t11:'',t12:'',t13:'',t14:''}
+      ];
+  
+      const grid1 = new tui.Grid({
+        el: document.getElementById('grid1'),
+        data: gridData1,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 39,
+        },
+  
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 't1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 't2', header: '경찰서', width: 120, height: 39, align: 'center' },
+          { name: 't3', header: '세부관서', width: 120, height: 39, align: 'center' },
+          { name: 't4', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 't5', header: '총사업비', width: 120, height: 39, align: 'center' },
+          { name: 't6', header: '사업기간', width: 120, height: 39, align: 'center' },
+          { name: 't7', header: '관리구분', width: 120, height: 39, align: 'center' },
+          { name: 't8', header: '집행액', width: 120, height: 39, align: 'center' },
+          { name: 't9', header: '집행률', width: 120, height: 39, align: 'center' },
+          { name: 't10', header: '이월예산(작년)', width: 120, height: 39, align: 'center' },
+          { name: 't11', header: '편성예산(올해)', width: 120, height: 39, align: 'center' },
+          { name: 't12', header: '예산현액', width: 120, height: 39, align: 'center' },
+          { name: 't13', header: '잔여 총사업비', width: 120, height: 39, align: 'center' },
+          { name: 't14', header: '등록일', width: 120, height: 39, align: 'center' }
+        ]
+      });
+    });
+  </script>
 </body>
-
-<script>
-  // 총사업비 조정 현황
-  const gridData_total = [
-    { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', tit17: '', tit18: '', tit19: '', tit20: '', tit21: '', tit22: '', tit23:'', tit24:'' },
-    { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', tit17: '', tit18: '', tit19: '', tit20: '', tit21: '', tit22: '', tit23:'', tit24:'' },
-    { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', tit17: '', tit18: '', tit19: '', tit20: '', tit21: '', tit22: '', tit23:'', tit24:'' },
-    { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', tit17: '', tit18: '', tit19: '', tit20: '', tit21: '', tit22: '', tit23:'', tit24:'' },
-    { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', tit17: '', tit18: '', tit19: '', tit20: '', tit21: '', tit22: '', tit23:'', tit24:'' },
-  ];
-
-  const grid_total = new tui.Grid({
-    el: document.getElementById('grid_total'),
-    data: gridData_total,
-    scrollX: true,
-    scrollY: false,
-    rowHeaders: ['checkbox'],
-    header: {
-      height: 80,
-      complexColumns: [
-        {
-          header: '사업기간',
-          name: 'projectInfo1',
-          childNames: ['최초편성', '현행', '경찰서', '세부관서명', '사업명']
-        },
-        {
-          header: '총사업비',
-          name: 'projectInfo2',
-          childNames: ['전체금액', '기타', '보상비', '기본설계비', '실시설계비', '시설비', '감리비', '시설부대비']
-        },
-        {
-          header: '부지면적',
-          name: 'projectInfo3',
-          childNames: ['토지취득구분', '면적', '주소']
-        },
-        {
-          header: '건축연면적',
-          name: 'projectInfo4',
-          childNames: ['면적2', '규모']
-        },
-
-        {
-          header: '담당자',
-          name: 'projectInfo5',
-          childNames: ['소속', '계급', '이름', '경비전화']
-        },
-      ]
-    },
-
-    columns: [
-      { header: '', name: 'NO', width: 68, height: 39, align: 'center' },
-      { header: '', name: '차수', width: 68, height: 39, align: 'center' },
-      { header: '', name: '최초편성', width: 68, height: 39, align: 'center' },
-      { header: '', name: '현행', width: 68, height: 39, align: 'center' },
-      { header: '', name: '전체금액', width: 68, height: 39, align: 'center' },
-      { header: '', name: '기타', width: 68, height: 39, align: 'center' },
-      { header: '', name: '보상비', width: 68, height: 39, align: 'center' },
-      { header: '', name: '기본설계비', width: 68, height: 39, align: 'center' },
-      { header: '', name: '실시설계비', width: 68, height: 39, align: 'center' },
-      { header: '', name: '시설비', width: 68, height: 39, align: 'center' },
-      { header: '', name: '감리비', width: 68, height: 39, align: 'center' },
-      { header: '', name: '시설부대비', width: 68, height: 39, align: 'center' },
-      { header: '', name: '자율조정 한도액', width: 68, height: 39, align: 'center' },
-      { header: '', name: '토지취득구분', width: 68, height: 39, align: 'center' },
-      { header: '', name: '면적', width: 68, height: 39, align: 'center' },
-      { header: '', name: '주소', width: 68, height: 39, align: 'center' },
-      { header: '', name: '면적2', width: 68, height: 39, align: 'center' },
-      { header: '', name: '규모', width: 68, height: 39, align: 'center' },
-      { header: '', name: '㎡당 공사비 (백만원)', width: 68, height: 39, align: 'center' },
-      { header: '', name: '소속', width: 68, height: 39, align: 'center' },
-      { header: '', name: '계급', width: 68, height: 39, align: 'center' },
-      { header: '', name: '이름', width: 68, height: 39, align: 'center' },
-      { header: '', name: '경비전화', width: 68, height: 39, align: 'center' },
-      { header: '', name: '조정일', width: 68, height: 39, align: 'center' },
-    ]
-  });
-</script>
 
 </html>

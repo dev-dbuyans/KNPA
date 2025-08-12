@@ -597,7 +597,7 @@
                 <header class="s_tit ">
                   <h4>기금사업 정보</h4>
                 </header>
-                <div class="tbl2">
+                <div class="tbl2 noHover">
                   <table>
                     <colgroup>
                       <col style="width: 120px;">
@@ -628,9 +628,9 @@
                         <th>기금총액</th>
                         <td></td>
                       </tr>
-                      <tr></tr>
-                      <th>부지연면적</th>
-                      <td></td>
+                      <tr>
+                        <th>부지연면적</th>
+                        <td></td>
                       </tr>
                       <tr>
                         <th>건축연면적</th>
@@ -658,7 +658,7 @@
           </div>
         </div>
 
-        <!-- 관련재산 : 건물 -->
+        <!-- 관련재산 : 토지 -->
         <div class="sec">
           <div class="sec_con">
             <header class="s_tit flexEnd underLine">
@@ -670,17 +670,16 @@
 
             <div class="sec_item">
               <div class="group">
-                <div class="row flexEnd sub_info">
-                  <div class="flexi">
-                    <div class="sub_tit">건물</div>
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">토지</div>
                     <ul class="info">
                       <li class="benone2">건수 : -건</li>
-                      <li class="benone2 ">대장면적 : 234.45㎡</li>
-                      <li class="benone">가액 : 123,456원</li>
+                      <li class="benone2 ">면적 : 234.45㎡</li>
                     </ul>
                   </div>
 
-                  <div class="flexi">
+                  <div class="flexi ver2">
                     <select class="st mini">
                       <option value="">원</option>
                       <option value="">천원</option>
@@ -711,7 +710,6 @@
                 </div>
               </div>
 
-              <!--  -->
               <div class="group">
                 <div class="row flexEnd sub_info">
                   <div class="flexi mlauto">
@@ -729,6 +727,178 @@
 
                 <!-- 토스트 그리드1_2 -->
                 <div id="grid1_2" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
+                  </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
+                </div>
+              </div>
+
+              <!-- 건물 -->
+              <div class="group">
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">건물</div>
+                    <ul class="info">
+                      <li class="benone2">건수 : -건</li>
+                      <li class="benone2 ">면적 : 234.45㎡</li>
+                    </ul>
+                  </div>
+
+                  <div class="flexi ver2">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <!-- 토스트 그리드3 -->
+                <div id="grid3" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
+                  </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
+                </div>
+              </div>
+
+              <div class="group">
+                <div class="row flexEnd sub_info">
+                  <div class="flexi mlauto">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <!-- 토스트 그리드4-->
+                <div id="grid4" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
+                  </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 사후관리 -->
+        <div class="sec">
+          <div class="sec_con">
+            <header class="s_tit flexEnd underLine">
+              <h4>사후관리</h4>
+              <button type="button" class="moreBtn">
+                <span class="soundOnly">더보기</span>
+              </button>
+            </header>
+
+            <div class="sec_item">
+              <div class="group">
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">하자관리</div>
+                    <ul class="info">
+                      <li class="benone2">건수 : -건</li>
+                    </ul>
+                  </div>
+
+                  <div class="flexi ver2">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <!-- 토스트 그리드5 -->
+                <div id="grid5" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
+                  </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
+                </div>
+              </div>
+
+
+              <!-- 기타 -->
+              <div class="group">
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">기타</div>
+                    <ul class="info">
+                      <li class="benone2">건수 : -건</li>
+                    </ul>
+                  </div>
+
+                  <div class="flexi ver2">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <button type="button" class="btn blueBtn">등록</button>
+                    <button type="button" class="btn blueBtn">수정</button>
+                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  </div>
+                </div>
+
+                <!-- 토스트 그리드6 -->
+                <div id="grid6" style="height: auto;"></div>
                 <!-- pagination -->
                 <div class="pagination">
                   <button class="first" aria-label="처음 리스트" disabled></button>
@@ -1072,47 +1242,47 @@
             </header>
 
             <div class="sec_item">
-                <div class="row flexEnd sub_info">
-                  <div class="flexi mlauto">
-                    <select class="st mini">
-                      <option value="">원</option>
-                      <option value="">천원</option>
-                      <option value="">백만원</option>
-                    </select>
+              <div class="row flexEnd sub_info">
+                <div class="flexi mlauto">
+                  <select class="st mini">
+                    <option value="">원</option>
+                    <option value="">천원</option>
+                    <option value="">백만원</option>
+                  </select>
 
-                    <button type="button" class="btn blueBtn">등록</button>
-                    <button type="button" class="btn blueBtn">수정</button>
-                    <a href="#" download class="btn blueBtn">선택삭제</a>
+                  <button type="button" class="btn blueBtn">등록</button>
+                  <button type="button" class="btn blueBtn">수정</button>
+                  <a href="#" download class="btn blueBtn">선택삭제</a>
+                </div>
+              </div>
+
+              <div class="tabMenuG_grid">
+                <button class=" on" onclick="tabMenu('grid',0)">변경이력</button>
+                <button onclick="tabMenu('grid',1)">사업담당자</button>
+                <button onclick="tabMenu('grid',2)">관련자료</button>
+              </div>
+
+              <div class="tabContG_grid0 on">
+                <!-- 토스트 그리드7 -->
+                <div id="grid7" style="height: auto;"></div>
+                <!-- pagination -->
+                <div class="pagination">
+                  <button class="first" aria-label="처음 리스트" disabled></button>
+                  <button class="prev" aria-label="이전 리스트" disabled></button>
+                  <div class="g4">
+                    <button class="on" aria-label="1 페이지">1</button>
+                    <button aria-label="2 페이지">2</button>
+                    <button aria-label="3 페이지">3</button>
+                    <button aria-label="4 페이지">4</button>
+                    <button aria-label="5 페이지">5</button>
                   </div>
+                  <button class="next" aria-label="다음 리스트"></button>
+                  <button class="last" aria-label="마지막 리스트"></button>
                 </div>
+              </div>
 
-                <div class="tabMenuG_grid">
-                  <button class=" on" onclick="tabMenu('grid',0)">변경이력</button>
-                  <button onclick="tabMenu('grid',1)">사업담당자</button>
-                  <button onclick="tabMenu('grid',2)">관련자료</button>
-                </div>
-
-                <div class="tabContG_grid0 on">
-                  <!-- 토스트 그리드1 -->
-                  <div id="grid3" style="height: auto;"></div>
-                  <!-- pagination -->
-                  <div class="pagination">
-                    <button class="first" aria-label="처음 리스트" disabled></button>
-                    <button class="prev" aria-label="이전 리스트" disabled></button>
-                    <div class="g4">
-                      <button class="on" aria-label="1 페이지">1</button>
-                      <button aria-label="2 페이지">2</button>
-                      <button aria-label="3 페이지">3</button>
-                      <button aria-label="4 페이지">4</button>
-                      <button aria-label="5 페이지">5</button>
-                    </div>
-                    <button class="next" aria-label="다음 리스트"></button>
-                    <button class="last" aria-label="마지막 리스트"></button>
-                  </div>
-                </div>
-
-                <div class="tabContG_grid1">탭 영역2</div>
-                <div class="tabContG_grid2">탭 영역3</div>
+              <div class="tabContG_grid1">탭 영역2</div>
+              <div class="tabContG_grid2">탭 영역3</div>
 
             </div>
           </div>
@@ -1145,142 +1315,315 @@
 
   </div>
   <!-- //wrap -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 관련재산 >토지1
+      const gridData1 = [
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' }
+      ];
+
+      const grid1 = new tui.Grid({
+        el: document.getElementById('grid1'),
+        data: gridData1,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 80,
+          complexColumns: [
+            {
+              header: '토지 준공전',
+              name: 'projectInfo',
+              childNames: ['NO', 't1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16']
+            },
+          ]
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 't1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 't2', header: '경찰서', width: 120, height: 39, align: 'center' },
+          { name: 't3', header: '세부관서명', width: 120, height: 39, align: 'center' },
+          { name: 't4', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 't5', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't6', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't7', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't8', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't9', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't10', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't11', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't12', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't13', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't14', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't15', header: '', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+
+      // 관련재산 > 토지2
+      const gridData1_2 = [
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+      ];
+
+      const grid1_2 = new tui.Grid({
+        el: document.getElementById('grid1_2'),
+        data: gridData1_2,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 80,
+          complexColumns: [
+            {
+              header: '토지 준공전',
+              name: 'projectInfo',
+              childNames: ['NO', 'tit1', 'tit2','tit3','tit4', 'tit5', 'tit6', 'tit7', 'tit8', 'tit9', 'tit10', 'tit11', 'tit12', 'tit13', 'tit14', 'tit15', 'tit16']
+            },
+          ]
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 'tit1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 'tit2', header: '경찰서', width: 120, height: 39, align: 'center' },
+          { name: 'tit3', header: '세부관서명', width: 120, height: 39, align: 'center' },
+          { name: 'tit4', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 'tit5', header: 'tit5', width: 120, height: 39, align: 'center' },
+          { name: 'tit6', header: 'tit6', width: 120, height: 39, align: 'center' },
+          { name: 'tit7', header: 'tit7', width: 120, height: 39, align: 'center' },
+          { name: 'tit8', header: 'tit8', width: 120, height: 39, align: 'center' },
+          { name: 'tit9', header: 'tit9', width: 120, height: 39, align: 'center' },
+          { name: 'tit10', header: 'tit10', width: 120, height: 39, align: 'center' },
+          { name: 'tit11', header: 'tit11', width: 120, height: 39, align: 'center' },
+          { name: 'tit12', header: 'tit12', width: 120, height: 39, align: 'center' },
+          { name: 'tit13', header: 'tit13', width: 120, height: 39, align: 'center' },
+          { name: 'tit14', header: 'tit14', width: 120, height: 39, align: 'center' },
+          { name: 'tit15', header: 'tit15', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+      // 관련재산 > 건물 
+      const gridData3 = [
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { name: '', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' }
+      ];
+
+      const grid3 = new tui.Grid({
+        el: document.getElementById('grid3'),
+        data: gridData3,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 80,
+          complexColumns: [
+            {
+              header: '건물 준공전',
+              name: 'projectInfo',
+              childNames: ['NO', 't1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12', 't13', 't14', 't15', 't16']
+            },
+          ]
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 't1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 't2', header: '경찰서', width: 120, height: 39, align: 'center' },
+          { name: 't3', header: '세부관서명', width: 120, height: 39, align: 'center' },
+          { name: 't4', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 't5', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't6', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't7', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't8', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't9', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't10', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't11', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't12', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't13', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't14', header: '', width: 120, height: 39, align: 'center' },
+          { name: 't15', header: '', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+
+      // 관련재산 > 건물 
+      const gridData4 = [
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+      ];
+
+      const grid4 = new tui.Grid({
+        el: document.getElementById('grid4'),
+        data: gridData4,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 80,
+          complexColumns: [
+            {
+              header: '건물 준공전',
+              name: 'projectInfo',
+              childNames: ['NO', 'tit1','tit2','tit3','tit4', 'tit5', 'tit6', 'tit7', 'tit8', 'tit9', 'tit10', 'tit11', 'tit12', 'tit13', 'tit14', 'tit15', 'tit16']
+            },
+          ]
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 'tit1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 'tit2', header: '경찰서', width: 120, height: 39, align: 'center' },
+          { name: 'tit3', header: '세부관서명', width: 120, height: 39, align: 'center' },
+          { name: 'tit4', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 'tit5', header: 'tit5', width: 120, height: 39, align: 'center' },
+          { name: 'tit6', header: 'tit6', width: 120, height: 39, align: 'center' },
+          { name: 'tit7', header: 'tit7', width: 120, height: 39, align: 'center' },
+          { name: 'tit8', header: 'tit8', width: 120, height: 39, align: 'center' },
+          { name: 'tit9', header: 'tit9', width: 120, height: 39, align: 'center' },
+          { name: 'tit10', header: 'tit10', width: 120, height: 39, align: 'center' },
+          { name: 'tit11', header: 'tit11', width: 120, height: 39, align: 'center' },
+          { name: 'tit12', header: 'tit12', width: 120, height: 39, align: 'center' },
+          { name: 'tit13', header: 'tit13', width: 120, height: 39, align: 'center' },
+          { name: 'tit14', header: 'tit14', width: 120, height: 39, align: 'center' },
+          { name: 'tit15', header: 'tit15', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+      // 사후관리 > 하자관리 
+      const gridData5 = [
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+      ];
+
+      const grid5 = new tui.Grid({
+        el: document.getElementById('grid5'),
+        data: gridData5,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 40,
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 'tit1', header: '사업명', width: 180, height: 39, align: 'center' },
+          { name: 'tit2', header: '대장재산', width: 120, height: 39, align: 'center' },
+          { name: 'tit3', header: '세부내용', width: 250, height: 39, align: 'center' },
+          { name: 'tit4', header: '발견일', width: 120, height: 39, align: 'center' },
+          { name: 'tit5', header: '조치완료일', width: 120, height: 39, align: 'center' },
+          { name: 'tit6', header: '조치결과', width: 120, height: 39, align: 'center' },
+          { name: 'tit7', header: '관련법령', width: 120, height: 39, align: 'center' },
+          { name: 'tit8', header: '담당자', width: 120, height: 39, align: 'center' },
+          { name: 'tit9', header: '첨부자료', width: 120, height: 39, align: 'center' },
+          { name: 'tit10', header: 'tit10', width: 120, height: 39, align: 'center' },
+          { name: 'tit11', header: 'tit11', width: 120, height: 39, align: 'center' },
+          { name: 'tit12', header: 'tit12', width: 120, height: 39, align: 'center' },
+          { name: 'tit13', header: 'tit13', width: 120, height: 39, align: 'center' },
+          { name: 'tit14', header: 'tit14', width: 120, height: 39, align: 'center' },
+          { name: 'tit15', header: 'tit15', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+      // 사후관리 > 기타
+      const gridData6 = [
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+        { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '' },
+      ];
+
+      const grid6 = new tui.Grid({
+        el: document.getElementById('grid6'),
+        data: gridData6,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 40,
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 'tit1', header: '사업명', width: 180, height: 39, align: 'center' },
+          { name: 'tit2', header: '대장재산', width: 120, height: 39, align: 'center' },
+          { name: 'tit3', header: '세부내용', width: 250, height: 39, align: 'center' },
+          { name: 'tit4', header: '발견일', width: 120, height: 39, align: 'center' },
+          { name: 'tit5', header: '조치완료일', width: 120, height: 39, align: 'center' },
+          { name: 'tit6', header: '조치결과', width: 120, height: 39, align: 'center' },
+          { name: 'tit7', header: '관련법령', width: 120, height: 39, align: 'center' },
+          { name: 'tit8', header: '담당자', width: 120, height: 39, align: 'center' },
+          { name: 'tit9', header: '첨부자료', width: 120, height: 39, align: 'center' },
+          { name: 'tit10', header: 'tit10', width: 120, height: 39, align: 'center' },
+          { name: 'tit11', header: 'tit11', width: 120, height: 39, align: 'center' },
+          { name: 'tit12', header: 'tit12', width: 120, height: 39, align: 'center' },
+          { name: 'tit13', header: 'tit13', width: 120, height: 39, align: 'center' },
+          { name: 'tit14', header: 'tit14', width: 120, height: 39, align: 'center' },
+          { name: 'tit15', header: 'tit15', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+      // 이력관리
+      const gridData7 = [
+        { name: '', tt1: '', tt2: '', tt3: '', tt4: '', tt5: '', tt6: '', tt7: '', tt8: '', tt9: '', tt10: '', tt11: '', tt12: '', tt13: '', tt14: '', tt15: '' },
+        { name: '', tt1: '', tt2: '', tt3: '', tt4: '', tt5: '', tt6: '', tt7: '', tt8: '', tt9: '', tt10: '', tt11: '', tt12: '', tt13: '', tt14: '', tt15: '' },
+        { name: '', tt1: '', tt2: '', tt3: '', tt4: '', tt5: '', tt6: '', tt7: '', tt8: '', tt9: '', tt10: '', tt11: '', tt12: '', tt13: '', tt14: '', tt15: '' },
+        { name: '', tt1: '', tt2: '', tt3: '', tt4: '', tt5: '', tt6: '', tt7: '', tt8: '', tt9: '', tt10: '', tt11: '', tt12: '', tt13: '', tt14: '', tt15: '' },
+        { name: '', tt1: '', tt2: '', tt3: '', tt4: '', tt5: '', tt6: '', tt7: '', tt8: '', tt9: '', tt10: '', tt11: '', tt12: '', tt13: '', tt14: '', tt15: '' },
+      ];
+
+      const grid7 = new tui.Grid({
+        el: document.getElementById('grid7'),
+        data: gridData7,
+        scrollX: true,
+        scrollY: false,
+        rowHeaders: ['checkbox'],
+        header: {
+          height: 39,
+        },
+
+        columns: [
+          { name: 'NO', header: 'NO', width: 120, height: 39, align: 'center' },
+          { name: 'tt1', header: '시청', width: 120, height: 39, align: 'center' },
+          { name: 'tt2', header: '경찰서', width: 120, height: 39, align: 'center' },
+          { name: 'tt3', header: '세부관서명', width: 120, height: 39, align: 'center' },
+          { name: 'tt4', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 'tt5', header: 'tt5', width: 120, height: 39, align: 'center' },
+          { name: 'tt6', header: 'tt6', width: 120, height: 39, align: 'center' },
+          { name: 'tt7', header: 'tt7', width: 120, height: 39, align: 'center' },
+          { name: 'tt8', header: 'tt8', width: 120, height: 39, align: 'center' },
+          { name: 'tt9', header: 'tt9', width: 120, height: 39, align: 'center' },
+          { name: 'tt10', header: 'tt10', width: 120, height: 39, align: 'center' },
+          { name: 'tt11', header: 'tt11', width: 120, height: 39, align: 'center' },
+          { name: 'tt12', header: 'tt12', width: 120, height: 39, align: 'center' },
+          { name: 'tt13', header: 'tt13', width: 120, height: 39, align: 'center' },
+          { name: 'tt14', header: 'tt14', width: 120, height: 39, align: 'center' },
+          { name: 'tt15', header: 'tt15', width: 120, height: 39, align: 'center' },
+        ]
+      });
+
+    });
+  </script>
+
 </body>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // 관련재산 
-    const gridData1 = [
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-    ];
-
-    const grid1 = new tui.Grid({
-      el: document.getElementById('grid1'),
-      data: gridData1,
-      scrollX: true,
-      scrollY: false,
-      rowHeaders: ['checkbox'],
-      header: {
-        height: 80,
-        complexColumns: [
-          {
-            header: '건물 준공전',
-            name: 'projectInfo',
-            childNames: ['NO', '시도청', '경찰서', '세부관서명', '사업명', 'tit5', 'tit6', 'tit7', 'tit8', 'tit9', 'tit10', 'tit11', 'tit12', 'tit13', 'tit14', 'tit15', 'tit16']
-          },
-        ]
-      },
-
-      columns: [
-        { header: '', name: 'NO', width: 120, height: 39, align: 'center' },
-        { header: '', name: '시도청', width: 120, height: 39, align: 'center' },
-        { header: '', name: '경찰서', width: 120, height: 39, align: 'center' },
-        { header: '', name: '세부관서명', width: 120, height: 39, align: 'center' },
-        { header: '', name: '사업명', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
-      ]
-    });
-
-
-    // 관련재산 1_2
-    const gridData1_2 = [
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-    ];
-
-    const grid1_2 = new tui.Grid({
-      el: document.getElementById('grid1_2'),
-      data: gridData1_2,
-      scrollX: true,
-      scrollY: false,
-      rowHeaders: ['checkbox'],
-      header: {
-        height: 80,
-        complexColumns: [
-          {
-            header: '건물 준공전',
-            name: 'projectInfo',
-            childNames: ['NO', '시도청', '경찰서', '세부관서명', '사업명', 'tit5', 'tit6', 'tit7', 'tit8', 'tit9', 'tit10', 'tit11', 'tit12', 'tit13', 'tit14', 'tit15', 'tit16']
-          },
-        ]
-      },
-
-      columns: [
-        { header: '', name: 'NO', width: 120, height: 39, align: 'center' },
-        { header: '', name: '시도청', width: 120, height: 39, align: 'center' },
-        { header: '', name: '경찰서', width: 120, height: 39, align: 'center' },
-        { header: '', name: '세부관서명', width: 120, height: 39, align: 'center' },
-        { header: '', name: '사업명', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
-      ]
-    });
-
-    // 이력관리
-    const gridData3 = [
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-      { name: '', tit1: '', tit2: '', tit3: '', tit4: '', tit5: '', tit6: '', tit7: '', tit8: '', tit9: '', tit10: '', tit11: '', tit12: '', tit13: '', tit14: '', tit15: '', tit16: '', },
-    ];
-
-    const grid3 = new tui.Grid({
-      el: document.getElementById('grid3'),
-      data: gridData3,
-      scrollX: true,
-      scrollY: false,
-      rowHeaders: ['checkbox'],
-      header: {
-        height: 39,
-      },
-
-      columns: [
-        { header: '', name: 'NO', width: 120, height: 39, align: 'center' },
-        { header: '', name: '시도청', width: 120, height: 39, align: 'center' },
-        { header: '', name: '경찰서', width: 120, height: 39, align: 'center' },
-        { header: '', name: '세부관서명', width: 120, height: 39, align: 'center' },
-        { header: '', name: '사업명', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit6', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit7', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit8', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit9', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit10', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit11', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit12', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit13', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit14', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit15', width: 120, height: 39, align: 'center' },
-        { header: '', name: 'tit16', width: 120, height: 39, align: 'center' },
-      ]
-    });
-    
-  });
-</script>
 
 </html>

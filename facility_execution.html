@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경찰청 - 국유재산</title>
+
+  <!-- CSS -->
+  <link rel="icon" href="/assets/img/ico_favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui.grid/latest/tui-grid.min.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/sub.css">
+  <link rel="stylesheet" href="/assets/css/toast_grid.css">
+
+  <!-- JS -->
+  <script src="/assets/js/jquery1.12.4.min.js"></script>
+  <script src="/assets/js/jquery-ui.min.js"></script>
+  <script src="https://uicdn.toast.com/tui.grid/latest/tui-grid.min.js"></script>
+  <script src="/assets/js/common.js"></script>
+</head>
+
+<body>
+  <!-- 시설사업관리 > 집행관리2 -->
+
+  <!-- wrap -->
+  <div id="wrap">
+
+    <!-- header -->
+    <header id="header">
+      <div class="h_inner flexEnd">
+        <div id="logo" class="flexi">
+          <h1>
+            <a href="/main.html">
+              <img src="/assets/img/logo.svg" alt="경찰청 국유재산 정보시스템">
+            </a>
+          </h1>
+          <a href="/main.html" class="bold">국유재산 정보시스템</a>
+        </div>
+
+        <!-- gnb -->
+        <div id="gnb" class="flexible">
+          <div class="dimmed"></div>
+
+          <ul class="depth1 flexible relative">
+            <li class="noHover"><button class="menuBtn"></button></li>
+            <li class="on">
+              <a href="#">국유재산관리</a>
+
+              <!-- dropMenu0 : 각 li.on .dropMenu -->
+              <div class="dropMenu">
+                <ul class="depth2">
+                  <li>
+                    <a href="#">관서별 재산현황</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">재산대장 관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">국유재산(토지)</a></li>
+                      <li><a href="#">국유재산(기타)</a></li>
+                      <li><a href="#">국유재산(건물)</a></li>
+                      <li><a href="#">미등재 재산</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">상호점유 관리</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">취득</a>
+                    <ul class="depth3">
+                      <li><a href="#">재산교환</a></li>
+                      <li><a href="#">기부채납</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">운용</a>
+                    <ul class="depth3">
+                      <li><a href="#">대부/사용허가</a></li>
+                      <li><a href="#">변상금(무단점유 등)</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">처분</a>
+                    <ul class="depth3">
+                      <li><a href="#">양여</a></li>
+                      <li><a href="#">멸실</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">용도폐지</a></li>
+                      <li><a href="#">사용승인</a></li>
+                      <li><a href="#">기부대양여</a></li>
+                      <li><a href="#">실태조사</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">기금사업관리</a>
+              <!-- dropMenu1 -->
+              <div class="dropMenu">
+                <ul class="depth2">
+                  <li>
+                    <a href="#">드롭메뉴 2</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">재산대장 관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">국유재산(토지)</a></li>
+                      <li><a href="#">국유재산(기타)</a></li>
+                      <li><a href="#">국유재산(건물)</a></li>
+                      <li><a href="#">미등재 재산</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">상호점유 관리</a>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">취득</a>
+                    <ul class="depth3">
+                      <li><a href="#">재산교환</a></li>
+                      <li><a href="#">기부채납</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">운용</a>
+                    <ul class="depth3">
+                      <li><a href="#">대부/사용허가</a></li>
+                      <li><a href="#">변상금(무단점유 등)</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">처분</a>
+                    <ul class="depth3">
+                      <li><a href="#">양여</a></li>
+                      <li><a href="#">멸실</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="depth2">
+                  <li>
+                    <a href="#">관리</a>
+                    <ul class="depth3">
+                      <li><a href="#">용도폐지</a></li>
+                      <li><a href="#">사용승인</a></li>
+                      <li><a href="#">기부대양여</a></li>
+                      <li><a href="#">실태조사</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">시설사업관리</a>
+            </li>
+            <li>
+              <a href="#">통계정보</a>
+            </li>
+            <li>
+              <a href="#">이용안내</a>
+            </li>
+            <li>
+              <a href="#">나의할일</a>
+            </li>
+            <li>
+              <a href="#">관리센터</a>
+            </li>
+          </ul>
+        </div>
+        <!-- //gnb -->
+
+        <div id="util" class="flexi">
+          <a href="#" target="_blank" class="newWindow">
+            <span>새창열기</span>
+          </a>
+          <div class="extention">
+            <span id="time-label" hidden>남은 시간</span>
+            <span aria-labelledby="time-label">19:27</span>
+            <button type="button" class="exBtn">연장</button>
+          </div>
+          <div class="flexi">
+            <div class="user">
+              <a href="#" class="my">MY</a>
+              <div class="toolTip">
+                <p><b>[본청 기획조정]</b><b>시스템관리자</b>님이 로그인하셨습니다.</p>
+              </div>
+            </div>
+            <div class="logOut">
+              <button type="button">
+                <span>로그아웃</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 전체메뉴 -->
+    <div id="allMenu">
+      <div class="dimmed"></div>
+      <div class="m_wrap">
+        <ul class="depth1 flexEnd">
+          <li>
+            <a href="#">국유재산관리</a>
+            <ul class="depth2">
+              <li>
+                <a href="#">관서별 재산현황</a>
+              </li>
+              <li>
+                <a href="#">재산대장 관리</a>
+                <ul class="depth3">
+                  <li><a href="#">국유재산(토지)</a></li>
+                  <li><a href="#">국유재산(기타)</a></li>
+                  <li><a href="#">국유재산(건물)</a></li>
+                  <li><a href="#">미등재 재산</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">상호점유관리</a>
+              </li>
+              <li>
+                <a href="#">취득</a>
+                <ul class="depth3">
+                  <li><a href="#">재산교환</a></li>
+                  <li><a href="#">기부채납</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">운용</a>
+                <ul class="depth3">
+                  <li><a href="#">대부/사용허가</a></li>
+                  <li><a href="#">변상금(무단점유 등)</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">처분</a>
+                <ul class="depth3">
+                  <li><a href="#">양여</a></li>
+                  <li><a href="#">멸실</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">관리</a>
+                <ul class="depth3">
+                  <li><a href="#">용도패지</a></li>
+                  <li><a href="#">사용승인</a></li>
+                  <li><a href="#">기부대양여</a></li>
+                  <li><a href="#">실태조사</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">기금사업관리</a>
+            <ul class="depth2">
+              <li><a href="#">기금사업관리</a></li>
+              <li><a href="#">총 사업비 관리</a></li>
+              <li><a href="#">집행관리</a></li>
+              <li><a href="#">신증축 우선순위</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">시설사업관리</a>
+            <ul class="depth2">
+              <li><a href="#">관서별 시설현황</a></li>
+              <li><a href="#">시설사업</a></li>
+              <li><a href="#">진행관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">통계정보</a>
+            <ul class="depth2">
+              <li><a href="#">국유재산 통계</a></li>
+              <li><a href="#">건축사업 통계</a></li>
+              <li><a href="#">시설사업 통계</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+            <ul class="depth2">
+              <li><a href="#">전체</a></li>
+              <li><a href="#">국유재산</a></li>
+              <li><a href="#">건축사업</a></li>
+              <li><a href="#">시설사업</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">나의할일</a>
+            <ul class="depth2">
+              <li><a href="#">국유재산</a></li>
+              <li><a href="#">기금사업</a></li>
+              <li><a href="#">시설사업</a></li>
+              <li><a href="#">권한관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">관리자센터</a>
+            <ul class="depth2">
+              <li><a href="#">조직관리</a></li>
+              <li><a href="#">사용자 권한관리</a></li>
+              <li><a href="#">사용자 통계</a></li>
+              <li><a href="#">정현원 관리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--// 전체메뉴 -->
+
+    <!-- main -->
+    <main>
+
+      <!-- navigation : -->
+      <nav id="navigation" class="tree_wrap">
+        <ul class="depth1">
+          <li class="d1_01 on">
+            <a href="#"><span>관서현황보고서</span></a>
+            <div class="tree_box nav_box on">
+              <div class="scrollY">
+                <!-- 스크롤 테스트 -->
+                <ul id="tree1" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="d1_02">
+            <a href="#"><span>기금사업</span></a>
+            <div class="tree_box nav_box">
+              <div class="scrollY">
+                <ul id="tree2" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="d1_03">
+            <a href="#"><span>시설사업</span></a>
+            <div class="tree_box nav_box">
+              <div class="scrollY">
+                <ul id="tree3" class="ztree" style="height: 3000px;"></ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="btnbox">
+          <button class="folding_btn"><span class="soundOnly">접기/펼치기</span></button>
+        </div>
+      </nav>
+      <!-- //navigation -->
+
+      <!-- 집행관리 -->
+      <section class="sec_wrap2 pd0">
+        <div class="inner">
+          <header class="sec_head type2 flexible">
+            <h3>집행관리</h3>
+          </header>
+
+          <div class="sec">
+            <div class="sec_con">
+              <div class="col">
+                <div class="row drop">
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">조회 기준</th>
+                          <td>
+                            <select class="st">
+                              <option value="">사업명기준</option>
+                              <option value="">예산비목기준</option>
+                            </select>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: 100px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">조회 기준</th>
+                          <td>
+                            <select class="st">
+                              <option value="">전체</option>
+                              <option value="">연도별 선택</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="flexi">
+                              <input type="text" class="it h26" aria-label="시작 연도" placeholder="0000">
+                              ~
+                              <input type="text" class="it h26" aria-label="종료 연도" placeholder="0000">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">사업명(내역/시설)</th>
+                          <td>
+                            <input type="text" class="it" aria-label="사업명 검색" placeholder="사업명 검색">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="tbl2 noHover">
+                  <table>
+                    <colgroup>
+                      <col span="7" style="width: auto;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">관서단위</th>
+                        <th scope="col">시도청</th>
+                        <th scope="col">경찰서</th>
+                        <th scope="col">지/파출소</th>
+                        <th scope="col">치안센터</th>
+                        <th scope="col">세부관서</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <select class="st">
+                            <option value="">관서</option>
+                            <option value="">재무관서</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="st">
+                            <option value="">본청</option>
+                            <option value="">부속기관</option>
+                            <option value="">시도청</option>
+                            <option value="">경찰서</option>
+                            <option value="">지/파출소</option>
+                            <option value="">치안센터</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="st">
+                            <option value="">본청</option>
+                            <option value="">시도청</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="st">
+                            <option value="">OOOO경찰서</option>
+                            <option value="">OOOOOO경찰서</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="st">
+                            <option value="">**파출소</option>
+                            <option value="">****파출소</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="st">
+                            <option value="">OOOO치안센터</option>
+                            <option value="">OOOOOO치안센터</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="st">
+                            <option value="">부속기관</option>
+                            <option value="">기동대</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tbl2 w67 full noHover">
+                  <table>
+                    <colgroup>
+                      <col span="2" style="width: 120px;">
+                      <col style="width: auto;">
+                      <col style="width: 120px;">
+                      <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">사업명</th>
+                        <th scope="row">내역사업명</th>
+                        <td>
+                          <select class="st">
+                            <option value="">선택1</option>
+                            <option value="">선택2</option>
+                          </select>
+                        </td>
+                        <th scope="row">시설사업명</th>
+                        <td>
+                          <select class="st">
+                            <option value="">선택1</option>
+                            <option value="">선택2</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 초기화 / 검색버튼 -->
+          <div class="flexible btngroup">
+            <button type="button" class="btn blueBtn reset">검색 초기화</button>
+            <button type="button" class="btn blueBtn srch">검색</button>
+          </div>
+        </div>
+
+        <div class="sec_wrap2 bg">
+          <div class="inner">
+            <div class="sec">
+              <header class="s_tit ">
+                <h4>검색 결과</h4>
+              </header>
+
+              <!-- 시설사업기준 -->
+              <div class="sec_con">
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">검색 건수</div>
+                    <div class="row fwrap">
+                      <ul class="info">
+                        <li>건수합계 : OO건</li>
+                        <li>예산액 : 123,456,660 원</li>
+                        <li>집행액 : 42,366 원</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="flexi ver2">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <select class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+
+                    <a href="#" download class="btn blueBtn">다운로드</a>
+                  </div>
+                </div>
+
+                <!-- 토스트그리드 -->
+                <div id="grid1" style="height: auto;"></div>
+              </div>
+            </div>
+
+
+            <!-- 예산비목기준 -->
+            <div class="sec">
+
+              <div class="sec_con">
+                <div class="row flexEnd sub_info drop">
+                  <div class="flexi ver1">
+                    <div class="sub_tit">검색 건수</div>
+                    <div class="row fwrap">
+                      <ul class="info">
+                        <li>건수합계 : OO건</li>
+                        <li>예산액 : 123,456,660 원</li>
+                        <li>집행액 : 42,366 원</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="flexi ver2">
+                    <select class="st mini">
+                      <option value="">원</option>
+                      <option value="">천원</option>
+                      <option value="">백만원</option>
+                    </select>
+
+                    <select class="st mini">
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">30</option>
+                      <option value="">50</option>
+                    </select>
+
+                    <a href="#" download class="btn blueBtn">다운로드</a>
+                  </div>
+                </div>
+
+                <!-- 토스트그리드 -->
+                <div id="grid2" style="height: auto;"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+      <!-- // 집행관리 -->
+
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer>
+      <div class="f_inner">
+        <div class="f_txt">
+          <a href="#" class="btn basic">이용안내</a>
+          <address>(03739) 서울특별시 서대문구 통일로 97</address>
+          <span>© 2018. KOREAN NATIONAL POLICE AGENCY</span>
+        </div>
+
+        <div class="f_logo">
+          <a href="#">
+            <img src="/assets/img/F_logo.svg" alt="경찰청 국유재산 정보시스템">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+  </div>
+  <!--// wrap -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gridData1 = [
+        { NO: '1', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '2', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '3', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '4', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '5', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' }
+      ];
+
+      const grid1 = new tui.Grid({
+        el: document.getElementById('grid1'),
+        data: gridData1,
+        scrollX: true,
+        scrollY: false,
+        header: {
+          height: 60,
+          complexColumns: [
+            {
+              header: '시설사업기준',
+              name: 'colspan1',
+              childNames: ['t1', 't2', 't3', 't4']
+            },
+          ]
+        },
+
+        columns: [
+          { name: 't1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 't2', header: '관서명', width: 120, height: 39, align: 'center' },
+          { name: 't3', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 't4', header: '예산비목', width: 120, height: 39, align: 'center' },
+          { name: 't5', header: '재재배정액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't6', header: '사업배정액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't7', header: '원인행위액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't8', header: '지출결의액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't9', header: '지출액액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't10', header: '사업배정잔액 (원/천원/백만원)(작년)', width: 120, height: 39, align: 'center' },
+          { name: 't11', header: '원인행위잔액 (원/천원/백만원)(올해)', width: 120, height: 39, align: 'center' },
+          { name: 't12', header: '지출집행률 (%)', width: 120, height: 39, align: 'center' },
+          { name: 't13', header: '지출집행률 (%)', width: 120, height: 39, align: 'center' },
+          { name: 't14', header: '원인행위내용', width: 120, height: 39, align: 'center' },
+          { name: 't15', header: '집행내용', width: 120, height: 39, align: 'center' }
+        ]
+      });
+
+      // 예산비목기준
+      const gridData2 = [
+        { NO: '1', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '2', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '3', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '4', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+        { NO: '5', t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' }
+      ];
+
+      const grid2 = new tui.Grid({
+        el: document.getElementById('grid2'),
+        data: gridData2,
+        scrollX: true,
+        scrollY: false,
+        header: {
+          height: 60,
+          complexColumns: [
+            {
+              header: '예산비목기준',
+              name: 'colspan1',
+              childNames: ['t1', 't2', 't3', 't4']
+            },
+          ]
+        },
+
+        columns: [
+          { name: 't1', header: '시도청', width: 120, height: 39, align: 'center' },
+          { name: 't2', header: '관서명', width: 120, height: 39, align: 'center' },
+          { name: 't3', header: '사업명', width: 120, height: 39, align: 'center' },
+          { name: 't4', header: '예산비목', width: 120, height: 39, align: 'center' },
+          { name: 't5', header: '재재배정액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't6', header: '사업배정액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't7', header: '원인행위액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't8', header: '지출결의액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't9', header: '지출액액 (원/천원/백만원)', width: 120, height: 39, align: 'center' },
+          { name: 't10', header: '사업배정잔액 (원/천원/백만원)(작년)', width: 120, height: 39, align: 'center' },
+          { name: 't11', header: '원인행위잔액 (원/천원/백만원)(올해)', width: 120, height: 39, align: 'center' },
+          { name: 't12', header: '지출집행률 (%)', width: 120, height: 39, align: 'center' },
+          { name: 't13', header: '지출집행률 (%)', width: 120, height: 39, align: 'center' },
+          { name: 't14', header: '원인행위내용', width: 120, height: 39, align: 'center' },
+          { name: 't15', header: '집행내용', width: 120, height: 39, align: 'center' }
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>
