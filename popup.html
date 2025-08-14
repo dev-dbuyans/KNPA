@@ -24,15 +24,20 @@
   <!-- wrap -->
   <div id="wrap">
     <div class="popup_wrap">
-      <button type="button" class="btn blueBtn" data-layer="download1">다운로드</button>
-      <button type="button" class="btn blueBtn" data-layer="download1">파일추가</button>
+      <button type="button" class="btn blueBtn layerOpen" data-layer="layerDown">다운로드</button>
+      <button type="button" class="btn blueBtn layerOpen" data-layer="layerFile">파일추가</button>
+      <button type="button" class="btn Dgray layerOpen" data-layer="layerSaved">저장</button>
+      <button type="button" class="btn blueBtn layerOpen" data-layer="layerAdd">추가</button>
+      <button type="button" class="btn blueBtn layerOpen edit2" data-layer="layerEdit">수정</button>
 
-      <button type="button" class="btn blueBtn" data-layer="saved1">저장</button>
+      <button type="button" class="btn light layerOpen" data-layer="layerEdit">검토요청</button>
+      <button type="button" class="btn light layerOpen" data-layer="layerEdit">승인</button>
+
     </div>
 
 
     <!-- 다운로드 팝업 -->
-    <div class="layer" id="down1">
+    <div class="layer" id="layerDown">
       <div class="layer_dimmed">
         <div class="layer_wrap">
           <div class="layer_head">
@@ -49,28 +54,28 @@
             <div class="layer_cont">
               <div class="file_box">
                 <p>파일명이 들어갑니다.pdf</p>
-                <div class="flie_info">
+                <div class="file_info">
                   <span class="f12">1.2MB</span>
                   <a href="#" download="#" class="popup_down">다운로드</a>
                 </div>
               </div>
               <div class="file_box">
                 <p>파일명이 들어갑니다. 파일명이 들어갑니다. 파일명이 들어갑니다.xls</p>
-                <div class="flie_info">
+                <div class="file_info">
                   <span class="f12">1.2MB</span>
                   <a href="#" download="#" class="popup_down">다운로드</a>
                 </div>
               </div>
               <div class="file_box">
                 <p>파일명이 들어갑니다. 파일명이 들어갑니다.hwp</p>
-                <div class="flie_info">
+                <div class="file_info">
                   <span class="f12">1.2MB</span>
                   <a href="#" download="#" class="popup_down">다운로드</a>
                 </div>
               </div>
             </div>
 
-            <div class="flexi">
+            <div class="flexible">
               <button type="button" class="btn Dgray lists">목록</button>
             </div>
           </div>
@@ -79,8 +84,116 @@
     </div>
     <!--// 다운로드 팝업 -->
 
+
     <!-- 파일추가 팝업 -->
+    <div class="layer" id="layerFile">
+      <div class="layer_dimmed">
+        <div class="layer_wrap">
+          <div class="layer_head">
+            <h3>파일추가</h3>
+            <button type="button" class="layerClose"><span class="soundOnly">닫기</span></button>
+          </div>
+          
+          <div class="layer_inner">
+            <div class="file_head">
+              <div class="time_wrap">
+                <p>전체 :</p>
+                <div class="timerbg">
+                  <span class="timer"></span>
+                </div>
+              </div>
+
+              <div class="filepanel">
+                <ul>
+                  <li>파일:<b>2</b>/3개 </li>
+                  <li>전송 용량:<b>257.37MB</b>/353.47.MB </li>
+                  <li>속도:<b>57.37MB</b>/초 </li>
+                  <li>남은 시간:<b>50</b>초 </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="layer_cont pb0">
+              <div class="file_box h32">
+                <p>파일명이 들어갑니다.pdf</p>
+                <div class="file_info">
+                  <span class="f12">1.2MB</span>
+                  <div class="timerbg">
+                    <div class="timer"></div>
+                  </div>
+                  <span class="rate">80%</span>
+                </div>
+              </div>
+              <div class="file_box h32">
+                <p>파일명이 들어갑니다. 파일명이 들어갑니다. 파일명이 들어갑니다.xls</p>
+                <div class="file_info">
+                  <span class="f12">1.2MB</span>
+                  <div class="timerbg">
+                    <div class="timer" style="width: 100%;"></div>
+                  </div>
+                  <span class="rate">100%</span>
+                </div>
+              </div>
+              <div class="file_box h32">
+                <p>파일명이 들어갑니다. 파일명이 들어갑니다.hwp</p>
+                <div class="file_info">
+                  <span class="f12">1.2MB</span>
+                  <div class="timerbg">
+                    <div class="timer" style="width: 100%;"></div>
+                  </div>
+                  <span class="rate">100%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
     <!--// 파일추가 팝업 -->
+
+
+    <!-- 저장버튼 -> 정보수정 팝업 -->
+    <div class="layer" id="layerSaved">
+      <div class="layer_dimmed">
+        <div class="layer_wrap">
+          <div class="layer_head">
+            <h3>정보수정</h3>
+            <button type="button" class="layerClose"><span class="soundOnly">닫기</span></button>
+          </div>
+          
+          <div class="layer_inner">
+            <div class="layer_cont bb">
+              <div class="text_wrap">
+                <div class="edits">
+                  <span class="tit">구분</span>
+                  <select class="st">
+                    <option value="">변경(오기입)</option>
+                    <option value="">변경(오기입)</option>
+                    <option value="">변경(오기입)</option>
+                  </select>
+                </div>
+                <div class="edits">
+                  <span class="tit">작성자</span>
+                  <span class="writer">서울경찰청 종로경찰서 경위 홍길동</span>
+                </div>
+                <div class="edits type2">
+                  <span class="tit">사유</span>
+                  <textarea class="txtarea" placeholder="서울경찰청 종로경찰서 경위 홍길동 사유를 작성합니다."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="flexible">
+              <button type="button" class="btn Dgray lists cc">취소</button>
+              <button type="button" class="btn Dgray lists">저장</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// 저장버튼 -> 정보수정 팝업 -->
 
   </div>
   <!-- //wrap -->

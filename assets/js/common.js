@@ -94,6 +94,49 @@ document.addEventListener("DOMContentLoaded", () => {
   //   });
   // });
 
+  /***  250814 추가 ***/
+  //레이어 열기
+  const layerOpenBtn = document.querySelectorAll(".layerOpen");
+  const layers = document.querySelectorAll(".layer");
+  const body = document.querySelector("body");
+
+  layerOpenBtn.forEach((item) => {
+    item.addEventListener("click", (item) => {
+      const btnTarget = item.currentTarget;
+
+      btnTarget.classList.add("on");
+
+      layers.forEach((e) => {
+        if (e.id == btnTarget.dataset.layer) {
+          e.classList.add("on");
+        }
+      });
+
+      body.classList.add("noScroll");
+    });
+  });
+
+
+  //레이어 닫기
+  const layerCloseBtn = document.querySelectorAll(".layerClose");
+
+  layerCloseBtn.forEach((item) => {
+    item.addEventListener("click", (item) => {
+      const btnTarget = item.currentTarget;
+
+      btnTarget.closest(".layer").classList.remove("on");
+
+      layerOpenBtn.forEach((item) => {
+        if (item.dataset.layer == btnTarget.closest(".layer").id) {
+          item.classList.remove("on");
+        }
+      });
+
+      body.classList.remove("noScroll");
+    });
+  });
+
+
 
 
 });

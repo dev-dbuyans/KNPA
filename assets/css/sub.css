@@ -128,7 +128,8 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 
 .alend{justify-content: space-between; }
 .alend .col.w75, .fstart .col.w75 {width: calc(75% - 8px);}
-.alend .col.w50 {width: calc(50% - 8px);}
+.alend .col.w50, .fstart .col.w50 {width: calc(50% - 8px);}
+.fstart .col.w50 >
 .alend .col.w50.g4 {width: calc(50% - 4px);}
 .alend .col.w25, .fstart .col.w25  {width: calc(25% - 8px);}
 .col.w75 > *:not(:last-child) { margin-bottom: 8px; }
@@ -224,6 +225,12 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   transition: background-color 0.2s ease;
 }
 .addfile_btn:hover span{background-color: var(--addfileHover);}
+
+
+/* ------------------------------------------------------------------------- */
+/* 총사업비관리
+/* ------------------------------------------------------------------------- */
+.tbl2.w4{width: calc(100% - 4px);}
 
 
 /* ------------------------------------------------------------------------- */
@@ -353,6 +360,16 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   pointer-events: auto;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------- */
 /* MediaQuery
 /* ------------------------------------------------------------------------- */
@@ -368,7 +385,7 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 
   /* 기금사업 */
   .flexi.ver1{margin-right: auto;}
-  .flexi.ver2{margin-left: auto;}
+  .flexi.ver2{margin-left: auto !important;}
 
   .fstart.early.drop{width: 100%; flex-direction: column;}
   .fstart.early .full{width: 100%;}
