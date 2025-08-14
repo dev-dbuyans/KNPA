@@ -40,13 +40,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 첨부파일 선택
   const addFileBtn = document.querySelectorAll(`.addfile_btn input[type="file"]`);
+  const addFileBtn2 = document.querySelectorAll(`.addfile_btn2 input[type="file"]`);
+
   addFileBtn.forEach((item) => {
     item.addEventListener('change', (btn) => {
       btnTarget = btn.currentTarget;
       const addFileName = btnTarget.closest('.addfile').querySelector('.addfile_name');
       addFileName.innerText = btnTarget.value.split('\\').pop();
     })
-  })
+  });
+
+  //첨부파일 ver2
+  addFileBtn2.forEach((item) => {
+    item.addEventListener('change', (btn) => {
+      const btnTarget = btn.currentTarget;
+      const addFileName2 = btnTarget.closest('.addfile2').querySelector('.addfile_name2');
+      const spanElement = btnTarget.closest('.addfile_btn2').querySelector('span');
+
+      const fileNames = Array.from(btnTarget.files).map(file => file.name);
+      addFileName2.innerText = fileNames.join(', ');
+
+      if (fileNames.length > 0) {
+        spanElement.style.display = 'none';
+      } else {
+        spanElement.style.display = '';
+      }
+    });
+  });
+
+  // 파일 이름 여러개 생성
+  // addFileBtn2.forEach((item) => {
+  //   item.addEventListener('change', (btn) => {
+  //     const btnTarget = btn.currentTarget;
+  //     const fileList = btnTarget.files;
+  //     const addFileName2 = btnTarget.closest('.addfile2').querySelector('.addfile_name2');
+  //     const spanElement = btnTarget.closest('.addfile_btn2').querySelector('span');
+
+  //     if (fileList.length > 0) {
+  //       spanElement.style.display = 'none';
+
+  //       // 파일 이름 여러 개 리스트로 보여주기
+  //       let fileListHTML = '<ul class="file-list">';
+  //       for (const file of fileList) {
+  //         fileListHTML += `<li>${file.name}</li>`;
+  //       }
+  //       fileListHTML += '</ul>';
+  //       addFileName2.innerHTML = fileListHTML;
+
+  //     } else {
+  //       spanElement.style.display = '';
+  //       addFileName2.innerHTML = '';
+  //     }
+  //   });
+  // });
+
+
+
 });
 
 $(function () {
@@ -167,22 +216,17 @@ function tabMenu(tabName, num) {
 
   tablist.forEach((item, index) => {
     const tabcont = document.querySelector(".tabCont_" + tabName + index);
-    const tabcontG = document.querySelector(".tabContG_" + tabName + index);
 
     if (index == num) {
       tabcont.classList.add("on");
       item.classList.add("on");
-      tabcontG.classList.add("on");
-      item.classList.add("on");
     } else {
       tabcont.classList.remove("on");
-      item.classList.remove("on");
-      tabcontG.classList.remove("on");
       item.classList.remove("on");
     }
   });
 
-  /*** 250808 ***/ 
+  /*** 250808 ***/
   // 탭메뉴 > 토스트 그리드 추가
   tablistG.forEach((item, index) => {
     const tabcontG = document.querySelector(".tabContG_" + tabName + index);
@@ -197,6 +241,28 @@ function tabMenu(tabName, num) {
   });
 
 }
+
+function toggleAddfileTab(show = true) {
+  const addfileTab = document.querySelector(".fileUpLoad");
+  const addButton = document.querySelector(".fileUpLoad button.add");
+
+  if (addfileTab) {
+    addfileTab.classList.toggle("on", show);
+  }
+  if (addButton) {
+    addButton.classList.toggle("on", show);
+  }
+
+  // const currentTab = document.querySelector('[id^="tabContG_"].on');
+  // if (currentTab) {
+  //   const toastGrids = currentTab.querySelectorAll('[id^="grid"]');
+  //   toastGrids.forEach(grid => {
+  //     grid.style.display = show ? "none" : "block";
+  //   });
+  // }
+}
+
+
 
 /*** 250731 : datepicker, 검색영역 추가 ***/
 $(function () {
@@ -247,6 +313,7 @@ $(function () {
     $(".sec_wrap2.bg").toggleClass("on");
   });
 });
+
 
 /*** 250801 : 검색결과 추가 ***/
 function resetToggle() {

@@ -14,7 +14,7 @@
 /* table */
 .tui-grid-container{ border: 1px solid var(--tablebd) !important; border-top-color: var(--tableTop) !important; border-bottom-color: var(--gray100) ;}
 .tui-grid-cell{
-  box-sizing: border-box;
+  box-sizing: border-box; overflow: hidden;
   padding: 0 6px;
   font-weight: 500; color: var(--text4);
   background-color: #ffffff !important;

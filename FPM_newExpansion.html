@@ -378,11 +378,11 @@
       <section class="sec_wrap2 pd0">
         <div class="inner">
           <header class="sec_head type2 flexible">
-            <h3>총사업비관리</h3>
+            <h3>신증축 우선순위</h3>
           </header>
 
           <div class="sec">
-            <div class="sec_con">
+            <div class="sec_con early">
               <div class="col">
                 <div class="tbl2 noHover">
                   <table>
@@ -474,55 +474,78 @@
                   </table>
                 </div>
 
-                <div class="tbl2 noHover">
-                  <table>
-                    <colgroup>
-                      <col style="width: 120px;">
-                      <col style="width: auto;">
-                      <col style="width: 120px;">
-                      <col style="width: 120px;">
-                      <col style="width: auto;">
-                      <col style="width: 120px;">
-                      <col style="width: auto;">
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th scope="row">준공일자</th>
-                        <td class="pd0">
-                          <div class="flexi">
-                            <input type="text" aria-label="시작일" class="it date">
-                            ~
-                            <input type="text" aria-label="종료일" class="it date">
-                          </div>
-                        </td>
-                        <th scope="row">노후도</th>
-                        <td>
-                          <select class="st">
-                            <option value="">10년 미만</option>
-                            <option value="">20년 미만</option>
-                            <option value="">30년</option>
-                            <option value="">50년 이상</option>
-                          </select>
-                        </td>
-                        <td>
-                          <div class="flexi">
-                            <input type="text" aria-label="노후도" class="it h26" placeholder="0000">
-                            ~
-                            <input type="text" aria-label="노후도" class="it h26" placeholder="0000">
-                          </div>
-                        </td>
-                        <th scope="row">협소도</th>
-                        <td>
-                          <div class="flexi">
-                            <input type="text" aria-label="협소도" class="it h26" placeholder="0000">
-                            ~
-                            <input type="text" aria-label="협소도" class="it h26" placeholder="0000">
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="row drop">
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">준공일자</th>
+                          <td class="pd0">
+                            <div class="flexi">
+                              <input type="text" aria-label="시작일" class="it date">
+                              ~
+                              <input type="text" aria-label="종료일" class="it date">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">노후도</th>
+                          <td>
+                            <select class="st">
+                              <option value="">10년 미만</option>
+                              <option value="">20년 미만</option>
+                              <option value="">30년</option>
+                              <option value="">50년 이상</option>
+                            </select>
+                          </td>
+                          <td>
+                            <div class="flexi">
+                              <input type="text" aria-label="노후도" class="it h26" placeholder="0000">
+                              ~
+                              <input type="text" aria-label="노후도" class="it h26" placeholder="0000">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tbl2 noHover">
+                    <table>
+                      <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">협소도</th>
+                          <td>
+                            <div class="flexi">
+                              <input type="text" aria-label="협소도" class="it h26" placeholder="0000">
+                              ~
+                              <input type="text" aria-label="협소도" class="it h26" placeholder="0000">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -622,13 +645,13 @@
   <script>
     // 집행관리 세부화면
     const gridData1 = [
-      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'본관', t8:'등재', t9:'', t10:'', t11:'', t12:'', t13:'', t14:'', t15:''},
-      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'별관', t8:'등재', t9:'', t10:'', t11:'', t12:'', t13:'', t14:'', t15:''},
-      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'기타', t8:'미등재', t9:'', t10:'', t11:'', t12:'', t13:'', t14:'', t15:''},
-      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:'', t15:''},
-      {t1:'', t2:'', t3:'', t4:'', t5:'', t6:'', t7:'', t8:'', t9:'', t10:'', t11:'', t12:'', t13:'', t14:'', t15:''},
+      { t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '본관', t8: '등재', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+      { t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '별관', t8: '등재', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+      { t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '기타', t8: '미등재', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+      { t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
+      { t1: '', t2: '', t3: '', t4: '', t5: '', t6: '', t7: '', t8: '', t9: '', t10: '', t11: '', t12: '', t13: '', t14: '', t15: '' },
     ];
-  
+
     const grid1 = new tui.Grid({
       el: document.getElementById('grid1'),
       data: gridData1,
@@ -638,24 +661,24 @@
       header: {
         height: 40,
       },
-  
+
       // rowspan 
       columns: [
-        { name:'t1', header: 'NO', width: 60, align: 'center' },
-        { name:'t2', header: '시도청', width: 120, align: 'center' },
-        { name:'t3', header: '경찰서', width: 120, align: 'center' },
-        { name:'t4', header: '지/파출소', width: 120, align: 'center' },
-        { name:'t5', header: '치안센터', width: 120, align: 'center' },
-        { name:'t6', header: '세부관서', width: 120, align: 'center' },
-        { name:'t7', header: '본관여부', width: 150, align: 'center' },
-        { name:'t8', header: '등재여부',  width: 120, align: 'center' },
-        { name:'t9', header: '세부자산명',  width: 120, align: 'center' },
-        { name:'t10', header: '가준평균(값)',  width: 120, align: 'center' },
-        { name:'t11', header: '안전등급(기재부)',  width: 120, align: 'center' },
-        { name:'t12', header: '안전등급(자체)',  width: 120, align: 'center' },
-        { name:'t13', header: '준공일자',  width: 120, align: 'center' },
-        { name:'t14', header: '노후도',  width: 120, align: 'center' },
-        { name:'t15', header: '협소도',  width: 120, align: 'center' },
+        { name: 't1', header: 'NO', width: 60, align: 'center' },
+        { name: 't2', header: '시도청', width: 120, align: 'center' },
+        { name: 't3', header: '경찰서', width: 120, align: 'center' },
+        { name: 't4', header: '지/파출소', width: 120, align: 'center' },
+        { name: 't5', header: '치안센터', width: 120, align: 'center' },
+        { name: 't6', header: '세부관서', width: 120, align: 'center' },
+        { name: 't7', header: '본관여부', width: 150, align: 'center' },
+        { name: 't8', header: '등재여부', width: 120, align: 'center' },
+        { name: 't9', header: '세부자산명', width: 120, align: 'center' },
+        { name: 't10', header: '가준평균(값)', width: 120, align: 'center' },
+        { name: 't11', header: '안전등급(기재부)', width: 120, align: 'center' },
+        { name: 't12', header: '안전등급(자체)', width: 120, align: 'center' },
+        { name: 't13', header: '준공일자', width: 120, align: 'center' },
+        { name: 't14', header: '노후도', width: 120, align: 'center' },
+        { name: 't15', header: '협소도', width: 120, align: 'center' },
       ]
     });
   </script>

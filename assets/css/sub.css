@@ -114,7 +114,7 @@
 .sec_wrap2.bg.on{ visibility: visible; max-height: 1600px; }
 table .it{ height: 3.6rem; padding: 0 12px; }
 .tbl2 table td .it.date, .tbl2 table td .it.edit { 
-  min-width: 77px;
+  min-width: 46px;
   margin: 0 8px;
   font-size: 14px; font-weight: 600; color: var(--text4);
 }
@@ -201,10 +201,11 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 .mlauto{margin-left: auto;}
 .sec_item .group + .group{margin-top: 3.2rem;}
 
-[class*=tabContG_] {max-height: 0; opacity: 0;}
-[class*=tabContG_].on {max-height: 1000px; opacity: 1;}
 
-/* 첨부파일 */
+[class*=tabContG_] { max-height: 0; opacity: 0;  position: relative; z-index: 1; }
+[class*=tabContG_].on { max-height: 1000px; opacity: 1; z-index: 2; }
+
+/* 첨부파일 버튼 */
 .addfile { height: 100%; display: flex; align-items: center; position: relative;}
 .addfile_btn {position: absolute; right: 0;}
 .addfile_btn input {
@@ -235,8 +236,122 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 
 
 
+/* ------------------------------------------------------------------------- */
+/* 재산교환 / 첨부파일
+/* ------------------------------------------------------------------------- */
+/* .uploadBtns button.add.on{background-color: var(--primary2); color: #ffffff;}
+.uploadBtns button.add:hover{background-color: var(--secondary);} */
+
+/* 첨부파일2 */
+.upload_wrap { width: 100%; height: 100%;}
+.upload_wrap .sub_tit { font-weight: 600; color: var(--secondary); }
+.upload_inner {width: 100%; height: 100%; display: flex; flex-direction: column; padding-bottom: 4rem;}
+.upload_inner > *  {margin-bottom: 8px;}
+.upload_inner .title_box{
+  width: 100%; height: 3.2rem;
+  display: flex; align-items: center;
+  border: 1px solid var(--tablebd);
+}
+.upload_inner .title_box .tit{
+  width: 8rem; height: 100%; 
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text1); background-color: var(--gray100);
+  border-right: 1px solid var(--tablebd);
+}
+.upload_inner .title_box .txt {width: 100%; }
+.it.upload{height: 2.8rem; border: 0; color: var(--text4);}
+
+.addfile_wrap{  
+  width: 100%; overflow: hidden;
+  border: 1px solid var(--tablebd); border-top-color:var(--tableTop);  
+}
+.addfile_wrap .row{
+  width: 100%; height: 4rem;
+  align-items: center; justify-content: space-between;
+  background-color: var(--bg); font-weight: 600; color: var(--text1);
+  border-bottom: 1px solid var(--tablebd);
+}
+.addfile_wrap .row .check_btn{width: 4rem; height: 100%; justify-content: center;}
+.addfile_wrap .row p {display: block; width: 100%; height: 100%; line-height: 4rem; text-align: center; margin: 0;}
+.addfile_wrap .row p.lines{ border-left: 1px solid var(--tablebd); border-right: 1px solid var(--tablebd);}
+.addfile_wrap .row p:last-child{width: 20rem; margin: 0;}
+
+.addfile_wrap .explains{
+  width: 100%; height: 3.2rem;
+  padding: 0 16px;
+  background-color: var(--bg);
+  border-top: 1px solid var(--tablebd); border-bottom: 1px solid var(--tablebd);
+}
+.addfile_wrap .explains span.number{color: var(--menuTitle);}
+.addfile_wrap .btnwrap{
+  background-color: var(--bg);
+  padding: 8px 16px;
+}
 
 
+.addfile2{
+  width: 100%; height: 16rem; 
+  display: flex; align-items: center; justify-content: center;
+  background-color: #ffff; color: var(--text1);
+  font-size: 14px; line-height: 2.1rem;
+  position: relative; cursor: pointer;
+}
+.addfile_btn2{width: 100%; height: 100%; position: relative;}
+.addfile_btn2 input[type="file"] {
+  width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.addfile_btn2 span {
+  position: absolute; z-index: 1;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-size: 14px; font-weight: 500; text-align: center; color: #898989;
+  pointer-events: none; 
+  display: flex; align-items: center;
+}
+.addfile_btn2 span::before{
+  display: inline-block; content: '';
+  width: 21px; height: 21px; margin-right: 6px;
+  background: url(/assets/img/ico_addfile2.svg) no-repeat center / contain;
+}
+.addfile2 .addfile_name2{
+  font-size: 14px; line-height: 2.4rem;
+  position: absolute; top: 10px; left: 10px; z-index: 3;
+  white-space: normal; overflow: visible; word-break: break-word;
+  max-height: none; display: block;
+}
+.addfile2 .addfile_name2 ul li{margin-bottom: 4px;}
+
+.btnwrap .addfile_name {
+  font-size: 14px;
+  position: absolute; top: -162px; left: -5px;
+}
+.addfile_wrap .addfile_btn{position: relative;}
+.addfile_wrap .addfile_btn input{width: 8rem; height: fit-content;}
+.addfile_wrap .addfile_btn:hover span {background-color: var(--secondary);}
+
+/* 취소 등록btn */
+.upload_inner .btnwrap{ margin-left: auto; }
+.upload_inner .btnwrap .btn.Dgray.line{ background-color: #ffffff; color: #2B2B2B; }
+
+.fileUpLoad {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  position: absolute; top: 0; left: 0; 
+  width: 100%; z-index: 100; 
+  pointer-events: none;
+  background-color: #ffffff;
+}
+
+.fileUpLoad.on {
+  max-height: 1000px;
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* ------------------------------------------------------------------------- */
 /* MediaQuery
@@ -250,6 +365,28 @@ table .it{ height: 3.6rem; padding: 0 12px; }
 
   .sub_info ul.info li.benone::before {display: none;}
   .sub_info ul.info.type2.none1{ margin-left: 0;}
+
+  /* 기금사업 */
+  .flexi.ver1{margin-right: auto;}
+  .flexi.ver2{margin-left: auto;}
+
+  .fstart.early.drop{width: 100%; flex-direction: column;}
+  .fstart.early .full{width: 100%;}
+
+  /* 시설사업 */
+  .sec_con.early .drop{width: 100% !important; flex-direction: column;}
+  .sec_con.early .drop > .col.full:not(.col.w75.full){margin-top: 4rem;}
+  
+  /* 총사업비관리 */
+  .alend.early.drop{width: 100%; flex-direction: column;}
+  .alend.early.drop .drop{width: 100%; }
+  .sec.rows3 .col.w50.drop{margin-bottom: 4rem;}
+
+  
+  /* 관서기금사업현황 */
+  .sec_con.early .drop>.tbl2{margin-bottom: 8px; margin-left: 0; margin-right: 0;}
+  .sec_con.early .full{width: 100%;}
+  .early .col.w25.full{margin-bottom: 4rem;}
 }
 
 
@@ -285,12 +422,14 @@ table .it{ height: 3.6rem; padding: 0 12px; }
   }
 
   /* 기금사업 */
-  .flexi.ver1{margin-right: auto;}
-  .flexi.ver2{margin-left: auto;}
-  .alend .col.w75 {width: 100%;}
-  .alend .col.w25 {width: 100%; margin-top: 4rem;}
-
+  .fstart .col.w75 {width: 100%;}
+  .fstart .col.w25 {width: 100%; margin-top: 4rem;}
   .sub_info .row.fwrap {margin-right: 0;}
+  .drop > .col.full:not(.col.w75.full) {margin-top: 4rem;}
 
-  .drop > .col.full {margin-top: 4rem;}
+  /* 시설사업 */
+  .col.w57.full{margin-top: 4rem;}
+
+  /* 총사업관리 */
+  .sec.rows3 .flexEnd > :last-child{margin-top: 4rem;}
 }

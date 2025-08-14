@@ -819,6 +819,7 @@ footer .f_inner{
   display: flex; align-items: center;
 }
 .btn.back span{line-height: 2.4rem;}
+.btn.back.edit{ background-image: url(/assets/img/ico_edit_02.svg);}
 
 /*** 250804 : min-width 추가 ***/
 .btn.blueBtn{
@@ -826,6 +827,7 @@ footer .f_inner{
   padding: 0 12px;
   font-size: 16px; line-height: 3.2rem; 
   background-color: var(--primary2); color: #ffffff; border-color: var(--primary2);
+  cursor: pointer;
 }
 
 /*** 250730 :  검색 버튼 추가 ***/
@@ -848,8 +850,10 @@ footer .f_inner{
 
 /*** 250808  추가 ***/
 .btn.view{
+  display: block; 
   width: 7.6rem; height: 2.6rem; 
-  padding: 0;
+  padding: 0; margin: 0 auto;
+  font-size: 14px;
   background-color: var(--addfile); border-color: var(--addfile); color: #ffffff;
 }
 .btn.view:hover{background-color: var(--addfileHover);}
@@ -1033,6 +1037,8 @@ textarea{ width: 100%; }
 [class*=tabCont_] {display: none;}
 [class*=tabCont_].on {display: flex;}
 
+/* 250813 추가 */
+.tabMenu_addfile{width: auto;}
 
 
 
@@ -1048,6 +1054,7 @@ textarea{ width: 100%; }
   white-space: nowrap;
 }
 .tbl2 table { width: 100%;  overflow: visible; border-collapse: collapse;  table-layout: fixed; }
+.tbl2 table.h32 td{height: 3.2rem;}
 
 .tbl2 table th,
 .tbl2 table td {
@@ -1065,10 +1072,11 @@ textarea{ width: 100%; }
   border: 1px solid var(--tablebd);  border-top: 0; 
   position: relative;
 }
+/*** 250813 border-top ***/
 .tbl2 table th + th,
 .tbl2 table th + td,
 .tbl2 table td + td,
-.tbl2 table td + th {border-left: 1px solid var(--tablebd);}
+.tbl2 table td + th {border-left: 1px solid var(--tablebd); border-top: 0;}
 .tbl2 thead tr th { height: 4rem; background-color: var(--bg); border-left: 0;}
 .tbl2 thead tr th:first-child { border-left: 1px solid var(--tablebd);}
 
@@ -1076,7 +1084,7 @@ textarea{ width: 100%; }
 .tbl2.noHover tbody tr:hover td {background-color: #ffffff;}
 
 .tbl2 table td { border-right: 1px solid var(--tablebd);  border-bottom: 1px solid var(--tablebd); transition: background-color 0.2s ease;}
-.tbl2 table td:first-child { border-left: 1px solid var(--tablebd);}
+.tbl2 table td:first-child { border-left: 1px solid var(--tablebd); border-top: 0;}
 
 .tbl2 table td.tal,
 .tbl2 table tr.tal td {padding-left: 12px; text-align: left;}
